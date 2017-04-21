@@ -23,7 +23,7 @@
 
 - iOS 10.3 or later
 - Xcode 8.3 or later
-
+- swift 3.1
 ## Getting Started
 
 ### Installation
@@ -40,20 +40,20 @@ import SMInstagramPhotoPicker
 
 ### Use
 
-Int your controller.
+In your controller.
 ```swift
 var picker: SMPhotoPickerViewController?
 ```
-First. It is importance to do this step.
-Be sour your app have Authorization to assecc your photo library.
+- [x] First. It is importance to do this step.
+- [x] Be sour your app have Authorization to assecc your photo library.
 
-on your plist.info add one attrabute.
+- [x] on your plist.info add one attrabute.
 
 ```ruby
 kye: Privacy - Photo Library Usage Description
 String: Your app need assecc your photo library.
 ```
-And then request Authorization.
+- [x] And then request Authorization.
 
 ```swift
 PHPhotoLibrary.requestAuthorization { (status) in
@@ -64,7 +64,7 @@ if status == .authorized {
 }
 ```
 
-Show!!!
+- [x] Show!!!
 ```swift
 //show picker. You need use present.
 @IBAction func show(_ sender: UIButton) {
@@ -74,7 +74,7 @@ Show!!!
 }
 ```
 
-Get your image through deledate.
+- [x] Get your image through deledate.
 ```swift
 class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
 	//your viewcontroller
