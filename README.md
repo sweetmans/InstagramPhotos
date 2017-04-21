@@ -9,6 +9,8 @@
 [![License](https://img.shields.io/cocoapods/l/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
 [![Platform](https://img.shields.io/cocoapods/p/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
 
+## If you like this framework. Please give me a start.
+
 ## Features
 
 - [x] Same design as Instagram and animation.
