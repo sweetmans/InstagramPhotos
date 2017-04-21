@@ -44,7 +44,7 @@ Getting Started
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'SMInstagramPhotoPicker/Classes/**/*.swift'
-  s.spec.resources = = ['SMInstagramPhotoPicker/Resources/*.png', 'SMInstagramPhotoPicker/Resources/*.xib']
+  s.resources = ['SMInstagramPhotoPicker/Resources/*.png', 'SMInstagramPhotoPicker/Resources/*.xib']
   s.module_name = 'SMImagePicker'
   # s.resource_bundles = {
   #   'SMColor' => ['SMColor/Assets/*.png']
