@@ -7,36 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		404A7C521EA90804004CB142 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A7C511EA90804004CB142 /* UIViewController+Extension.swift */; };
-		404A7C761EA938D3004CB142 /* SMAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A7C751EA938D3004CB142 /* SMAlbumViewController.swift */; };
 		409DE1611EA6016A00498BA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1601EA6016A00498BA6 /* AppDelegate.swift */; };
 		409DE1631EA6016A00498BA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1621EA6016A00498BA6 /* ViewController.swift */; };
 		409DE1661EA6016A00498BA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409DE1641EA6016A00498BA6 /* Main.storyboard */; };
 		409DE1681EA6016A00498BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409DE1671EA6016A00498BA6 /* Assets.xcassets */; };
 		409DE16B1EA6016A00498BA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409DE1691EA6016A00498BA6 /* LaunchScreen.storyboard */; };
-		409DE1741EA6019700498BA6 /* SMPhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1721EA6019700498BA6 /* SMPhotoPickerViewController.swift */; };
-		409DE1751EA6019700498BA6 /* SMPhotoPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 409DE1731EA6019700498BA6 /* SMPhotoPickerViewController.xib */; };
-		409DE1771EA609CE00498BA6 /* SMPhotoPickerLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1761EA609CE00498BA6 /* SMPhotoPickerLibraryView.swift */; };
-		409DE1791EA609F300498BA6 /* SMPhotoPickerLibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 409DE1781EA609F300498BA6 /* SMPhotoPickerLibraryView.xib */; };
-		409DE17B1EA6296F00498BA6 /* redi.png in Resources */ = {isa = PBXBuildFile; fileRef = 409DE17A1EA6296F00498BA6 /* redi.png */; };
-		409DE17E1EA62D7C00498BA6 /* SMPhotoPickerImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE17C1EA62D7C00498BA6 /* SMPhotoPickerImageCell.swift */; };
-		409DE17F1EA62D7C00498BA6 /* SMPhotoPickerImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 409DE17D1EA62D7C00498BA6 /* SMPhotoPickerImageCell.xib */; };
-		409DE1821EA634AB00498BA6 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1811EA634AB00498BA6 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */; };
 		409DE1871EA6398A00498BA6 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409DE1861EA6398A00498BA6 /* Photos.framework */; };
-		409DE1891EA67D9B00498BA6 /* SMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1881EA67D9B00498BA6 /* SMProgressView.swift */; };
-		409DE18B1EA69BCF00498BA6 /* SMPhotoPickerAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE18A1EA69BCF00498BA6 /* SMPhotoPickerAlbumView.swift */; };
-		409DE18D1EA69C7C00498BA6 /* SMPhotoPickerAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 409DE18C1EA69C7C00498BA6 /* SMPhotoPickerAlbumView.xib */; };
-		409DE1901EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE18E1EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.swift */; };
-		409DE1911EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 409DE18F1EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.xib */; };
-		409DE1931EA75C7F00498BA6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1921EA75C7F00498BA6 /* UIView+Extension.swift */; };
-		409DE1951EA7741A00498BA6 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1941EA7741A00498BA6 /* AlbumModel.swift */; };
-		409DE1971EA8028C00498BA6 /* SMPhotoPickerLibraryView+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1961EA8028C00498BA6 /* SMPhotoPickerLibraryView+ScrollView.swift */; };
-		409DE1991EA8067F00498BA6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DE1981EA8067E00498BA6 /* UIImage+Extension.swift */; };
+		5D2E9229E73619D6056CB40F /* Pods_SMInstagramPhotosPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D8C52BA17D756F837528D9 /* Pods_SMInstagramPhotosPicker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		404A7C511EA90804004CB142 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		404A7C751EA938D3004CB142 /* SMAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMAlbumViewController.swift; sourceTree = "<group>"; };
 		409DE15D1EA6016A00498BA6 /* SMInstagramPhotosPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMInstagramPhotosPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409DE1601EA6016A00498BA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		409DE1621EA6016A00498BA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,24 +24,10 @@
 		409DE1671EA6016A00498BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		409DE16A1EA6016A00498BA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		409DE16C1EA6016A00498BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		409DE1721EA6019700498BA6 /* SMPhotoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerViewController.swift; path = ../SMPhotoPickerViewController.swift; sourceTree = "<group>"; };
-		409DE1731EA6019700498BA6 /* SMPhotoPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SMPhotoPickerViewController.xib; path = ../SMPhotoPickerViewController.xib; sourceTree = "<group>"; };
-		409DE1761EA609CE00498BA6 /* SMPhotoPickerLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPhotoPickerLibraryView.swift; sourceTree = "<group>"; };
-		409DE1781EA609F300498BA6 /* SMPhotoPickerLibraryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMPhotoPickerLibraryView.xib; sourceTree = "<group>"; };
-		409DE17A1EA6296F00498BA6 /* redi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redi.png; path = ../../../Pictures/redi.png; sourceTree = "<group>"; };
-		409DE17C1EA62D7C00498BA6 /* SMPhotoPickerImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPhotoPickerImageCell.swift; sourceTree = "<group>"; };
-		409DE17D1EA62D7C00498BA6 /* SMPhotoPickerImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMPhotoPickerImageCell.xib; sourceTree = "<group>"; };
-		409DE1811EA634AB00498BA6 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SMPhotoPickerLibraryView+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		409DE1861EA6398A00498BA6 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		409DE1881EA67D9B00498BA6 /* SMProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMProgressView.swift; sourceTree = "<group>"; };
-		409DE18A1EA69BCF00498BA6 /* SMPhotoPickerAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPhotoPickerAlbumView.swift; sourceTree = "<group>"; };
-		409DE18C1EA69C7C00498BA6 /* SMPhotoPickerAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMPhotoPickerAlbumView.xib; sourceTree = "<group>"; };
-		409DE18E1EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPhotoPickAlbumViewCell.swift; sourceTree = "<group>"; };
-		409DE18F1EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMPhotoPickAlbumViewCell.xib; sourceTree = "<group>"; };
-		409DE1921EA75C7F00498BA6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		409DE1941EA7741A00498BA6 /* AlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
-		409DE1961EA8028C00498BA6 /* SMPhotoPickerLibraryView+ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SMPhotoPickerLibraryView+ScrollView.swift"; sourceTree = "<group>"; };
-		409DE1981EA8067E00498BA6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		425B8F79DE62840516869462 /* Pods-SMInstagramPhotosPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMInstagramPhotosPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMInstagramPhotosPicker/Pods-SMInstagramPhotosPicker.release.xcconfig"; sourceTree = "<group>"; };
+		5126463DF30E457EEBA337F1 /* Pods-SMInstagramPhotosPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMInstagramPhotosPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMInstagramPhotosPicker/Pods-SMInstagramPhotosPicker.debug.xcconfig"; sourceTree = "<group>"; };
+		67D8C52BA17D756F837528D9 /* Pods_SMInstagramPhotosPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMInstagramPhotosPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				409DE1871EA6398A00498BA6 /* Photos.framework in Frameworks */,
+				5D2E9229E73619D6056CB40F /* Pods_SMInstagramPhotosPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +49,7 @@
 				409DE15F1EA6016A00498BA6 /* SMInstagramPhotosPicker */,
 				409DE15E1EA6016A00498BA6 /* Products */,
 				409DE1851EA6398A00498BA6 /* Frameworks */,
+				56D6442FF44326665DBCD491 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,49 +64,32 @@
 		409DE15F1EA6016A00498BA6 /* SMInstagramPhotosPicker */ = {
 			isa = PBXGroup;
 			children = (
-				409DE1801EA6347800498BA6 /* XIB */,
-				409DE17A1EA6296F00498BA6 /* redi.png */,
-				409DE1721EA6019700498BA6 /* SMPhotoPickerViewController.swift */,
-				409DE1761EA609CE00498BA6 /* SMPhotoPickerLibraryView.swift */,
-				409DE1811EA634AB00498BA6 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */,
-				409DE1961EA8028C00498BA6 /* SMPhotoPickerLibraryView+ScrollView.swift */,
-				409DE18A1EA69BCF00498BA6 /* SMPhotoPickerAlbumView.swift */,
-				409DE18E1EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.swift */,
-				404A7C751EA938D3004CB142 /* SMAlbumViewController.swift */,
-				409DE1941EA7741A00498BA6 /* AlbumModel.swift */,
-				409DE1881EA67D9B00498BA6 /* SMProgressView.swift */,
-				409DE1981EA8067E00498BA6 /* UIImage+Extension.swift */,
-				409DE1921EA75C7F00498BA6 /* UIView+Extension.swift */,
-				409DE17C1EA62D7C00498BA6 /* SMPhotoPickerImageCell.swift */,
+				409DE1641EA6016A00498BA6 /* Main.storyboard */,
+				409DE1691EA6016A00498BA6 /* LaunchScreen.storyboard */,
 				409DE1601EA6016A00498BA6 /* AppDelegate.swift */,
 				409DE1621EA6016A00498BA6 /* ViewController.swift */,
 				409DE1671EA6016A00498BA6 /* Assets.xcassets */,
 				409DE16C1EA6016A00498BA6 /* Info.plist */,
-				404A7C511EA90804004CB142 /* UIViewController+Extension.swift */,
 			);
 			path = SMInstagramPhotosPicker;
-			sourceTree = "<group>";
-		};
-		409DE1801EA6347800498BA6 /* XIB */ = {
-			isa = PBXGroup;
-			children = (
-				409DE1731EA6019700498BA6 /* SMPhotoPickerViewController.xib */,
-				409DE1781EA609F300498BA6 /* SMPhotoPickerLibraryView.xib */,
-				409DE17D1EA62D7C00498BA6 /* SMPhotoPickerImageCell.xib */,
-				409DE1641EA6016A00498BA6 /* Main.storyboard */,
-				409DE1691EA6016A00498BA6 /* LaunchScreen.storyboard */,
-				409DE18C1EA69C7C00498BA6 /* SMPhotoPickerAlbumView.xib */,
-				409DE18F1EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.xib */,
-			);
-			name = XIB;
 			sourceTree = "<group>";
 		};
 		409DE1851EA6398A00498BA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				409DE1861EA6398A00498BA6 /* Photos.framework */,
+				67D8C52BA17D756F837528D9 /* Pods_SMInstagramPhotosPicker.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56D6442FF44326665DBCD491 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5126463DF30E457EEBA337F1 /* Pods-SMInstagramPhotosPicker.debug.xcconfig */,
+				425B8F79DE62840516869462 /* Pods-SMInstagramPhotosPicker.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 409DE16F1EA6016A00498BA6 /* Build configuration list for PBXNativeTarget "SMInstagramPhotosPicker" */;
 			buildPhases = (
+				34BEA65EAD8AA1D898C2485B /* [CP] Check Pods Manifest.lock */,
 				409DE1591EA6016A00498BA6 /* Sources */,
 				409DE15A1EA6016A00498BA6 /* Frameworks */,
 				409DE15B1EA6016A00498BA6 /* Resources */,
+				A43C9F605AB2C0E29AC9E362 /* [CP] Embed Pods Frameworks */,
+				C7E0D2913171E33CCFE9B9D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,37 +158,66 @@
 				409DE16B1EA6016A00498BA6 /* LaunchScreen.storyboard in Resources */,
 				409DE1681EA6016A00498BA6 /* Assets.xcassets in Resources */,
 				409DE1661EA6016A00498BA6 /* Main.storyboard in Resources */,
-				409DE1911EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.xib in Resources */,
-				409DE1751EA6019700498BA6 /* SMPhotoPickerViewController.xib in Resources */,
-				409DE17F1EA62D7C00498BA6 /* SMPhotoPickerImageCell.xib in Resources */,
-				409DE1791EA609F300498BA6 /* SMPhotoPickerLibraryView.xib in Resources */,
-				409DE17B1EA6296F00498BA6 /* redi.png in Resources */,
-				409DE18D1EA69C7C00498BA6 /* SMPhotoPickerAlbumView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34BEA65EAD8AA1D898C2485B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A43C9F605AB2C0E29AC9E362 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMInstagramPhotosPicker/Pods-SMInstagramPhotosPicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7E0D2913171E33CCFE9B9D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMInstagramPhotosPicker/Pods-SMInstagramPhotosPicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		409DE1591EA6016A00498BA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				409DE1971EA8028C00498BA6 /* SMPhotoPickerLibraryView+ScrollView.swift in Sources */,
-				409DE1991EA8067F00498BA6 /* UIImage+Extension.swift in Sources */,
-				404A7C761EA938D3004CB142 /* SMAlbumViewController.swift in Sources */,
-				409DE1931EA75C7F00498BA6 /* UIView+Extension.swift in Sources */,
-				409DE1951EA7741A00498BA6 /* AlbumModel.swift in Sources */,
-				404A7C521EA90804004CB142 /* UIViewController+Extension.swift in Sources */,
 				409DE1631EA6016A00498BA6 /* ViewController.swift in Sources */,
-				409DE1771EA609CE00498BA6 /* SMPhotoPickerLibraryView.swift in Sources */,
-				409DE18B1EA69BCF00498BA6 /* SMPhotoPickerAlbumView.swift in Sources */,
-				409DE1741EA6019700498BA6 /* SMPhotoPickerViewController.swift in Sources */,
-				409DE17E1EA62D7C00498BA6 /* SMPhotoPickerImageCell.swift in Sources */,
 				409DE1611EA6016A00498BA6 /* AppDelegate.swift in Sources */,
-				409DE1821EA634AB00498BA6 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift in Sources */,
-				409DE1901EA69DDA00498BA6 /* SMPhotoPickAlbumViewCell.swift in Sources */,
-				409DE1891EA67D9B00498BA6 /* SMProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +340,7 @@
 		};
 		409DE1701EA6016A00498BA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5126463DF30E457EEBA337F1 /* Pods-SMInstagramPhotosPicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92A277ZDK2;
@@ -370,6 +354,7 @@
 		};
 		409DE1711EA6016A00498BA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425B8F79DE62840516869462 /* Pods-SMInstagramPhotosPicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 92A277ZDK2;

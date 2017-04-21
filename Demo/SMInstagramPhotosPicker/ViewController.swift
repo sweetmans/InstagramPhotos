@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import SMInstagramPhotoPicker
 
 class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
     func didCancelPickingPhoto() {
