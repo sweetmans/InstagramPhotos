@@ -41,22 +41,15 @@ import SMInstagramPhotoPicker
 
 ### Use
 
-In your controller.
+
+- In your controller.
 ```swift
 var picker: SMPhotoPickerViewController?
 ```
 - [x] First. It is importance to do this step.
 - [x] Be sour your app have Authorization to assecc your photo library.
-- [x] on your plist.info add one attrabute.
 
-Int your controller.
-```swift
-var picker: SMPhotoPickerViewController?
-```
-First. It is importance to do this step.
-Be sour your app have Authorization to assecc your photo library.
-
-on your plist.info add one attrabute.
+- on your plist.info add one attrabute.
 
 ```ruby
 kye: Privacy - Photo Library Usage Description
