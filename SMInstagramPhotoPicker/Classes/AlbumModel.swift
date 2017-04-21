@@ -11,7 +11,7 @@ import UIKit
 import Photos
 
 
-class AlbumModel {
+public class AlbumModel {
     
     let name:String
     let count:Int
