@@ -1,5 +1,5 @@
 <p align="center" >
-	<img src="https://github.com/sweetmans/SMColor/blob/master/SMColor/Assets/swcolor.png" title="SWColor" float=left>
+	<img src="https://github.com/sweetmans/SMInstagramPhotoPicker/blob/master/SMInstagramPhotoPicker/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
 </p>
 <p align="center">
 	SMInstagramPhotoPicker Create By Sweetman, Inc
@@ -8,11 +8,8 @@
 [![Version](https://img.shields.io/cocoapods/v/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
 [![License](https://img.shields.io/cocoapods/l/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
 [![Platform](https://img.shields.io/cocoapods/p/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
-<<<<<<< HEAD
 
 ## If you like this framework. Please give me a start.
-=======
->>>>>>> 0.3.8
 
 ## Features
 
@@ -26,11 +23,8 @@
 
 - iOS 10.3 or later
 - Xcode 8.3 or later
-<<<<<<< HEAD
 - swift 3.1
-=======
 
->>>>>>> 0.3.8
 ## Getting Started
 
 ### Installation
@@ -47,16 +41,14 @@ import SMInstagramPhotoPicker
 
 ### Use
 
-<<<<<<< HEAD
 In your controller.
 ```swift
 var picker: SMPhotoPickerViewController?
 ```
 - [x] First. It is importance to do this step.
 - [x] Be sour your app have Authorization to assecc your photo library.
-
 - [x] on your plist.info add one attrabute.
-=======
+
 Int your controller.
 ```swift
 var picker: SMPhotoPickerViewController?
@@ -65,17 +57,12 @@ First. It is importance to do this step.
 Be sour your app have Authorization to assecc your photo library.
 
 on your plist.info add one attrabute.
->>>>>>> 0.3.8
 
 ```ruby
 kye: Privacy - Photo Library Usage Description
 String: Your app need assecc your photo library.
 ```
-<<<<<<< HEAD
-- [x] And then request Authorization.
-=======
-And then request Authorization.
->>>>>>> 0.3.8
+- And then request Authorization.
 
 ```swift
 PHPhotoLibrary.requestAuthorization { (status) in
@@ -86,11 +73,8 @@ if status == .authorized {
 }
 ```
 
-<<<<<<< HEAD
-- [x] Show!!!
-=======
-Show!!!
->>>>>>> 0.3.8
+- Show!!!
+
 ```swift
 //show picker. You need use present.
 @IBAction func show(_ sender: UIButton) {
@@ -100,11 +84,8 @@ Show!!!
 }
 ```
 
-<<<<<<< HEAD
-- [x] Get your image through deledate.
-=======
-Get your image through deledate.
->>>>>>> 0.3.8
+- Get your image through deledate.
+
 ```swift
 class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
 	//your viewcontroller
@@ -124,7 +105,6 @@ class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
 ## Licenses
 
 All source code is licensed under the [MIT License](https://raw.github.com/rs/SDWebImage/master/LICENSE).
-
 
 ## Author
 
