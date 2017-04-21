@@ -1,58 +1,94 @@
 <p align="center" >
-  <img src="https://github.com/sweetmans/SMColor/blob/master/SMColor/Assets/swcolor.png" title="SWColor" float=left>
+	<img src="https://github.com/sweetmans/SMColor/blob/master/SMColor/Assets/swcolor.png" title="SWColor" float=left>
 </p>
 <p align="center">
-SMColor Create By Sweetman, Inc
+	SMInstagramPhotoPicker Create By Sweetman, Inc
 </p>
 
-[![Version](https://img.shields.io/cocoapods/v/SMColor.svg?style=flat)](http://cocoapods.org/pods/SMColor)
-[![License](https://img.shields.io/cocoapods/l/SMColor.svg?style=flat)](http://cocoapods.org/pods/SMColor)
-[![Platform](https://img.shields.io/cocoapods/p/SMColor.svg?style=flat)](http://cocoapods.org/pods/SMColor)
+[![Version](https://img.shields.io/cocoapods/v/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
+[![License](https://img.shields.io/cocoapods/l/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
+[![Platform](https://img.shields.io/cocoapods/p/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
+
+## If you like this framework. Please give me a start.
 
 ## Features
 
-- [x] Categories for `UIColor`
-- [x] So easy to use.x
-- [x] Support Swift 3.0
+- [x] Same design as Instagram and animation.
+- [x] So easy to use.
+- [x] Support Swift 3.1
 - [x] Performances!
 - [x] Use GCD and ARC
 
 ## Requirements
 
-- iOS 10.0 or later
-- watchOS 3.0 or later
-- OS X 12.0 or later
-- Xcode 8.0 or later
-
+- iOS 10.3 or later
+- Xcode 8.3 or later
+- swift 3.1
 ## Getting Started
 
 ### Installation
 
-SMColor is available through [CocoaPods](http://cocoapods.org). To install
+SMInstagramPhotoPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SMColor"
+pod "SMInstagramPhotoPicker"
 ```
 ```swift
-import SMColor
+import SMInstagramPhotoPicker
 ```
 
 ### Use
 
-<p align="center" >
-  <img src="https://github.com/sweetmans/SMColor/blob/master/SMColor/Assets/type.png" title="SWColor" float=left>
-</p>
-Specify your Hex Color:
+In your controller.
+```swift
+var picker: SMPhotoPickerViewController?
+```
+- [x] First. It is importance to do this step.
+- [x] Be sour your app have Authorization to assecc your photo library.
+
+- [x] on your plist.info add one attrabute.
+
+```ruby
+kye: Privacy - Photo Library Usage Description
+String: Your app need assecc your photo library.
+```
+- [x] And then request Authorization.
 
 ```swift
-view.backgroundColor = UIColor.hex(hex: "#FB8DB4")
+PHPhotoLibrary.requestAuthorization { (status) in
+if status == .authorized {
+	self.picker = SMPhotoPickerViewController()
+		self.picker?.delegate = self
+	}
+}
 ```
 
-Using Builded Color
+- [x] Show!!!
 ```swift
-view.backgroundColor = UIColor.red200
-view.textLble.textColor = UIColor.green500
+//show picker. You need use present.
+@IBAction func show(_ sender: UIButton) {
+    if picker != nil {
+        present(picker!, animated: true, completion: nil)
+    }
+}
+```
+
+- [x] Get your image through deledate.
+```swift
+class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
+	//your viewcontroller
+
+    func didCancelPickingPhoto() {
+        print("User cancel picking image")
+    }
+    
+    
+    func didFinishPickingPhoto(image: UIImage, meteData: [String : Any]) {
+        
+        imageView.image = image
+    }
+}
 ```
 
 ## Licenses
