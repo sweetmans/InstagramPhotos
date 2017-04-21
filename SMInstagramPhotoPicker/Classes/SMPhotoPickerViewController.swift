@@ -9,12 +9,12 @@
 import UIKit
 import Photos
 
-protocol SMPhotoPickerViewControllerDelegate {
+public protocol SMPhotoPickerViewControllerDelegate {
     func didFinishPickingPhoto(image: UIImage, meteData: [String: Any])
     func didCancelPickingPhoto()
 }
 
-class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDelegate {
+public class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var arrowImageView: UIImageView!
