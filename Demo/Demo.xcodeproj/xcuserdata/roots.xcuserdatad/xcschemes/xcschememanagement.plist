@@ -4,25 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Demo.xcscheme</key>
+		<key>Demo.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SMInstagramPhotoPicker.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D40E5CDC09CC723F6F32EC05A657896C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D86EF844D2A47A18A2A28AA3D1F766A2</key>
+		<key>404A7C801EA97DAD004CB142</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,12 +1,12 @@
 PODS:
-  - SMInstagramPhotoPicker (0.3.0)
+  - SMInstagramPhotoPicker (0.3.8)
 
 DEPENDENCIES:
   - SMInstagramPhotoPicker
 
 SPEC CHECKSUMS:
-  SMInstagramPhotoPicker: 21640fb3afe29e63538c2cfb74c45cd30c27786c
+  SMInstagramPhotoPicker: fe1787661ba400b660e11e80b9996d53de859712
 
-PODFILE CHECKSUM: c3722a5faee69775912055ba2536691be4bcc216
+PODFILE CHECKSUM: aa273724f12472ec2b84583e6c4f24424d298982
 
 COCOAPODS: 1.2.1

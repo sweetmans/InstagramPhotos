@@ -31,7 +31,7 @@ extension SMPhotoPickerLibraryView {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
-
+        
         let width = (collectionView.frame.width - 3) / 4.00
         //print("Cell Width", width, collectionView.frame.width)
         return CGSize(width: width, height: width)
@@ -74,19 +74,24 @@ extension SMPhotoPickerLibraryView {
             //print(progress)
         }
         
-        self.currentImageRequestID = PHImageManager.default().requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: op) { (image, info) in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             
-            if let isInCloud = info?[PHImageResultIsInCloudKey] as? Bool {
+            
+            self.currentImageRequestID = PHImageManager.default().requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: op) { (image, info) in
                 
-                self.isOnDownloadingImage = isInCloud
-            }
-            
-            if image != nil {
-                //self.isOnDownloadingImage = false
-                self.setupFirstLoadingImageAttrabute(image: image!)
+                if let isInCloud = info?[PHImageResultIsInCloudKey] as? Bool {
+                    
+                    self.isOnDownloadingImage = isInCloud
+                }
+                
+                if image != nil {
+                    //self.isOnDownloadingImage = false
+                    DispatchQueue.main.async {
+                        self.setupFirstLoadingImageAttrabute(image: image!)
+                    }
+                }
             }
         }
-        
     }
     
 }

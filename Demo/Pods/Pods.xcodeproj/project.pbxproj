@@ -7,274 +7,287 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12FAB288BCC56F8F24332B4399A2C2E2 /* SMPhotoPickerAlbumView.xib in Sources */ = {isa = PBXBuildFile; fileRef = A97374E9BC5B0416E7EA9BB715045905 /* SMPhotoPickerAlbumView.xib */; };
-		1CBFA2C20A2867089FC121726BFCBE47 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9985ACDE1BA419CCAFD5763E0505 /* AlbumModel.swift */; };
-		1F2AD8FD909A32ABEBE364E9E2C901A1 /* SMPhotoPickerViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E57C81F6103AD982D6A916ECA8B11 /* SMPhotoPickerViewController.xib */; };
-		23ABD37E29933D4AA56B14EE252E70D9 /* SMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0037A7FB560FA5119FF405B9DA8047 /* SMProgressView.swift */; };
-		3540347BC0607CE05A96D75189509A6D /* Pods-SMInstagramPhotosPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24008E0F671ACC69BC7035726AFABE40 /* Pods-SMInstagramPhotosPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3893B4A1B915CEFCCC610DF5FA5A4AF3 /* SMPhotoPickerImageCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = EE6D1B78B4595605DA7A75F42DA2030E /* SMPhotoPickerImageCell.xib */; };
-		3D8318EA2803DE60C5A7477D6E2A823B /* SMPhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E30B010596454D7E93E33468B506B2 /* SMPhotoPickerViewController.swift */; };
-		3D937A9ADBB84D5EF4D907BEEE5E38F0 /* SMPhotoPickerImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2EB15AE33BEBF312C55BFFCA96343 /* SMPhotoPickerImageCell.swift */; };
-		40B72EF0CBCF5FDE70235A5A997AD348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		4B59E872ECB403E4F5B7BA07A9AC14C7 /* SMPhotoPickerLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC20BEE87D13C4F68EAB0CB40467C6A /* SMPhotoPickerLibraryView.swift */; };
-		54714F7FC58160FDC14C9A9DD28D8721 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA5EB6AE0336079B2FC169C7F04DD1 /* UIViewController+Extension.swift */; };
-		577BED3FCB8607207A54B8707BC11B03 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881CACF0553BAAA420388ACA31CB595F /* UIView+Extension.swift */; };
-		5CF53ABB3C49B1C53B04059170FF1D02 /* SMInstagramPhotoPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC9333E970750C2BB1A2D6C4414E5F71 /* SMInstagramPhotoPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70577C6A8D03A22618D59476E674148A /* Pods-SMInstagramPhotosPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AED704B15D55DCF8024D26A966AD7FFF /* Pods-SMInstagramPhotosPicker-dummy.m */; };
-		759B23DF54DD090EA0C2880F41387DC1 /* SMAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D29CB9641B642876BCF891DA66F4AEE /* SMAlbumViewController.swift */; };
-		8D08987C7DB76676DDE3B802F4AEF365 /* SMPhotoPickAlbumViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = FF6C1AEA9D9B7BF671512D3FB4797B8A /* SMPhotoPickAlbumViewCell.xib */; };
-		92B09D013B6D9D9D699201AFA088372E /* SMPhotoPickAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE0FE70A6E0A5596B12D7B8A5869C2 /* SMPhotoPickAlbumViewCell.swift */; };
-		970B5BAD046225834D5A0F9B6C7092D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		A37A3F023E08CB978C90D3027E65364B /* squareMask@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = C22BFCCC58F11065D5766864159E38C8 /* squareMask@2x.png */; };
-		AD6199872AE82A00264B4091ADFDBDCB /* SMPhotoPickerAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B743A37C5947555FFCF6DDDD0F092 /* SMPhotoPickerAlbumView.swift */; };
-		ADA19768A9F3D35DABE42B9AC85EA53A /* arrowDown.png in Sources */ = {isa = PBXBuildFile; fileRef = DE69B2F9F43B04C22BE24CBCD94791C6 /* arrowDown.png */; };
-		B97FAE51C7C2F1607DB6E9317AF2EAEC /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABFA0F352C61D2E1D1E7922A7230878 /* UIImage+Extension.swift */; };
-		BB886465676F94745477D8A616B613C3 /* SMPhotoPickerLibraryView+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FFEC4F3EB024D1EBFEDD4D8955E261 /* SMPhotoPickerLibraryView+ScrollView.swift */; };
-		C4BA46BF122ED2A36AF6F97F6C91B123 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BAC86CD33412895D3EFB0D8FFCF658 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */; };
-		D0299DD210AA32F6E84DE308263E2454 /* SMPhotoPickerLibraryView.xib in Sources */ = {isa = PBXBuildFile; fileRef = C684C03995383BB32B880AF51FE03601 /* SMPhotoPickerLibraryView.xib */; };
-		E9EF554CD260D11FB2C44A28DF46378D /* SMInstagramPhotoPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6094F25FDF5670D9E02C06285FB37E49 /* SMInstagramPhotoPicker-dummy.m */; };
-		EDC2B550EE2E1FC0E15E89EB2325B8F2 /* squareMask@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 73C17A5B94715F26505C0F5818F6007F /* squareMask@3x.png */; };
-		F4017675962EEDC1BF32922117919DDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		04C2AC6F9E4D205596EE9252C6C044CA /* SMPhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400F1DE261BA1E26CE27A1FF0E72027 /* SMPhotoPickerViewController.swift */; };
+		102B5B88D881D8C0298FF20E8584EB50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AF6E9E67D620E639E17F9B0A8B56EF /* Foundation.framework */; };
+		153247E9CD1741D45AFF42F1F6EC936D /* SMPhotoPickAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7423BE33A2F3AE776956CD13B695B739 /* SMPhotoPickAlbumViewCell.xib */; };
+		1F784652A535C370910B3B041D37ABB9 /* SMPhotoPickerLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04DF7E87B753853017AF1D1941A9DCB /* SMPhotoPickerLibraryView.swift */; };
+		26D5CC619D30AA7B59BF68714A0C9848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1309F98D9F519762D9EE46EF5E12917 /* UIViewController+Extension.swift */; };
+		273760AE7CD830228B95DD217C8C86EF /* SMAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534D133FEE8350C32957544896747D96 /* SMAlbumViewController.swift */; };
+		2761EC8C7787E8F8A276C0BBA3C38EA9 /* SMPhotoPickerImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D86B511C9A9DD13B9634CAA238EA37 /* SMPhotoPickerImageCell.xib */; };
+		28C3BB73ABA745424363B872E1A46A93 /* Pods-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EA1E60232BFA05817BC26ACB8E68BA /* Pods-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		293298C70FD34CE6D2A595A187DF122A /* SMInstagramPhotoPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6422CC702EBC3DE417FC0D955994D5DA /* SMInstagramPhotoPicker-dummy.m */; };
+		487C63B7D828713AC0EEFE732272C3EF /* SMPhotoPickerImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51F649D07751802BF0A6A78A4DAE933 /* SMPhotoPickerImageCell.swift */; };
+		52A88E648FED524DB8DBC48A3A3A302A /* SMPhotoPickAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D39C3BB655C85165B21E8DEC469F74 /* SMPhotoPickAlbumViewCell.swift */; };
+		58C0DE16DAE8DE419AE85702991F6614 /* SMPhotoPickerAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9012CC087772F1BC4BF21E2AD3E988 /* SMPhotoPickerAlbumView.xib */; };
+		624F6AEB2FA03E76C5FEEE9E3B5D4FBB /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26A7C6C07A9AA6DA68F130C37E06956 /* Photos.framework */; };
+		70DA6011EBE3B2F60428DC1EDB8B173B /* squareMask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F94876C3277A3C3CBC6191DD08C9ABA8 /* squareMask@3x.png */; };
+		7674B75B1B42544EDEDD4E81C12C9DB1 /* SMPhotoPickerAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765385FFDB417A8F913002D9A7FF950D /* SMPhotoPickerAlbumView.swift */; };
+		7FA345B75714FBFF4F865B9B1992B041 /* arrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 4954563B54808E45ACC6E75017E9DD03 /* arrowDown.png */; };
+		800058008B7183F19EB0F2D0A609D8E0 /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BC86D40B890A7B0844F888209CA06F /* Pods-Demo-dummy.m */; };
+		938993BCD56E1F6F0E199A9D717BE05A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02A1087A37D5FE3535EBFB6C0D5334B /* UIKit.framework */; };
+		B1CA99F204A631F7376E061ACF186BD4 /* SMPhotoPickerLibraryView+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE4D474004A5C34DE55E2E1E609DCA /* SMPhotoPickerLibraryView+ScrollView.swift */; };
+		B671DCF1D988757D295EE27DA53712AD /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE7AE60CF89E275E3710F43D0016877 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */; };
+		BD62A81D1AC3C149DB0C8837A60880D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AF6E9E67D620E639E17F9B0A8B56EF /* Foundation.framework */; };
+		C22B487A9C8D8A1818F2279362B4774F /* SMInstagramPhotoPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62C61C6189F0DC0B632BA92A46252AD3 /* SMInstagramPhotoPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C24B7EED4359319B9FC9CDF6D45EE8E9 /* SMPhotoPickerLibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92FE69F93DDC91B8FBF378F149D0582 /* SMPhotoPickerLibraryView.xib */; };
+		D2BDECA0BB3A184D042DF43909608846 /* SMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0DE3E729F66FB78E2467CA2D17CB5C /* SMProgressView.swift */; };
+		D2DB633879FEB935F3A78206ADC2EDDB /* squareMask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 003F09957C0A5A0AB218240980EF0533 /* squareMask@2x.png */; };
+		DDA486431C8B95FEA4ED5CB54FFC43D5 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4121D6F5BAD678227C6C05DB28031372 /* AlbumModel.swift */; };
+		E041C7BEECE67E679171E32A54CCD258 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568989A5BC805613AC2E451EEA3F571 /* UIView+Extension.swift */; };
+		EA668C7508B57D5CCFD4A43E36356F79 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9DF643795D36036EE1A4ABF6620974 /* UIImage+Extension.swift */; };
+		FC08A5C79FD566B85A4AF7C12F485FAF /* SMPhotoPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9B3384FD02CA6C3944A43BBCCB9388 /* SMPhotoPickerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		598712FDA6F8D6015341CCDF05CF00A2 /* PBXContainerItemProxy */ = {
+		0DDE354C5532926AAB5DE4BB35043B26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6C9C4D98029DF47DCB394BF9A36048FC;
+			remoteGlobalIDString = D86EF844D2A47A18A2A28AA3D1F766A2;
 			remoteInfo = SMInstagramPhotoPicker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02CC8564AF4898DF8319CCDB640D2148 /* Pods-SMInstagramPhotosPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SMInstagramPhotosPicker.modulemap"; sourceTree = "<group>"; };
-		21BAC86CD33412895D3EFB0D8FFCF658 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SMPhotoPickerLibraryView+CollectionViewDelegate.swift"; path = "SMInstagramPhotoPicker/Classes/SMPhotoPickerLibraryView+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
-		24008E0F671ACC69BC7035726AFABE40 /* Pods-SMInstagramPhotosPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SMInstagramPhotosPicker-umbrella.h"; sourceTree = "<group>"; };
-		24B90320BAA473656E3741507745C4A8 /* Pods_SMInstagramPhotosPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SMInstagramPhotosPicker.framework; path = "Pods-SMInstagramPhotosPicker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38CF221643D3DF5ADFE11D54A88BC5D0 /* SMInstagramPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SMInstagramPhotoPicker.framework; path = SMInstagramPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A55C7E0F33392F3EAAA4B353639FBBC /* SMInstagramPhotoPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SMInstagramPhotoPicker.modulemap; sourceTree = "<group>"; };
-		3ABFA0F352C61D2E1D1E7922A7230878 /* UIImage+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extension.swift"; path = "SMInstagramPhotoPicker/Classes/UIImage+Extension.swift"; sourceTree = "<group>"; };
-		4B0037A7FB560FA5119FF405B9DA8047 /* SMProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMProgressView.swift; path = SMInstagramPhotoPicker/Classes/SMProgressView.swift; sourceTree = "<group>"; };
-		4D05F8EB5F2D7C79794B924346CD10D2 /* Pods-SMInstagramPhotosPicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SMInstagramPhotosPicker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		517482C677E5CBB374EC2C1C236C1F88 /* Pods-SMInstagramPhotosPicker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SMInstagramPhotosPicker-resources.sh"; sourceTree = "<group>"; };
-		6094F25FDF5670D9E02C06285FB37E49 /* SMInstagramPhotoPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SMInstagramPhotoPicker-dummy.m"; sourceTree = "<group>"; };
-		60EFA02BECEF20848D0B6F54C3058194 /* Pods-SMInstagramPhotosPicker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SMInstagramPhotosPicker-frameworks.sh"; sourceTree = "<group>"; };
-		6E5E57C81F6103AD982D6A916ECA8B11 /* SMPhotoPickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickerViewController.xib; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerViewController.xib; sourceTree = "<group>"; };
-		71FA5EB6AE0336079B2FC169C7F04DD1 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extension.swift"; path = "SMInstagramPhotoPicker/Classes/UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		73C17A5B94715F26505C0F5818F6007F /* squareMask@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "squareMask@3x.png"; path = "SMInstagramPhotoPicker/Classes/squareMask@3x.png"; sourceTree = "<group>"; };
-		7D0CA957D6A1FC3CA5AF4180C026C660 /* SMInstagramPhotoPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SMInstagramPhotoPicker.xcconfig; sourceTree = "<group>"; };
-		84DD9985ACDE1BA419CCAFD5763E0505 /* AlbumModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlbumModel.swift; path = SMInstagramPhotoPicker/Classes/AlbumModel.swift; sourceTree = "<group>"; };
-		85E30B010596454D7E93E33468B506B2 /* SMPhotoPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerViewController.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerViewController.swift; sourceTree = "<group>"; };
-		8812BA9888B0E867D7C9EF5FFE3B2F51 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		881CACF0553BAAA420388ACA31CB595F /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "SMInstagramPhotoPicker/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
-		8EC20BEE87D13C4F68EAB0CB40467C6A /* SMPhotoPickerLibraryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerLibraryView.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerLibraryView.swift; sourceTree = "<group>"; };
+		003F09957C0A5A0AB218240980EF0533 /* squareMask@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "squareMask@2x.png"; path = "SMInstagramPhotoPicker/Resources/squareMask@2x.png"; sourceTree = "<group>"; };
+		03EA1E60232BFA05817BC26ACB8E68BA /* Pods-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Demo-umbrella.h"; sourceTree = "<group>"; };
+		0A0DE3E729F66FB78E2467CA2D17CB5C /* SMProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMProgressView.swift; path = SMInstagramPhotoPicker/Classes/SMProgressView.swift; sourceTree = "<group>"; };
+		1BA519667E01205C97037B76B2F28AD9 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Demo.framework; path = "Pods-Demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		322419E99883B306EE7EC77959FCC8DF /* Pods-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Demo.modulemap"; sourceTree = "<group>"; };
+		3CD5A30239C90F1B549B4AB9299ECF16 /* Pods-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-frameworks.sh"; sourceTree = "<group>"; };
+		3D653C9DA16200D75AD14323AA830C6B /* Pods-Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-resources.sh"; sourceTree = "<group>"; };
+		4121D6F5BAD678227C6C05DB28031372 /* AlbumModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlbumModel.swift; path = SMInstagramPhotoPicker/Classes/AlbumModel.swift; sourceTree = "<group>"; };
+		42D39C3BB655C85165B21E8DEC469F74 /* SMPhotoPickAlbumViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickAlbumViewCell.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickAlbumViewCell.swift; sourceTree = "<group>"; };
+		4954563B54808E45ACC6E75017E9DD03 /* arrowDown.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = arrowDown.png; path = SMInstagramPhotoPicker/Resources/arrowDown.png; sourceTree = "<group>"; };
+		534D133FEE8350C32957544896747D96 /* SMAlbumViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMAlbumViewController.swift; path = SMInstagramPhotoPicker/Classes/SMAlbumViewController.swift; sourceTree = "<group>"; };
+		5DE7AE60CF89E275E3710F43D0016877 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SMPhotoPickerLibraryView+CollectionViewDelegate.swift"; path = "SMInstagramPhotoPicker/Classes/SMPhotoPickerLibraryView+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		62C61C6189F0DC0B632BA92A46252AD3 /* SMInstagramPhotoPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMInstagramPhotoPicker-umbrella.h"; sourceTree = "<group>"; };
+		6422CC702EBC3DE417FC0D955994D5DA /* SMInstagramPhotoPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SMInstagramPhotoPicker-dummy.m"; sourceTree = "<group>"; };
+		71940C1CEB7995DC34CFE54CAF1AEF88 /* Pods-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7423BE33A2F3AE776956CD13B695B739 /* SMPhotoPickAlbumViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickAlbumViewCell.xib; path = SMInstagramPhotoPicker/Resources/SMPhotoPickAlbumViewCell.xib; sourceTree = "<group>"; };
+		74EE4D474004A5C34DE55E2E1E609DCA /* SMPhotoPickerLibraryView+ScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SMPhotoPickerLibraryView+ScrollView.swift"; path = "SMInstagramPhotoPicker/Classes/SMPhotoPickerLibraryView+ScrollView.swift"; sourceTree = "<group>"; };
+		765385FFDB417A8F913002D9A7FF950D /* SMPhotoPickerAlbumView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerAlbumView.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerAlbumView.swift; sourceTree = "<group>"; };
+		7C9B3384FD02CA6C3944A43BBCCB9388 /* SMPhotoPickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickerViewController.xib; path = SMInstagramPhotoPicker/Resources/SMPhotoPickerViewController.xib; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D29CB9641B642876BCF891DA66F4AEE /* SMAlbumViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMAlbumViewController.swift; path = SMInstagramPhotoPicker/Classes/SMAlbumViewController.swift; sourceTree = "<group>"; };
-		A91C69A94571F42521A8E88ADE87615D /* Pods-SMInstagramPhotosPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SMInstagramPhotosPicker.release.xcconfig"; sourceTree = "<group>"; };
-		A97374E9BC5B0416E7EA9BB715045905 /* SMPhotoPickerAlbumView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickerAlbumView.xib; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerAlbumView.xib; sourceTree = "<group>"; };
-		AED704B15D55DCF8024D26A966AD7FFF /* Pods-SMInstagramPhotosPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SMInstagramPhotosPicker-dummy.m"; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B6DE0FE70A6E0A5596B12D7B8A5869C2 /* SMPhotoPickAlbumViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickAlbumViewCell.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickAlbumViewCell.swift; sourceTree = "<group>"; };
-		C22BFCCC58F11065D5766864159E38C8 /* squareMask@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "squareMask@2x.png"; path = "SMInstagramPhotoPicker/Classes/squareMask@2x.png"; sourceTree = "<group>"; };
-		C684C03995383BB32B880AF51FE03601 /* SMPhotoPickerLibraryView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickerLibraryView.xib; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerLibraryView.xib; sourceTree = "<group>"; };
-		C82E245B863C3DA5DCCB4527F0E639C8 /* Pods-SMInstagramPhotosPicker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SMInstagramPhotosPicker-acknowledgements.plist"; sourceTree = "<group>"; };
-		D0B2EB15AE33BEBF312C55BFFCA96343 /* SMPhotoPickerImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerImageCell.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerImageCell.swift; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DE69B2F9F43B04C22BE24CBCD94791C6 /* arrowDown.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = arrowDown.png; path = SMInstagramPhotoPicker/Classes/arrowDown.png; sourceTree = "<group>"; };
-		E0C432ED8437CC1BEFCE88BF6D595681 /* SMInstagramPhotoPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMInstagramPhotoPicker-prefix.pch"; sourceTree = "<group>"; };
-		E9FFEC4F3EB024D1EBFEDD4D8955E261 /* SMPhotoPickerLibraryView+ScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SMPhotoPickerLibraryView+ScrollView.swift"; path = "SMInstagramPhotoPicker/Classes/SMPhotoPickerLibraryView+ScrollView.swift"; sourceTree = "<group>"; };
-		EA1E9F240C761384CAD7C2A44640776C /* Pods-SMInstagramPhotosPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SMInstagramPhotosPicker.debug.xcconfig"; sourceTree = "<group>"; };
-		EC9333E970750C2BB1A2D6C4414E5F71 /* SMInstagramPhotoPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMInstagramPhotoPicker-umbrella.h"; sourceTree = "<group>"; };
-		EE6D1B78B4595605DA7A75F42DA2030E /* SMPhotoPickerImageCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickerImageCell.xib; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerImageCell.xib; sourceTree = "<group>"; };
-		EF94F0451656A817F96871D81303A83F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F50B743A37C5947555FFCF6DDDD0F092 /* SMPhotoPickerAlbumView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerAlbumView.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerAlbumView.swift; sourceTree = "<group>"; };
-		FF6C1AEA9D9B7BF671512D3FB4797B8A /* SMPhotoPickAlbumViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickAlbumViewCell.xib; path = SMInstagramPhotoPicker/Classes/SMPhotoPickAlbumViewCell.xib; sourceTree = "<group>"; };
+		95AF6E9E67D620E639E17F9B0A8B56EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9F707398EEC3EF6EEC1507D8B323E90D /* SMInstagramPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SMInstagramPhotoPicker.framework; path = SMInstagramPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02A1087A37D5FE3535EBFB6C0D5334B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A1309F98D9F519762D9EE46EF5E12917 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extension.swift"; path = "SMInstagramPhotoPicker/Classes/UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		A400F1DE261BA1E26CE27A1FF0E72027 /* SMPhotoPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerViewController.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerViewController.swift; sourceTree = "<group>"; };
+		A51F649D07751802BF0A6A78A4DAE933 /* SMPhotoPickerImageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerImageCell.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerImageCell.swift; sourceTree = "<group>"; };
+		A8F8F1508689903C35DD7948D60E6C1B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4D86B511C9A9DD13B9634CAA238EA37 /* SMPhotoPickerImageCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickerImageCell.xib; path = SMInstagramPhotoPicker/Resources/SMPhotoPickerImageCell.xib; sourceTree = "<group>"; };
+		BA898D7CEACDFCAA8AD35F8FC8B44853 /* SMInstagramPhotoPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SMInstagramPhotoPicker.xcconfig; sourceTree = "<group>"; };
+		C5BC86D40B890A7B0844F888209CA06F /* Pods-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Demo-dummy.m"; sourceTree = "<group>"; };
+		CA19694C0AC41D598DE4ABFEB300E619 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		CC6A59B0ADA6CB2F51DAE6508E437829 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		D04DF7E87B753853017AF1D1941A9DCB /* SMPhotoPickerLibraryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMPhotoPickerLibraryView.swift; path = SMInstagramPhotoPicker/Classes/SMPhotoPickerLibraryView.swift; sourceTree = "<group>"; };
+		D26A7C6C07A9AA6DA68F130C37E06956 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
+		D28CADA7FAE5CE6F13A8A26E54C8A823 /* SMInstagramPhotoPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMInstagramPhotoPicker-prefix.pch"; sourceTree = "<group>"; };
+		D568989A5BC805613AC2E451EEA3F571 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "SMInstagramPhotoPicker/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
+		DA9DF643795D36036EE1A4ABF6620974 /* UIImage+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extension.swift"; path = "SMInstagramPhotoPicker/Classes/UIImage+Extension.swift"; sourceTree = "<group>"; };
+		DAB0701F8F25395B1ED46510ED4B9797 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		E68F8C86FB3267A3C87983DA9E269889 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92FE69F93DDC91B8FBF378F149D0582 /* SMPhotoPickerLibraryView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickerLibraryView.xib; path = SMInstagramPhotoPicker/Resources/SMPhotoPickerLibraryView.xib; sourceTree = "<group>"; };
+		F94876C3277A3C3CBC6191DD08C9ABA8 /* squareMask@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "squareMask@3x.png"; path = "SMInstagramPhotoPicker/Resources/squareMask@3x.png"; sourceTree = "<group>"; };
+		FA82008CD645A2D511D29F2C38A3812F /* SMInstagramPhotoPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SMInstagramPhotoPicker.modulemap; sourceTree = "<group>"; };
+		FD9012CC087772F1BC4BF21E2AD3E988 /* SMPhotoPickerAlbumView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SMPhotoPickerAlbumView.xib; path = SMInstagramPhotoPicker/Resources/SMPhotoPickerAlbumView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		105E3A8AC48CEF348265618C86441CF5 /* Frameworks */ = {
+		6F985A0B2F999130098A24A1B8832768 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B72EF0CBCF5FDE70235A5A997AD348 /* Foundation.framework in Frameworks */,
-				970B5BAD046225834D5A0F9B6C7092D8 /* UIKit.framework in Frameworks */,
+				102B5B88D881D8C0298FF20E8584EB50 /* Foundation.framework in Frameworks */,
+				624F6AEB2FA03E76C5FEEE9E3B5D4FBB /* Photos.framework in Frameworks */,
+				938993BCD56E1F6F0E199A9D717BE05A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6E6466E6DEFC13FE1410B61020FAAFD /* Frameworks */ = {
+		D2BFA92FD200BC1EE7C839632E5E2CE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4017675962EEDC1BF32922117919DDE /* Foundation.framework in Frameworks */,
+				BD62A81D1AC3C149DB0C8837A60880D8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		125FC6782797C09FCBA0E850EE575148 /* Pods */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3115FD471BA87E34E0756F91A8172A7 /* SMInstagramPhotoPicker */,
+				9EFA3F5A4484B397B4ED6B7F86D1C6F4 /* iOS */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2E7BFEFD368631D92B3264CD0F921310 /* Support Files */ = {
+		20940DF6B83D6AC555BF89397FF21D30 /* SMInstagramPhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
-				8812BA9888B0E867D7C9EF5FFE3B2F51 /* Info.plist */,
-				3A55C7E0F33392F3EAAA4B353639FBBC /* SMInstagramPhotoPicker.modulemap */,
-				7D0CA957D6A1FC3CA5AF4180C026C660 /* SMInstagramPhotoPicker.xcconfig */,
-				6094F25FDF5670D9E02C06285FB37E49 /* SMInstagramPhotoPicker-dummy.m */,
-				E0C432ED8437CC1BEFCE88BF6D595681 /* SMInstagramPhotoPicker-prefix.pch */,
-				EC9333E970750C2BB1A2D6C4414E5F71 /* SMInstagramPhotoPicker-umbrella.h */,
+				4121D6F5BAD678227C6C05DB28031372 /* AlbumModel.swift */,
+				534D133FEE8350C32957544896747D96 /* SMAlbumViewController.swift */,
+				42D39C3BB655C85165B21E8DEC469F74 /* SMPhotoPickAlbumViewCell.swift */,
+				765385FFDB417A8F913002D9A7FF950D /* SMPhotoPickerAlbumView.swift */,
+				A51F649D07751802BF0A6A78A4DAE933 /* SMPhotoPickerImageCell.swift */,
+				D04DF7E87B753853017AF1D1941A9DCB /* SMPhotoPickerLibraryView.swift */,
+				5DE7AE60CF89E275E3710F43D0016877 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */,
+				74EE4D474004A5C34DE55E2E1E609DCA /* SMPhotoPickerLibraryView+ScrollView.swift */,
+				A400F1DE261BA1E26CE27A1FF0E72027 /* SMPhotoPickerViewController.swift */,
+				0A0DE3E729F66FB78E2467CA2D17CB5C /* SMProgressView.swift */,
+				DA9DF643795D36036EE1A4ABF6620974 /* UIImage+Extension.swift */,
+				D568989A5BC805613AC2E451EEA3F571 /* UIView+Extension.swift */,
+				A1309F98D9F519762D9EE46EF5E12917 /* UIViewController+Extension.swift */,
+				F15640775F2B67F37BE5E008204D8A70 /* Resources */,
+				57F7120F3F0C98C6DDDB523F673DB81B /* Support Files */,
+			);
+			name = SMInstagramPhotoPicker;
+			path = SMInstagramPhotoPicker;
+			sourceTree = "<group>";
+		};
+		35E88670AB53F96E4AF4C3422AD28CDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BA519667E01205C97037B76B2F28AD9 /* Pods_Demo.framework */,
+				9F707398EEC3EF6EEC1507D8B323E90D /* SMInstagramPhotoPicker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57F7120F3F0C98C6DDDB523F673DB81B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8F8F1508689903C35DD7948D60E6C1B /* Info.plist */,
+				FA82008CD645A2D511D29F2C38A3812F /* SMInstagramPhotoPicker.modulemap */,
+				BA898D7CEACDFCAA8AD35F8FC8B44853 /* SMInstagramPhotoPicker.xcconfig */,
+				6422CC702EBC3DE417FC0D955994D5DA /* SMInstagramPhotoPicker-dummy.m */,
+				D28CADA7FAE5CE6F13A8A26E54C8A823 /* SMInstagramPhotoPicker-prefix.pch */,
+				62C61C6189F0DC0B632BA92A46252AD3 /* SMInstagramPhotoPicker-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SMInstagramPhotoPicker";
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		6F2351C272926D3E0225FEFC2F9C5D1F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+				ECC58720C5754A079F9A150E40E2FCDD /* Pods-Demo */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		6E19DE50F30614077FFE0005A27CEEE5 /* Pods-SMInstagramPhotosPicker */ = {
-			isa = PBXGroup;
-			children = (
-				EF94F0451656A817F96871D81303A83F /* Info.plist */,
-				02CC8564AF4898DF8319CCDB640D2148 /* Pods-SMInstagramPhotosPicker.modulemap */,
-				4D05F8EB5F2D7C79794B924346CD10D2 /* Pods-SMInstagramPhotosPicker-acknowledgements.markdown */,
-				C82E245B863C3DA5DCCB4527F0E639C8 /* Pods-SMInstagramPhotosPicker-acknowledgements.plist */,
-				AED704B15D55DCF8024D26A966AD7FFF /* Pods-SMInstagramPhotosPicker-dummy.m */,
-				60EFA02BECEF20848D0B6F54C3058194 /* Pods-SMInstagramPhotosPicker-frameworks.sh */,
-				517482C677E5CBB374EC2C1C236C1F88 /* Pods-SMInstagramPhotosPicker-resources.sh */,
-				24008E0F671ACC69BC7035726AFABE40 /* Pods-SMInstagramPhotosPicker-umbrella.h */,
-				EA1E9F240C761384CAD7C2A44640776C /* Pods-SMInstagramPhotosPicker.debug.xcconfig */,
-				A91C69A94571F42521A8E88ADE87615D /* Pods-SMInstagramPhotosPicker.release.xcconfig */,
-			);
-			name = "Pods-SMInstagramPhotosPicker";
-			path = "Target Support Files/Pods-SMInstagramPhotosPicker";
-			sourceTree = "<group>";
-		};
-		78E1C6B0B9B038C39F416BAAE1D13994 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				24B90320BAA473656E3741507745C4A8 /* Pods_SMInstagramPhotosPicker.framework */,
-				38CF221643D3DF5ADFE11D54A88BC5D0 /* SMInstagramPhotoPicker.framework */,
-			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				125FC6782797C09FCBA0E850EE575148 /* Pods */,
-				78E1C6B0B9B038C39F416BAAE1D13994 /* Products */,
-				A5B7836C50503919E7F8B61EA5C787EA /* Targets Support Files */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				F681D18837390300CED4FC6123582106 /* Pods */,
+				35E88670AB53F96E4AF4C3422AD28CDE /* Products */,
+				6F2351C272926D3E0225FEFC2F9C5D1F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A3115FD471BA87E34E0756F91A8172A7 /* SMInstagramPhotoPicker */ = {
+		9EFA3F5A4484B397B4ED6B7F86D1C6F4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				84DD9985ACDE1BA419CCAFD5763E0505 /* AlbumModel.swift */,
-				DE69B2F9F43B04C22BE24CBCD94791C6 /* arrowDown.png */,
-				9D29CB9641B642876BCF891DA66F4AEE /* SMAlbumViewController.swift */,
-				B6DE0FE70A6E0A5596B12D7B8A5869C2 /* SMPhotoPickAlbumViewCell.swift */,
-				FF6C1AEA9D9B7BF671512D3FB4797B8A /* SMPhotoPickAlbumViewCell.xib */,
-				F50B743A37C5947555FFCF6DDDD0F092 /* SMPhotoPickerAlbumView.swift */,
-				A97374E9BC5B0416E7EA9BB715045905 /* SMPhotoPickerAlbumView.xib */,
-				D0B2EB15AE33BEBF312C55BFFCA96343 /* SMPhotoPickerImageCell.swift */,
-				EE6D1B78B4595605DA7A75F42DA2030E /* SMPhotoPickerImageCell.xib */,
-				8EC20BEE87D13C4F68EAB0CB40467C6A /* SMPhotoPickerLibraryView.swift */,
-				C684C03995383BB32B880AF51FE03601 /* SMPhotoPickerLibraryView.xib */,
-				21BAC86CD33412895D3EFB0D8FFCF658 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift */,
-				E9FFEC4F3EB024D1EBFEDD4D8955E261 /* SMPhotoPickerLibraryView+ScrollView.swift */,
-				85E30B010596454D7E93E33468B506B2 /* SMPhotoPickerViewController.swift */,
-				6E5E57C81F6103AD982D6A916ECA8B11 /* SMPhotoPickerViewController.xib */,
-				4B0037A7FB560FA5119FF405B9DA8047 /* SMProgressView.swift */,
-				C22BFCCC58F11065D5766864159E38C8 /* squareMask@2x.png */,
-				73C17A5B94715F26505C0F5818F6007F /* squareMask@3x.png */,
-				3ABFA0F352C61D2E1D1E7922A7230878 /* UIImage+Extension.swift */,
-				881CACF0553BAAA420388ACA31CB595F /* UIView+Extension.swift */,
-				71FA5EB6AE0336079B2FC169C7F04DD1 /* UIViewController+Extension.swift */,
-				2E7BFEFD368631D92B3264CD0F921310 /* Support Files */,
+				95AF6E9E67D620E639E17F9B0A8B56EF /* Foundation.framework */,
+				D26A7C6C07A9AA6DA68F130C37E06956 /* Photos.framework */,
+				A02A1087A37D5FE3535EBFB6C0D5334B /* UIKit.framework */,
 			);
-			name = SMInstagramPhotoPicker;
-			path = SMInstagramPhotoPicker;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		A5B7836C50503919E7F8B61EA5C787EA /* Targets Support Files */ = {
+		ECC58720C5754A079F9A150E40E2FCDD /* Pods-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				6E19DE50F30614077FFE0005A27CEEE5 /* Pods-SMInstagramPhotosPicker */,
+				E68F8C86FB3267A3C87983DA9E269889 /* Info.plist */,
+				322419E99883B306EE7EC77959FCC8DF /* Pods-Demo.modulemap */,
+				71940C1CEB7995DC34CFE54CAF1AEF88 /* Pods-Demo-acknowledgements.markdown */,
+				CA19694C0AC41D598DE4ABFEB300E619 /* Pods-Demo-acknowledgements.plist */,
+				C5BC86D40B890A7B0844F888209CA06F /* Pods-Demo-dummy.m */,
+				3CD5A30239C90F1B549B4AB9299ECF16 /* Pods-Demo-frameworks.sh */,
+				3D653C9DA16200D75AD14323AA830C6B /* Pods-Demo-resources.sh */,
+				03EA1E60232BFA05817BC26ACB8E68BA /* Pods-Demo-umbrella.h */,
+				CC6A59B0ADA6CB2F51DAE6508E437829 /* Pods-Demo.debug.xcconfig */,
+				DAB0701F8F25395B1ED46510ED4B9797 /* Pods-Demo.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-Demo";
+			path = "Target Support Files/Pods-Demo";
+			sourceTree = "<group>";
+		};
+		F15640775F2B67F37BE5E008204D8A70 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4954563B54808E45ACC6E75017E9DD03 /* arrowDown.png */,
+				7423BE33A2F3AE776956CD13B695B739 /* SMPhotoPickAlbumViewCell.xib */,
+				FD9012CC087772F1BC4BF21E2AD3E988 /* SMPhotoPickerAlbumView.xib */,
+				B4D86B511C9A9DD13B9634CAA238EA37 /* SMPhotoPickerImageCell.xib */,
+				E92FE69F93DDC91B8FBF378F149D0582 /* SMPhotoPickerLibraryView.xib */,
+				7C9B3384FD02CA6C3944A43BBCCB9388 /* SMPhotoPickerViewController.xib */,
+				003F09957C0A5A0AB218240980EF0533 /* squareMask@2x.png */,
+				F94876C3277A3C3CBC6191DD08C9ABA8 /* squareMask@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F681D18837390300CED4FC6123582106 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20940DF6B83D6AC555BF89397FF21D30 /* SMInstagramPhotoPicker */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		21E85FCAA6C08DC0BFFE266F7CF66D16 /* Headers */ = {
+		CDE8D284241982BC6BF62A552B4ABF33 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF53ABB3C49B1C53B04059170FF1D02 /* SMInstagramPhotoPicker-umbrella.h in Headers */,
+				C22B487A9C8D8A1818F2279362B4774F /* SMInstagramPhotoPicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9611F147ECCE106DADCC1FC2525C7422 /* Headers */ = {
+		F8A10E239EDB36B6B32E92BB25422418 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3540347BC0607CE05A96D75189509A6D /* Pods-SMInstagramPhotosPicker-umbrella.h in Headers */,
+				28C3BB73ABA745424363B872E1A46A93 /* Pods-Demo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		538C81A3466A337539BE5AE761BDAA5B /* Pods-SMInstagramPhotosPicker */ = {
+		D40E5CDC09CC723F6F32EC05A657896C /* Pods-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09B6BC4693DB6822A252AAFBA14CF4F7 /* Build configuration list for PBXNativeTarget "Pods-SMInstagramPhotosPicker" */;
+			buildConfigurationList = 1B50EC2E5F0EA8D3D8E2C9BEF1DB74C3 /* Build configuration list for PBXNativeTarget "Pods-Demo" */;
 			buildPhases = (
-				04D9AD694C3A4D26A52B0AB21FAC4639 /* Sources */,
-				C6E6466E6DEFC13FE1410B61020FAAFD /* Frameworks */,
-				9611F147ECCE106DADCC1FC2525C7422 /* Headers */,
+				09E828DF97B988795D6D90DDD60C3972 /* Sources */,
+				D2BFA92FD200BC1EE7C839632E5E2CE8 /* Frameworks */,
+				F8A10E239EDB36B6B32E92BB25422418 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FB89AF364427EBF9D776F13A768E2A7D /* PBXTargetDependency */,
+				AE4B045F6C340FCE9A6DB94349A89CB1 /* PBXTargetDependency */,
 			);
-			name = "Pods-SMInstagramPhotosPicker";
-			productName = "Pods-SMInstagramPhotosPicker";
-			productReference = 24B90320BAA473656E3741507745C4A8 /* Pods_SMInstagramPhotosPicker.framework */;
+			name = "Pods-Demo";
+			productName = "Pods-Demo";
+			productReference = 1BA519667E01205C97037B76B2F28AD9 /* Pods_Demo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6C9C4D98029DF47DCB394BF9A36048FC /* SMInstagramPhotoPicker */ = {
+		D86EF844D2A47A18A2A28AA3D1F766A2 /* SMInstagramPhotoPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E5F65A56999C081364F06A63507CBC7 /* Build configuration list for PBXNativeTarget "SMInstagramPhotoPicker" */;
+			buildConfigurationList = 3F99DD4A913F00DA049BBA290E4C4C41 /* Build configuration list for PBXNativeTarget "SMInstagramPhotoPicker" */;
 			buildPhases = (
-				B6CC78B7AF275C6E19CF25333A029891 /* Sources */,
-				105E3A8AC48CEF348265618C86441CF5 /* Frameworks */,
-				21E85FCAA6C08DC0BFFE266F7CF66D16 /* Headers */,
+				6643700AD990CC5FEEBF1234D47BDD5C /* Sources */,
+				6F985A0B2F999130098A24A1B8832768 /* Frameworks */,
+				1D844522ED3EE9E5CBC11AC56187A8EC /* Resources */,
+				CDE8D284241982BC6BF62A552B4ABF33 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -282,7 +295,7 @@
 			);
 			name = SMInstagramPhotoPicker;
 			productName = SMInstagramPhotoPicker;
-			productReference = 38CF221643D3DF5ADFE11D54A88BC5D0 /* SMInstagramPhotoPicker.framework */;
+			productReference = 9F707398EEC3EF6EEC1507D8B323E90D /* SMInstagramPhotoPicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -302,62 +315,72 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 78E1C6B0B9B038C39F416BAAE1D13994 /* Products */;
+			productRefGroup = 35E88670AB53F96E4AF4C3422AD28CDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				538C81A3466A337539BE5AE761BDAA5B /* Pods-SMInstagramPhotosPicker */,
-				6C9C4D98029DF47DCB394BF9A36048FC /* SMInstagramPhotoPicker */,
+				D40E5CDC09CC723F6F32EC05A657896C /* Pods-Demo */,
+				D86EF844D2A47A18A2A28AA3D1F766A2 /* SMInstagramPhotoPicker */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		04D9AD694C3A4D26A52B0AB21FAC4639 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		1D844522ED3EE9E5CBC11AC56187A8EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70577C6A8D03A22618D59476E674148A /* Pods-SMInstagramPhotosPicker-dummy.m in Sources */,
+				7FA345B75714FBFF4F865B9B1992B041 /* arrowDown.png in Resources */,
+				153247E9CD1741D45AFF42F1F6EC936D /* SMPhotoPickAlbumViewCell.xib in Resources */,
+				58C0DE16DAE8DE419AE85702991F6614 /* SMPhotoPickerAlbumView.xib in Resources */,
+				2761EC8C7787E8F8A276C0BBA3C38EA9 /* SMPhotoPickerImageCell.xib in Resources */,
+				C24B7EED4359319B9FC9CDF6D45EE8E9 /* SMPhotoPickerLibraryView.xib in Resources */,
+				FC08A5C79FD566B85A4AF7C12F485FAF /* SMPhotoPickerViewController.xib in Resources */,
+				D2DB633879FEB935F3A78206ADC2EDDB /* squareMask@2x.png in Resources */,
+				70DA6011EBE3B2F60428DC1EDB8B173B /* squareMask@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6CC78B7AF275C6E19CF25333A029891 /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09E828DF97B988795D6D90DDD60C3972 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CBFA2C20A2867089FC121726BFCBE47 /* AlbumModel.swift in Sources */,
-				ADA19768A9F3D35DABE42B9AC85EA53A /* arrowDown.png in Sources */,
-				759B23DF54DD090EA0C2880F41387DC1 /* SMAlbumViewController.swift in Sources */,
-				E9EF554CD260D11FB2C44A28DF46378D /* SMInstagramPhotoPicker-dummy.m in Sources */,
-				92B09D013B6D9D9D699201AFA088372E /* SMPhotoPickAlbumViewCell.swift in Sources */,
-				8D08987C7DB76676DDE3B802F4AEF365 /* SMPhotoPickAlbumViewCell.xib in Sources */,
-				AD6199872AE82A00264B4091ADFDBDCB /* SMPhotoPickerAlbumView.swift in Sources */,
-				12FAB288BCC56F8F24332B4399A2C2E2 /* SMPhotoPickerAlbumView.xib in Sources */,
-				3D937A9ADBB84D5EF4D907BEEE5E38F0 /* SMPhotoPickerImageCell.swift in Sources */,
-				3893B4A1B915CEFCCC610DF5FA5A4AF3 /* SMPhotoPickerImageCell.xib in Sources */,
-				C4BA46BF122ED2A36AF6F97F6C91B123 /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift in Sources */,
-				BB886465676F94745477D8A616B613C3 /* SMPhotoPickerLibraryView+ScrollView.swift in Sources */,
-				4B59E872ECB403E4F5B7BA07A9AC14C7 /* SMPhotoPickerLibraryView.swift in Sources */,
-				D0299DD210AA32F6E84DE308263E2454 /* SMPhotoPickerLibraryView.xib in Sources */,
-				3D8318EA2803DE60C5A7477D6E2A823B /* SMPhotoPickerViewController.swift in Sources */,
-				1F2AD8FD909A32ABEBE364E9E2C901A1 /* SMPhotoPickerViewController.xib in Sources */,
-				23ABD37E29933D4AA56B14EE252E70D9 /* SMProgressView.swift in Sources */,
-				A37A3F023E08CB978C90D3027E65364B /* squareMask@2x.png in Sources */,
-				EDC2B550EE2E1FC0E15E89EB2325B8F2 /* squareMask@3x.png in Sources */,
-				B97FAE51C7C2F1607DB6E9317AF2EAEC /* UIImage+Extension.swift in Sources */,
-				577BED3FCB8607207A54B8707BC11B03 /* UIView+Extension.swift in Sources */,
-				54714F7FC58160FDC14C9A9DD28D8721 /* UIViewController+Extension.swift in Sources */,
+				800058008B7183F19EB0F2D0A609D8E0 /* Pods-Demo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6643700AD990CC5FEEBF1234D47BDD5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA486431C8B95FEA4ED5CB54FFC43D5 /* AlbumModel.swift in Sources */,
+				273760AE7CD830228B95DD217C8C86EF /* SMAlbumViewController.swift in Sources */,
+				293298C70FD34CE6D2A595A187DF122A /* SMInstagramPhotoPicker-dummy.m in Sources */,
+				52A88E648FED524DB8DBC48A3A3A302A /* SMPhotoPickAlbumViewCell.swift in Sources */,
+				7674B75B1B42544EDEDD4E81C12C9DB1 /* SMPhotoPickerAlbumView.swift in Sources */,
+				487C63B7D828713AC0EEFE732272C3EF /* SMPhotoPickerImageCell.swift in Sources */,
+				B671DCF1D988757D295EE27DA53712AD /* SMPhotoPickerLibraryView+CollectionViewDelegate.swift in Sources */,
+				B1CA99F204A631F7376E061ACF186BD4 /* SMPhotoPickerLibraryView+ScrollView.swift in Sources */,
+				1F784652A535C370910B3B041D37ABB9 /* SMPhotoPickerLibraryView.swift in Sources */,
+				04C2AC6F9E4D205596EE9252C6C044CA /* SMPhotoPickerViewController.swift in Sources */,
+				D2BDECA0BB3A184D042DF43909608846 /* SMProgressView.swift in Sources */,
+				EA668C7508B57D5CCFD4A43E36356F79 /* UIImage+Extension.swift in Sources */,
+				E041C7BEECE67E679171E32A54CCD258 /* UIView+Extension.swift in Sources */,
+				26D5CC619D30AA7B59BF68714A0C9848 /* UIViewController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FB89AF364427EBF9D776F13A768E2A7D /* PBXTargetDependency */ = {
+		AE4B045F6C340FCE9A6DB94349A89CB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SMInstagramPhotoPicker;
-			target = 6C9C4D98029DF47DCB394BF9A36048FC /* SMInstagramPhotoPicker */;
-			targetProxy = 598712FDA6F8D6015341CCDF05CF00A2 /* PBXContainerItemProxy */;
+			target = D86EF844D2A47A18A2A28AA3D1F766A2 /* SMInstagramPhotoPicker */;
+			targetProxy = 0DDE354C5532926AAB5DE4BB35043B26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -410,9 +433,9 @@
 			};
 			name = Debug;
 		};
-		65AA5AD3E6B5327754EC43E8412F2A5F /* Release */ = {
+		548B7F37BFFEAA9ACF4FF906485D3CC5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D0CA957D6A1FC3CA5AF4180C026C660 /* SMInstagramPhotoPicker.xcconfig */;
+			baseConfigurationReference = DAB0701F8F25395B1ED46510ED4B9797 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -426,14 +449,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SMInstagramPhotoPicker/SMInstagramPhotoPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SMInstagramPhotoPicker/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Demo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SMInstagramPhotoPicker/SMInstagramPhotoPicker.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Demo/Pods-Demo.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SMInstagramPhotoPicker;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Demo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -443,6 +470,41 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		54CFA3CAF632B5D10E8492918CA91EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA898D7CEACDFCAA8AD35F8FC8B44853 /* SMInstagramPhotoPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SMInstagramPhotoPicker/SMInstagramPhotoPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SMInstagramPhotoPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SMInstagramPhotoPicker/SMInstagramPhotoPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SMInstagramPhotoPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		707B86CFB21B645E37109F39754D4051 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -488,9 +550,9 @@
 			};
 			name = Release;
 		};
-		CD34DEA2C5DBD7594A17EFE557EE0A05 /* Debug */ = {
+		A944A60214408877426F58CA0B57FA50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA1E9F240C761384CAD7C2A44640776C /* Pods-SMInstagramPhotosPicker.debug.xcconfig */;
+			baseConfigurationReference = CC6A59B0ADA6CB2F51DAE6508E437829 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -504,18 +566,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SMInstagramPhotosPicker/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Demo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SMInstagramPhotosPicker/Pods-SMInstagramPhotosPicker.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Demo/Pods-Demo.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SMInstagramPhotosPicker;
+				PRODUCT_NAME = Pods_Demo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -527,9 +589,9 @@
 			};
 			name = Debug;
 		};
-		E19FC1E661CDD475EAF4E31DFC130D28 /* Release */ = {
+		B877880625451A9C653574893BCE2E7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A91C69A94571F42521A8E88ADE87615D /* Pods-SMInstagramPhotosPicker.release.xcconfig */;
+			baseConfigurationReference = BA898D7CEACDFCAA8AD35F8FC8B44853 /* SMInstagramPhotoPicker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -543,18 +605,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SMInstagramPhotosPicker/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SMInstagramPhotoPicker/SMInstagramPhotoPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SMInstagramPhotoPicker/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SMInstagramPhotosPicker/Pods-SMInstagramPhotosPicker.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SMInstagramPhotoPicker/SMInstagramPhotoPicker.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SMInstagramPhotosPicker;
+				PRODUCT_NAME = SMInstagramPhotoPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -565,49 +623,14 @@
 			};
 			name = Release;
 		};
-		E5986F36C40B06B1AEEE188A140106F4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D0CA957D6A1FC3CA5AF4180C026C660 /* SMInstagramPhotoPicker.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SMInstagramPhotoPicker/SMInstagramPhotoPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SMInstagramPhotoPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SMInstagramPhotoPicker/SMInstagramPhotoPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SMInstagramPhotoPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09B6BC4693DB6822A252AAFBA14CF4F7 /* Build configuration list for PBXNativeTarget "Pods-SMInstagramPhotosPicker" */ = {
+		1B50EC2E5F0EA8D3D8E2C9BEF1DB74C3 /* Build configuration list for PBXNativeTarget "Pods-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD34DEA2C5DBD7594A17EFE557EE0A05 /* Debug */,
-				E19FC1E661CDD475EAF4E31DFC130D28 /* Release */,
+				A944A60214408877426F58CA0B57FA50 /* Debug */,
+				548B7F37BFFEAA9ACF4FF906485D3CC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -621,11 +644,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7E5F65A56999C081364F06A63507CBC7 /* Build configuration list for PBXNativeTarget "SMInstagramPhotoPicker" */ = {
+		3F99DD4A913F00DA049BBA290E4C4C41 /* Build configuration list for PBXNativeTarget "SMInstagramPhotoPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5986F36C40B06B1AEEE188A140106F4 /* Debug */,
-				65AA5AD3E6B5327754EC43E8412F2A5F /* Release */,
+				54CFA3CAF632B5D10E8492918CA91EB1 /* Debug */,
+				B877880625451A9C653574893BCE2E7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

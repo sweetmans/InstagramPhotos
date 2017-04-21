@@ -13,7 +13,6 @@ import UIKit
 extension UIImage {
     func crop(rect: CGRect, scale: CGFloat) -> UIImage {
         
-        print(self.size)
         var rect = rect
         rect.origin.x *= self.scale
         rect.origin.y *= self.scale
@@ -24,7 +23,7 @@ extension UIImage {
         rect.origin.y *= scale
         rect.size.height *= scale
         rect.size.width *= scale
-        print(rect)
+        //print(rect)
         let imageRef = self.cgImage!.cropping(to: rect)
         let image = UIImage(cgImage: imageRef!, scale: self.scale, orientation: self.imageOrientation)
         return image
