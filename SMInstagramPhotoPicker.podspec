@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SMInstagramPhotoPicker'
-  s.version          = '0.3.2'
-  s.summary          = 'Same as Instagram Photo Picker'
+  s.version          = '0.3.8'
+  s.summary          = 'SMInstagramPhotoPicker, A instagram photos picker viewcontroller using swift 3.1.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,26 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Features
-
- Categories for UIColor
- So easy to use.
- Support Swift 3.0
- Performances!
- Use GCD and ARC
-Requirements
-
-iOS 10.3.0 or later
-watchOS 3.1 or later
-OS X 12.0 or later
-Xcode 8.0 or later
-Getting Started
+A instagram photos picker viewcontroller using swift 3.1. Your can easy to get your photo quickly.
+And zooming, clip.
+A beautiful design UI.
+A Performances framework.
+A iOS 10.0 or later.
                        DESC
 
   s.homepage         = 'https://github.com/sweetmans/SMInstagramPhotoPicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'sweetmans' => 'ceo@sweetman.cc' }
+  s.author           = { 'sweetmans' => 'developer@sweetman.cc' }
   s.source           = { :git => 'https://github.com/sweetmans/SMInstagramPhotoPicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -45,7 +36,7 @@ Getting Started
 
   s.source_files = 'SMInstagramPhotoPicker/Classes/**/*.swift'
   s.resources = ['SMInstagramPhotoPicker/Resources/*.png', 'SMInstagramPhotoPicker/Resources/*.xib']
-  s.module_name = 'SMImagePicker'
+  s.module_name = 'SMInstagramPhotoPicker'
   # s.resource_bundles = {
   #   'SMColor' => ['SMColor/Assets/*.png']
   # }

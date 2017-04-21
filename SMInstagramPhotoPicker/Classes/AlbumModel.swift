@@ -27,6 +27,7 @@ public class AlbumModel {
     
     
     static func listAlbums() -> [AlbumModel] {
+        
         var album:[AlbumModel] = [AlbumModel]()
         
         let options = PHFetchOptions()
@@ -95,6 +96,7 @@ public class AlbumModel {
             }
         })
     }
+    
 }
 
 

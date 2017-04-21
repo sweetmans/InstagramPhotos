@@ -66,7 +66,6 @@ class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
             }
         }
     }
-    
     @IBAction func nothings(_ sender: UIButton) {
         
         let alert = UIAlertController.init(title: "都说啥都没有啦，还点。。。", message: "Do not understan Chinaese? You need google translate.", preferredStyle: .alert)
