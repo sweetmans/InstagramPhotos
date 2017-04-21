@@ -11,7 +11,7 @@ import UIKit
 import Photos
 
 
-class AlbumModel {
+public class AlbumModel {
     
     let name:String
     let count:Int
@@ -27,6 +27,7 @@ class AlbumModel {
     
     
     static func listAlbums() -> [AlbumModel] {
+        
         var album:[AlbumModel] = [AlbumModel]()
         
         let options = PHFetchOptions()
@@ -95,6 +96,7 @@ class AlbumModel {
             }
         })
     }
+    
 }
 
 

@@ -15,7 +15,7 @@ extension SMPhotoPickerLibraryView {
         if scrollView == self.scrollView {
             self.squareMask.isHidden = false
             
-            print("Off Set:", scrollView.contentOffset)
+            //print("Off Set:", scrollView.contentOffset)
         }
     }
     
@@ -46,7 +46,7 @@ extension SMPhotoPickerLibraryView {
     func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
         
         if scrollView == self.scrollView{
-            print(scale)
+            //print(scale)
             self.scale = scale
             self.squareMask.isHidden = true
             self.scaleRect = CGRect(origin: scrollView.contentOffset, size: scrollView.frame.size)

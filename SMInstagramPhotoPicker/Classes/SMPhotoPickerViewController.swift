@@ -9,12 +9,12 @@
 import UIKit
 import Photos
 
-protocol SMPhotoPickerViewControllerDelegate {
+public protocol SMPhotoPickerViewControllerDelegate {
     func didFinishPickingPhoto(image: UIImage, meteData: [String: Any])
     func didCancelPickingPhoto()
 }
 
-class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDelegate {
+public class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var arrowImageView: UIImageView!
@@ -27,10 +27,17 @@ class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDeleg
     let albumView = SMPhotoPickerAlbumView.instance()
     let library: SMPhotoPickerLibraryView = SMPhotoPickerLibraryView.instance()
     
-    var delegate: SMPhotoPickerViewControllerDelegate? = nil
+    public var delegate: SMPhotoPickerViewControllerDelegate? = nil
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
+        
+        getAuthorizationStatue { (auth) in
+            if !auth {
+                print("User can not assecc photolibrary.")
+                return
+            }
+        }
         
         albumView.delegate = self
         
@@ -43,12 +50,11 @@ class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDeleg
         let si = selectAlbumButton.titleLabel?.intrinsicContentSize
         selectAlbumButton.updateConstraint(attribute: .width, value: (si?.width)!)
         
+        let downIcon = UIImage(named: "arrowDown.png", in: Bundle(for: self.classForCoder), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         
-        let down = #imageLiteral(resourceName: "arrowDown").withRenderingMode(.alwaysTemplate)
-        
-        arrowImageView.image = down
+        arrowImageView.image = downIcon
         albumView.frame = CGRect(x: 0, y: view.frame.height, width: view.frame.width, height: view.frame.height - 44.0)
-        print(albumView.frame)
+        //print(albumView.frame)
         view.addSubview(self.albumView)
     }
     
@@ -58,7 +64,7 @@ class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDeleg
         if !selectAlbumButton.isSelected {
             selectAlbumButton.isSelected = true
             
-            print(self.bottomToolsView.frame)
+            //print(self.bottomToolsView.frame)
             
             UIView.animate(withDuration: 0.3, animations: {
                 var rect = self.bottomToolsView.frame
@@ -106,10 +112,10 @@ class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDeleg
             let cancel = UIAlertAction.init(title: "Got it.", style: .cancel, handler: { (action) in
                 
             })
-            alert.addAction(cancel)
             
+            alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
-
+            
         }else{
             
             let image = library.imageView.image!.crop(rect: library.scaleRect, scale: library.imageScale / library.scale)
@@ -137,7 +143,7 @@ class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDeleg
         if let view = UINib(nibName: "SMPhotoPickerViewController", bundle: Bundle(for: self.classForCoder)).instantiate(withOwner: self, options: nil).first as? UIView {
             view.frame = UIScreen.main.bounds
             self.view = view
-            print("SMPhotoPickerViewController", self.view.frame)
+            //print("SMPhotoPickerViewController", self.view.frame)
         }
     }
     
@@ -157,7 +163,7 @@ class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDeleg
         library.collectionView.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: .bottom)
         album.fetchFirstImage { (image) in
             self.library.setupFirstLoadingImageAttrabute(image: image)
-
+            
         }
         
         // handle hidn album list.
@@ -180,6 +186,23 @@ class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumViewDeleg
         
     }
     
+    func getAuthorizationStatue(authorized: @escaping (Bool) -> Void) {
+        
+        if PHPhotoLibrary.authorizationStatus() != .authorized {
+            
+            PHPhotoLibrary.requestAuthorization({ (status) in
+                if status == .authorized {
+                    authorized(true)
+                }else{
+                    authorized(false)
+                }
+            })
+            
+        }else{
+            authorized(true)
+        }
+        
+    }
 }
 
 

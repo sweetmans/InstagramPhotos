@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol SMPhotoPickerAlbumViewDelegate {
-
+    
     func didSeletctAlbum(album: AlbumModel)
     
 }
@@ -39,7 +39,7 @@ class SMPhotoPickerAlbumView: UIView, UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-       let cell = tableView.dequeueReusableCell(withIdentifier: "SMPhotoPickerAlbumView", for: indexPath) as! SMPhotoPickAlbumViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SMPhotoPickerAlbumView", for: indexPath) as! SMPhotoPickAlbumViewCell
         cell.model = albums[indexPath.row]
         return cell
     }

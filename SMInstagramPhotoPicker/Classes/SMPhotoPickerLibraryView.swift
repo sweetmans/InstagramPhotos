@@ -43,7 +43,7 @@ class SMPhotoPickerLibraryView: UIView, UICollectionViewDelegate, UICollectionVi
         let view = UINib(nibName: "SMPhotoPickerLibraryView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! SMPhotoPickerLibraryView
         
         view.initialize()
-        print("Library Width", view.frame)
+        //print("Library Width", view.frame)
         return view
     }
     
@@ -69,7 +69,7 @@ class SMPhotoPickerLibraryView: UIView, UICollectionViewDelegate, UICollectionVi
             
             self.setupFirstLoadingImageAttrabute(image: image)
             self.isOnDownloadingImage = false
-            print(self.scrollView.zoomScale)
+            //print(self.scrollView.zoomScale)
         }
         
         collectionView.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: .bottom)
@@ -82,7 +82,7 @@ class SMPhotoPickerLibraryView: UIView, UICollectionViewDelegate, UICollectionVi
         let se = self.cacuclateContentSize(original: image.size, target: self.scrollView.frame.size)
         self.scrollView.contentSize = se
         self.imageView.frame = CGRect(origin: CGPoint.zero, size: se)
-        self.scaleRect = CGRect(origin: CGPoint.zero, size: se)
+        self.scaleRect = CGRect(origin: CGPoint.zero, size: scrollView.frame.size)
         self.scrollView.zoomScale = 1.0
         self.scale = 1.0
         

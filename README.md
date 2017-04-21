@@ -8,8 +8,11 @@
 [![Version](https://img.shields.io/cocoapods/v/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
 [![License](https://img.shields.io/cocoapods/l/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
 [![Platform](https://img.shields.io/cocoapods/p/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
+<<<<<<< HEAD
 
 ## If you like this framework. Please give me a start.
+=======
+>>>>>>> 0.3.8
 
 ## Features
 
@@ -23,7 +26,11 @@
 
 - iOS 10.3 or later
 - Xcode 8.3 or later
+<<<<<<< HEAD
 - swift 3.1
+=======
+
+>>>>>>> 0.3.8
 ## Getting Started
 
 ### Installation
@@ -40,6 +47,7 @@ import SMInstagramPhotoPicker
 
 ### Use
 
+<<<<<<< HEAD
 In your controller.
 ```swift
 var picker: SMPhotoPickerViewController?
@@ -48,12 +56,26 @@ var picker: SMPhotoPickerViewController?
 - [x] Be sour your app have Authorization to assecc your photo library.
 
 - [x] on your plist.info add one attrabute.
+=======
+Int your controller.
+```swift
+var picker: SMPhotoPickerViewController?
+```
+First. It is importance to do this step.
+Be sour your app have Authorization to assecc your photo library.
+
+on your plist.info add one attrabute.
+>>>>>>> 0.3.8
 
 ```ruby
 kye: Privacy - Photo Library Usage Description
 String: Your app need assecc your photo library.
 ```
+<<<<<<< HEAD
 - [x] And then request Authorization.
+=======
+And then request Authorization.
+>>>>>>> 0.3.8
 
 ```swift
 PHPhotoLibrary.requestAuthorization { (status) in
@@ -64,7 +86,11 @@ if status == .authorized {
 }
 ```
 
+<<<<<<< HEAD
 - [x] Show!!!
+=======
+Show!!!
+>>>>>>> 0.3.8
 ```swift
 //show picker. You need use present.
 @IBAction func show(_ sender: UIButton) {
@@ -74,7 +100,11 @@ if status == .authorized {
 }
 ```
 
+<<<<<<< HEAD
 - [x] Get your image through deledate.
+=======
+Get your image through deledate.
+>>>>>>> 0.3.8
 ```swift
 class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
 	//your viewcontroller
