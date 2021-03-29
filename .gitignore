@@ -88,3 +88,5 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+Demo/Demo.xcodeproj/xcshareddata/xcschemes/Demo.xcscheme
+.DS_Store

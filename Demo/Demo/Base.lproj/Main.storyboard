@@ -28,25 +28,53 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0oS-EK-SZi">
                                 <rect key="frame" x="0.0" y="847" width="428" height="79"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EC-H7-u3v">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fct-B4-hZw">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="79"/>
-                                        <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Show"/>
-                                        <connections>
-                                            <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4BQ-3D-51f"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB9-HX-Qo4">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB9-HX-Qo4">
+                                                <rect key="frame" x="0.0" y="0.0" width="214" height="79"/>
+                                                <color key="backgroundColor" red="0.2274509804" green="0.66274509800000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="No things">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nothings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpF-OS-YkT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="dB9-HX-Qo4" secondAttribute="bottom" id="FyF-0x-e7C"/>
+                                            <constraint firstItem="dB9-HX-Qo4" firstAttribute="top" secondItem="Fct-B4-hZw" secondAttribute="top" id="Jki-P5-jbf"/>
+                                            <constraint firstItem="dB9-HX-Qo4" firstAttribute="leading" secondItem="Fct-B4-hZw" secondAttribute="leading" id="NqU-Ek-nr8"/>
+                                            <constraint firstAttribute="trailing" secondItem="dB9-HX-Qo4" secondAttribute="trailing" id="pn4-6E-9kb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNm-SU-1Uo">
                                         <rect key="frame" x="214" y="0.0" width="214" height="79"/>
-                                        <color key="backgroundColor" red="0.2274509804" green="0.66274509800000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="No things">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="nothings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpF-OS-YkT"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EC-H7-u3v">
+                                                <rect key="frame" x="0.0" y="0.0" width="214" height="79"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Show">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4BQ-3D-51f"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3EC-H7-u3v" firstAttribute="leading" secondItem="SNm-SU-1Uo" secondAttribute="leading" id="5nO-eb-3xM"/>
+                                            <constraint firstItem="3EC-H7-u3v" firstAttribute="top" secondItem="SNm-SU-1Uo" secondAttribute="top" id="Trm-M2-69v"/>
+                                            <constraint firstAttribute="trailing" secondItem="3EC-H7-u3v" secondAttribute="trailing" id="UNl-ZH-gbK"/>
+                                            <constraint firstAttribute="bottom" secondItem="3EC-H7-u3v" secondAttribute="bottom" id="Yvi-eu-C6n"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="6fM-Yc-qvr"/>
@@ -55,7 +83,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr8-2I-zSa">
                                 <rect key="frame" x="0.0" y="428" width="428" height="419"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <mutableString key="text">    Copyright (c) 2021 Sweetman, Inc
+                                <string key="text">    Copyright (c) 2021 Sweetman, Inc
     developer@sweetman.cc
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,7 +103,7 @@
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -111,6 +139,9 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
