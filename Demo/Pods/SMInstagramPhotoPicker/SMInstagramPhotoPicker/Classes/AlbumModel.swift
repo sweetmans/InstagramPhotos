@@ -12,7 +12,6 @@ import Photos
 
 
 public class AlbumModel {
-    
     let name:String
     let count:Int
     let collection:PHAssetCollection
@@ -68,18 +67,15 @@ public class AlbumModel {
         })
         
         return album
-        
     }
     
     func fetchFirstImage(returnImage: @escaping (UIImage) -> Void) {
-        
         DispatchQueue.global(qos: .default).async(execute: {
             let op = PHFetchOptions()
             op.fetchLimit = 1
             op.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
             let assets = PHAsset.fetchAssets(in: self.collection, options: op)
             
-
             let rop = PHImageRequestOptions()
             rop.isNetworkAccessAllowed = true
             
