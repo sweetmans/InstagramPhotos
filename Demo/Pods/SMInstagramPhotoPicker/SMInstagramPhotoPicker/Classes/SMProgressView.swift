@@ -16,7 +16,7 @@ class SMProgressView: UIView {
     
     override func awakeFromNib() {
         
-        progressLayer.lineCap = "round"
+        progressLayer.lineCap = CAShapeLayerLineCap(rawValue: "round")
         progressLayer.strokeStart = 0
         progressLayer.strokeEnd = 0
         progressLayer.fillColor = UIColor(red: 38/255.0, green: 38/255.0, blue: 38/255.0, alpha: 0.56).cgColor

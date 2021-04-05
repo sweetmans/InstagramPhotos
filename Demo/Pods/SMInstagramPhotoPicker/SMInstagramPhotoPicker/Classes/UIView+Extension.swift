@@ -28,7 +28,7 @@ extension NSLayoutConstraint: NSCopying{
 
 extension UIView {
     
-    func updateConstraint(attribute: NSLayoutAttribute, value: CGFloat) {
+    func updateConstraint(attribute: NSLayoutConstraint.Attribute, value: CGFloat) {
         self.superview?.layoutIfNeeded()
         var const: NSLayoutConstraint?
         for i in 0...self.constraints.count - 1 {

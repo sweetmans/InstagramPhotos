@@ -48,7 +48,8 @@ public class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumVi
         let title = "All Photos"
         selectAlbumButton.setTitle(title, for: .normal)
         let si = selectAlbumButton.titleLabel?.intrinsicContentSize
-        selectAlbumButton.updateConstraint(attribute: .width, value: (si?.width)!)
+        
+        //selectAlbumButton.updateConstraint(attribute: .width, value: (si?.width)!)
         
         let downIcon = UIImage(named: "arrowDown.png", in: Bundle(for: self.classForCoder), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         
@@ -156,7 +157,7 @@ public class SMPhotoPickerViewController: UIViewController, SMPhotoPickerAlbumVi
         
         selectAlbumButton.setTitle(album.name, for: .normal)
         let si = selectAlbumButton.titleLabel?.intrinsicContentSize
-        selectAlbumButton.updateConstraint(attribute: .width, value: (si?.width)!)
+        //selectAlbumButton.updateConstraint(attribute: .width, value: (si?.width)!)
         
         library.images = album.assets
         library.collectionView.reloadData()

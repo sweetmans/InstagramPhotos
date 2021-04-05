@@ -17,22 +17,20 @@ class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
     @IBOutlet var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*
-         First. It is importance to do this step.
-         Be sour your app have Authorization to assecc your photo library.
-         
-         */
-        
-        PHPhotoLibrary.requestAuthorization { (status) in
+        PHPhotoLibrary.requestAuthorization { [weak self] status in
             if status == .authorized {
-                self.picker = SMPhotoPickerViewController()
-                self.picker?.delegate = self
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.getPickerReady()
+                }
             }
         }
-
     }
     
+    private func getPickerReady() {
+        picker = SMPhotoPickerViewController()
+        picker?.delegate = self
+    }
     
     //show picker. You need use present.
     @IBAction func show(_ sender: UIButton) {
