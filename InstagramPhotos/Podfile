@@ -1,0 +1,6 @@
+platform :ios, '14.4'
+
+target 'InstagramPhotos' do
+  use_frameworks!
+  pod "SMInstagramPhotoPicker"
+end
