@@ -9,21 +9,34 @@
 [![License](https://img.shields.io/cocoapods/l/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
 [![Platform](https://img.shields.io/cocoapods/p/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
 
-## If you like this framework. Please give me a start.
+# To be contributed with me
+Twitter PM me: [@tubepets](https://twitter.com/tubepets)
 
+Next release: 2.0.0 on the way.
+- [x] Rename to InstagramPhotos
+- [x] Migrated to Xcode 12
+- [x] Adding Unit test and UI test
+- [x] Workflow checking
+## To do
+- [ ] New design to match Instagram.
+- [ ] Handle Apple New options photo library access system
+- [ ] Adding filter function
+- [ ] Multiples photos select support
+### If you like this framework. Please give me a start.
+### Contributor
+Welcome to be one of us.
 ## Features
-
 - [x] Same design as Instagram and animation.
 - [x] So easy to use.
-- [x] Support Swift 3.1
+- [x] Support Swift 5.0 and above
 - [x] Performances!
 - [x] Use GCD and ARC
 
 ## Requirements
 
-- iOS 10.3 or later
-- Xcode 8.3 or later
-- swift 3.1
+- iOS 12.0 or later
+- Xcode 12.0 or later
+- swift 5.0 or later
 
 ## Getting Started
 
@@ -99,8 +112,7 @@ class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
 
 All source code is licensed under the [MIT License](https://raw.github.com/rs/SDWebImage/master/LICENSE).
 
-## Author
-
+## Copyright
 - [x] Created by Sweetman, Inc on 2017.
 - [x] GuangZhou City. CN 510000 
 - [x] [https://www.sweetman.cc](https://www.sweetman.cc)

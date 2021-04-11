@@ -90,3 +90,5 @@ fastlane/test_output
 iOSInjectionProject/
 Demo/Demo.xcodeproj/xcshareddata/xcschemes/Demo.xcscheme
 .DS_Store
+
+.idea/
