@@ -1,18 +1,12 @@
 //
-//  UIView+Extension.swift
-//  SMInstagramPhotosPicker
-//
-//  Created by MacBook Pro on 2017/4/19.
-//  Copyright © 2017年 Sweetman, Inc. All rights reserved.
+//  Copyright © 2021年 Sweetman, Inc. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-extension NSLayoutConstraint: NSCopying{
-    
+extension NSLayoutConstraint: NSCopying {
     public func copy(with zone: NSZone? = nil) -> Any {
-        
         let newConstraint = NSLayoutConstraint(item: self.firstItem,
                                                attribute: self.firstAttribute,
                                                relatedBy: self.relation,
@@ -21,13 +15,10 @@ extension NSLayoutConstraint: NSCopying{
                                                multiplier: self.multiplier,
                                                constant: self.constant)
         return newConstraint
-        
     }
-    
 }
 
 extension UIView {
-    
     func updateConstraint(attribute: NSLayoutConstraint.Attribute, value: CGFloat) {
         self.superview?.layoutIfNeeded()
         var const: NSLayoutConstraint?
@@ -48,5 +39,4 @@ extension UIView {
         self.addConstraint(nc)
         self.superview?.layoutIfNeeded()
     }
-    
 }

@@ -1,41 +1,34 @@
 //
-//  SMPhotoPickAlbumViewCell.swift
-//  SMInstagramPhotosPicker
-//
-//  Created by MacBook Pro on 2017/4/19.
-//  Copyright © 2017年 Sweetman, Inc. All rights reserved.
+//  Copyright © 2021年 Sweetman, Inc. All rights reserved.
 //
 
 import UIKit
 
 class SMPhotoPickAlbumViewCell: UITableViewCell {
-
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
-    var model: AlbumModel? {didSet{updateAlbumInfo()}}
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        logoView.layer.cornerRadius = 3.0
-        logoView.layer.borderWidth = 0.33
-        logoView.layer.borderColor = UIColor.darkGray.cgColor
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    var album: InstagramImageAlbum? {didSet{updateAlbumInfo()}}
+    private let albumsProvider: InstagramImageAlbumsProviding = InstagramImageAlbumsProvider()
     
     func updateAlbumInfo() {
-        
-        model?.fetchFirstImage(returnImage: { (image) in
-            self.logoView.image = image
-        })
-        nameLabel.text = model?.name
-        countLabel.text = "\(String(describing: model!.count)) photos"
+        guard let unwrapAlbum = album else { return }
+        loadingAlbumFirstImage(album: unwrapAlbum)
+        nameLabel.text = unwrapAlbum.name
+        countLabel.text = "\(String(describing: unwrapAlbum.count)) photos"
     }
     
+    private func loadingAlbumFirstImage(album: InstagramImageAlbum) {
+        guard let firstAsset = albumsProvider.fetchAlbumFirstAsset(collection: album.collection) else { return }
+        albumsProvider.fetchAssetImage(asset: firstAsset, size: .original) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let image):
+                self.logoView.image = image
+            default:
+                print("setting first image failure")
+            }
+        }
+    }
 }

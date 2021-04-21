@@ -7,7 +7,7 @@ import SMInstagramPhotoPicker
 import Photos
 
 class ViewController: UIViewController {
-    var picker: SMPhotoPickerViewController?
+    var picker: InstagramImagePickingViewController?
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -23,13 +23,13 @@ class ViewController: UIViewController {
     }
     
     private func getPickerReady() {
-        picker = SMPhotoPickerViewController()
-        picker?.delegate = self
+        picker = InstagramImagePickingViewController(imagePicking: self)
     }
     
     //show picker. You need use present.
     @IBAction func show(_ sender: UIButton) {
         if picker != nil {
+            picker?.modalPresentationStyle = .fullScreen
             present(picker!, animated: true, completion: nil)
         }
     }
@@ -47,12 +47,18 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: SMPhotoPickerViewControllerDelegate {
-    func didCancelPickingPhoto() {
-        print("User cancel picking image")
-    }
-    
-    func didFinishPickingPhoto(image: UIImage, meteData: [String : Any]) {
-        imageView.image = image
+extension ViewController: InstagramImagePicking {
+    func instagramPhotosDidFinishPickingImage(result: InstagramImagePickingResult) {
+        switch result {
+        case .failure(let error):
+            switch error {
+            case .cancelByUser:
+                print("User canceled selete image")
+            default:
+                print(error)
+            }
+        case .success(let ipImage):
+            imageView.image = ipImage.image
+        }
     }
 }

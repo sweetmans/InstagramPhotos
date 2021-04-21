@@ -1,22 +1,15 @@
 //
-//  SMPhotoPickerImageCell.swift
-//  SMInstagramPhotosPicker
-//
-//  Created by MacBook Pro on 2017/4/18.
-//  Copyright © 2017年 Sweetman, Inc. All rights reserved.
+//  Copyright © 2021年 Sweetman, Inc. All rights reserved.
 //
 
 import UIKit
 
 class SMPhotoPickerImageCell: UICollectionViewCell {
-
     @IBOutlet weak var imageView: UIImageView!    
     @IBOutlet weak var mk: UIView!
 
     var image: UIImage? {
-        
         didSet {
-            
             self.imageView.image = image
         }
     }
@@ -28,7 +21,6 @@ class SMPhotoPickerImageCell: UICollectionViewCell {
             }else{
                 self.mk.isHidden = true
             }
-        
         }
     }
     

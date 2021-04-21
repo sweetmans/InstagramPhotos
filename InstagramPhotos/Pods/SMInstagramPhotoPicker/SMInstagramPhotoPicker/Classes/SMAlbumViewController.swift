@@ -1,9 +1,5 @@
 //
-//  SMAlbumViewController.swift
-//  SMInstagramPhotosPicker
-//
-//  Created by MacBook Pro on 2017/4/21.
-//  Copyright © 2017年 Sweetman, Inc. All rights reserved.
+//  Copyright © 2021年 Sweetman, Inc. All rights reserved.
 //
 
 import UIKit
@@ -21,5 +17,4 @@ class SMAlbumViewController: UIViewController {
         albumView.frame = CGRect(origin: CGPoint.zero, size: view.frame.size)
         albumView.tableView.reloadData()
     }
-    
 }

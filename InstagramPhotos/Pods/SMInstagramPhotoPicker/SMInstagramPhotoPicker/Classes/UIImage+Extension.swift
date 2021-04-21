@@ -1,14 +1,9 @@
 //
-//  UIImage+Extension.swift
-//  SMInstagramPhotosPicker
-//
-//  Created by MacBook Pro on 2017/4/20.
-//  Copyright © 2017年 Sweetman, Inc. All rights reserved.
+//  Copyright © 2021年 Sweetman, Inc. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
 
 extension UIImage {
     func crop(rect: CGRect, scale: CGFloat) -> UIImage {

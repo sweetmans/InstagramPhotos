@@ -1,9 +1,5 @@
 //
-//  UIViewController+Extension.swift
-//  SMInstagramPhotosPicker
-//
-//  Created by MacBook Pro on 2017/4/20.
-//  Copyright © 2017年 Sweetman, Inc. All rights reserved.
+//  Copyright © 2021年 Sweetman, Inc. All rights reserved.
 //
 
 import Foundation
@@ -17,9 +13,7 @@ enum SMSreenSize {
 
 
 extension UIViewController {
-    
     func getScreenSize() -> SMSreenSize{
-        
         //iPad
         if self.traitCollection.horizontalSizeClass == .regular &&  self.traitCollection.verticalSizeClass == .regular {
             return .ipad
@@ -27,7 +21,6 @@ extension UIViewController {
             return .iphone
         }
     }
-    
 }
 
 

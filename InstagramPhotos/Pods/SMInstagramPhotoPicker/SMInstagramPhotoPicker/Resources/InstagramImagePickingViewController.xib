@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstagramImagePickingViewController" customModule="SMInstagramPhotoPicker" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="OEn-eq-X9E" id="Xd5-aK-vpE"/>
+                <outlet property="nextButton" destination="ywe-i1-xp6" id="a45-K0-Rn9"/>
+                <outlet property="scrollView" destination="8ho-y2-Tda" id="mSn-dm-Un3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hoi-iA-hnt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iD-Y3-q9e">
+                            <rect key="frame" x="0.0" y="91.666666666666671" width="414" height="0.3333333333333286"/>
+                            <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.33000000000000002" id="QRw-8l-1yB"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEn-eq-X9E">
+                            <rect key="frame" x="0.0" y="27.666666666666671" width="80" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="afW-Wu-LqX"/>
+                                <constraint firstAttribute="width" constant="80" id="zwc-vp-SYG"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <inset key="contentEdgeInsets" minX="22" minY="0.0" maxX="0.0" maxY="14"/>
+                            <state key="normal" image="xmark" catalog="system">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
+                            <connections>
+                                <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="ury-JE-pjf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywe-i1-xp6">
+                            <rect key="frame" x="334" y="28" width="80" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="KE4-6e-J12"/>
+                                <constraint firstAttribute="height" constant="64" id="uhR-R0-jqw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="22" maxY="14"/>
+                            <state key="normal" title="Next">
+                                <color key="titleColor" systemColor="linkColor"/>
+                            </state>
+                            <connections>
+                                <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="NQl-u3-1oT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUP-o8-1kS">
+                            <rect key="frame" x="80" y="27.666666666666671" width="254" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="ecu-F3-GBP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="14"/>
+                            <state key="normal" title="Selecte your photos">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="OEn-eq-X9E" firstAttribute="leading" secondItem="Hoi-iA-hnt" secondAttribute="leading" id="03G-5q-OGE"/>
+                        <constraint firstItem="5iD-Y3-q9e" firstAttribute="top" secondItem="oUP-o8-1kS" secondAttribute="bottom" id="21s-cZ-e1A"/>
+                        <constraint firstItem="5iD-Y3-q9e" firstAttribute="leading" secondItem="Hoi-iA-hnt" secondAttribute="leading" id="8w2-oG-ZAV"/>
+                        <constraint firstAttribute="trailing" secondItem="5iD-Y3-q9e" secondAttribute="trailing" id="Jny-Hi-7Md"/>
+                        <constraint firstItem="5iD-Y3-q9e" firstAttribute="top" secondItem="OEn-eq-X9E" secondAttribute="bottom" id="Kgo-0x-hjH"/>
+                        <constraint firstItem="oUP-o8-1kS" firstAttribute="leading" secondItem="OEn-eq-X9E" secondAttribute="trailing" id="OeF-E6-9S8"/>
+                        <constraint firstItem="ywe-i1-xp6" firstAttribute="leading" secondItem="oUP-o8-1kS" secondAttribute="trailing" id="Q0t-cU-jvy"/>
+                        <constraint firstAttribute="trailing" secondItem="ywe-i1-xp6" secondAttribute="trailing" id="Quw-Eh-oo8"/>
+                        <constraint firstAttribute="bottom" secondItem="ywe-i1-xp6" secondAttribute="bottom" id="Why-fE-f31"/>
+                        <constraint firstAttribute="bottom" secondItem="5iD-Y3-q9e" secondAttribute="bottom" id="Za0-OR-Lg3"/>
+                        <constraint firstAttribute="height" constant="92" id="eTW-Ue-G1C"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ho-y2-Tda">
+                    <rect key="frame" x="0.0" y="92" width="414" height="804"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8ho-y2-Tda" secondAttribute="bottom" id="LbM-fN-Fgp"/>
+                <constraint firstItem="Hoi-iA-hnt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y1H-Iy-0eC"/>
+                <constraint firstItem="Hoi-iA-hnt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="i0Z-VB-ocS"/>
+                <constraint firstItem="8ho-y2-Tda" firstAttribute="top" secondItem="Hoi-iA-hnt" secondAttribute="bottom" id="iGF-4d-5SY"/>
+                <constraint firstAttribute="trailing" secondItem="8ho-y2-Tda" secondAttribute="trailing" id="k9p-E0-64q"/>
+                <constraint firstAttribute="trailing" secondItem="Hoi-iA-hnt" secondAttribute="trailing" id="xHN-Pq-S9H"/>
+                <constraint firstItem="8ho-y2-Tda" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ydT-vQ-ydn"/>
+            </constraints>
+            <point key="canvasLocation" x="-259" y="23"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
