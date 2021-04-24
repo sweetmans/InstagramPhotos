@@ -3,7 +3,7 @@
 //
 
 import UIKit
-import SMInstagramPhotoPicker
+import InstagramPhotosPodspec
 import Photos
 import PhotosUI
 

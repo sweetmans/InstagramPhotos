@@ -4,6 +4,7 @@
 
 import Foundation
 import Photos
+import UIKit
 
 public typealias InstagramImageFetchAssetImageResult = Result<UIImage, InstagramImageFetchAssetImageError>
 

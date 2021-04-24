@@ -2,7 +2,7 @@
 //  Copyright © 2021年 Sweetman, Inc. All rights reserved.
 //
 
-import SMInstagramPhotoPicker
+import InstagramPhotosPodspec
 
 struct PhotosProvider: InstagramImagePicking {
     private let viewController: ViewController
