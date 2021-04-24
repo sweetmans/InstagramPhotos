@@ -85,6 +85,7 @@
             </constraints>
             <connections>
                 <outlet property="cancelButton" destination="y05-3n-KNl" id="K7r-xX-eQ7"/>
+                <outlet property="navigationTitleButton" destination="4yX-DF-ZkT" id="Ysc-8P-XFI"/>
                 <outlet property="navigationView" destination="Y1l-XE-im6" id="Gge-DF-H1x"/>
                 <outlet property="tableView" destination="686-kh-E8C" id="bab-Ua-qLi"/>
             </connections>

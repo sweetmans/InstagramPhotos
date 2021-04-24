@@ -5,8 +5,13 @@
 import UIKit
 import Photos
 
-class SMPhotoPickerLibraryView: UIView {
+public class SMPhotoPickerLibraryView: UIView {
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var showAlbumsButton: UIButton!
+    @IBOutlet weak var squareMask: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addingMoreImageVisualView: UIVisualEffectView!
+    @IBOutlet weak var progressView: SMProgressView!
     
     lazy var imageView: UIImageView = {
         let i = UIImageView()
@@ -14,12 +19,6 @@ class SMPhotoPickerLibraryView: UIView {
         i.clipsToBounds = true
         return i
     }()
-    
-    @IBOutlet weak var showAlbumsButton: UIButton!
-    @IBOutlet weak var squareMask: UIImageView!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var addingMoreImageVisualView: UIVisualEffectView!
-    @IBOutlet weak var progressView: SMProgressView!
     
     var currentAsset: PHAsset?
     var currentImageRequestID: PHImageRequestID?
@@ -37,16 +36,15 @@ class SMPhotoPickerLibraryView: UIView {
     var pickingInteractor: InstagramImagePickingInteracting?
     private let albumsProvider: InstagramImageAlbumsProviding = InstagramImageAlbumsProvider()
     
-    static func instance() -> SMPhotoPickerLibraryView {
+    public static func instance() -> SMPhotoPickerLibraryView {
         let view = UINib(nibName: "SMPhotoPickerLibraryView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! SMPhotoPickerLibraryView
         view.initialize()
+        InstagramPhotosLocalizationManager.main.addLocalizationConponent(localizationUpdateable: view)
         return view
     }
     
     func initialize() {
-        if images != nil {
-            return
-        }
+        if images != nil { return }
         settingFirstAlbum()
         scrollView.addSubview(imageView)
         imageView.frame = scrollView.frame
@@ -55,6 +53,9 @@ class SMPhotoPickerLibraryView: UIView {
         addingMoreImageVisualView.clipsToBounds = true
         addingMoreImageVisualView.layer.cornerRadius = 23
         collectionView.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: .bottom)
+        if InstagramPhotosAuthorizationProvider().authorizationStatus() != .limited {
+            addingMoreImageVisualView.isHidden = true
+        }
     }
     
     func settingFirstAlbum() {
@@ -108,6 +109,13 @@ class SMPhotoPickerLibraryView: UIView {
     }
 }
 
+extension SMPhotoPickerLibraryView: InstagramPhotosLocalizationUpdateable {
+    public func localizationContents() {
+        let provider = InstagramPhotosLocalizationManager.main.localizationsProviding
+        showAlbumsButton.setTitle(provider.pinkingControllerDefaultAlbumName(), for: .normal)
+    }
+}
+
 extension SMPhotoPickerLibraryView {
     @IBAction func showAlbumsButtonAction(_ sender: Any) {
         guard let interactor = pickingInteractor else { return }
@@ -116,7 +124,7 @@ extension SMPhotoPickerLibraryView {
 }
 
 extension SMPhotoPickerLibraryView: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SMPhotoPickerImageCell", for: indexPath) as! SMPhotoPickerImageCell
         let asset = self.images[(indexPath as NSIndexPath).item]
         PHImageManager.default().requestImage(for: asset, targetSize: cellSize, contentMode: .aspectFill, options: nil) { (image, info) in
@@ -125,16 +133,16 @@ extension SMPhotoPickerLibraryView: UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images == nil ? 0 : images.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (UIScreen.main.bounds.width - 3) / 4.00
         return CGSize(width: width, height: width)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let asset = images[(indexPath as NSIndexPath).row]
         currentAsset = asset
         isOnDownloadingImage = true
@@ -184,7 +192,7 @@ extension SMPhotoPickerLibraryView: UICollectionViewDelegate, UICollectionViewDa
 
 extension SMPhotoPickerLibraryView {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
             self.squareMask.isHidden = false
             
@@ -192,7 +200,7 @@ extension SMPhotoPickerLibraryView {
         }
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         if scrollView == self.scrollView{
             self.squareMask.isHidden = true
@@ -200,7 +208,7 @@ extension SMPhotoPickerLibraryView {
         }
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
         if scrollView == self.scrollView{
             self.squareMask.isHidden = true
@@ -209,13 +217,13 @@ extension SMPhotoPickerLibraryView {
         
     }
     
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+    public func scrollViewDidZoom(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
             self.squareMask.isHidden = false
         }
     }
     
-    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+    public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
         
         if scrollView == self.scrollView{
             //print(scale)
@@ -225,7 +233,7 @@ extension SMPhotoPickerLibraryView {
         }
     }
     
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
 }

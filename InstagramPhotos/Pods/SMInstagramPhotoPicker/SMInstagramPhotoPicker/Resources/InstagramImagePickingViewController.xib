@@ -13,6 +13,7 @@
                 <outlet property="closeButton" destination="OEn-eq-X9E" id="Xd5-aK-vpE"/>
                 <outlet property="nextButton" destination="ywe-i1-xp6" id="a45-K0-Rn9"/>
                 <outlet property="scrollView" destination="8ho-y2-Tda" id="mSn-dm-Un3"/>
+                <outlet property="titleButton" destination="oUP-o8-1kS" id="c7s-7F-YAU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

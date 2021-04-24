@@ -5,6 +5,7 @@
 import UIKit
 import SMInstagramPhotoPicker
 import Photos
+import PhotosUI
 
 class ViewController: UIViewController {
     var picker: InstagramImagePickingViewController?
@@ -23,7 +24,8 @@ class ViewController: UIViewController {
     }
     
     private func getPickerReady() {
-        picker = InstagramImagePickingViewController(imagePicking: self)
+        let imageProvider = PhotosProvider(viewController: self)
+        picker = InstagramImagePickingViewController(imagePicking: imageProvider)
     }
     
     //show picker. You need use present.
@@ -43,22 +45,6 @@ class ViewController: UIViewController {
         alert.addAction(cancel)
         DispatchQueue.main.async {
             self.present(alert, animated: true, completion: nil)
-        }
-    }
-}
-
-extension ViewController: InstagramImagePicking {
-    func instagramPhotosDidFinishPickingImage(result: InstagramImagePickingResult) {
-        switch result {
-        case .failure(let error):
-            switch error {
-            case .cancelByUser:
-                print("User canceled selete image")
-            default:
-                print(error)
-            }
-        case .success(let ipImage):
-            imageView.image = ipImage.image
         }
     }
 }

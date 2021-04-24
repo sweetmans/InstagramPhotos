@@ -42,6 +42,6 @@ A iOS 10.0 or later.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'Photos'
+  s.frameworks = 'UIKit', 'Photos', 'PhotosUI'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

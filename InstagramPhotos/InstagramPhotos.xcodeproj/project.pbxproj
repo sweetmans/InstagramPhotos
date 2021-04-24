@@ -13,6 +13,7 @@
 		404A7C8C1EA97DAD004CB142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404A7C8B1EA97DAD004CB142 /* Assets.xcassets */; };
 		404A7C8F1EA97DAD004CB142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404A7C8D1EA97DAD004CB142 /* LaunchScreen.storyboard */; };
 		8146B51DD536808184BAC87B /* Pods_InstagramPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE82B01CB81E9B24507A9A9 /* Pods_InstagramPhotos.framework */; };
+		A1BD7ADB26318FC800A54995 /* PhotosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD7ADA26318FC800A54995 /* PhotosProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		404A7C901EA97DAD004CB142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748203AA42AFB46664EAC67E /* Pods-InstagramPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramPhotos.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramPhotos/Pods-InstagramPhotos.release.xcconfig"; sourceTree = "<group>"; };
 		A11194932620C99600900236 /* InstagramPhotos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstagramPhotos.entitlements; sourceTree = "<group>"; };
+		A1BD7ADA26318FC800A54995 /* PhotosProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosProvider.swift; sourceTree = "<group>"; };
 		BBE82B01CB81E9B24507A9A9 /* Pods_InstagramPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				A11194932620C99600900236 /* InstagramPhotos.entitlements */,
 				404A7C841EA97DAD004CB142 /* AppDelegate.swift */,
 				404A7C861EA97DAD004CB142 /* ViewController.swift */,
+				A1BD7ADA26318FC800A54995 /* PhotosProvider.swift */,
 				404A7C881EA97DAD004CB142 /* Main.storyboard */,
 				404A7C8B1EA97DAD004CB142 /* Assets.xcassets */,
 				404A7C8D1EA97DAD004CB142 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 			files = (
 				404A7C871EA97DAD004CB142 /* ViewController.swift in Sources */,
 				404A7C851EA97DAD004CB142 /* AppDelegate.swift in Sources */,
+				A1BD7ADB26318FC800A54995 /* PhotosProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,11 +27,5 @@ class SMPhotoPickerImageCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.isSelected = false
-        
-        // Initialization code
-//        
-//        imageView.layer.borderWidth = 0.5
-//        imageView.layer.borderColor = UIColor.white.cgColor
     }
-    
 }
