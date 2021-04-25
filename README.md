@@ -21,7 +21,7 @@ New release: 2.0.0
 ## To do
 - [ ] Adding filter function
 - [ ] Multiples photos select support
-### If you like this framework. Please give me a start ⭐️
+### If you like this framework. Please give me a star ⭐️
 ### Contributor
 <p align="left" >
 <a href="https://github.com/sweetmans">
@@ -38,11 +38,11 @@ New release: 2.0.0
 - [x] Support Swift 5.0 and above
 - [x] Performances!
 - [x] Use GCD and ARC
-- [x] Supported iOS 11.0~14.4
+- [x] Supported iOS 11.0 and above
 ## Requirements
-- iOS 11.0 or later
-- Xcode 12.0 or later
-- swift 5.0 or later
+- iOS 11.0 or above
+- Xcode 12.0 or above
+- swift 5.0 or above
 
 ## Getting Started
 
