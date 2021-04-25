@@ -25,12 +25,12 @@ Adding localization support
 Supporting new iOS 14 photos limited access system
                        DESC
 
-  s.homepage         = 'https://github.com/sweetmans/InstagramPhotos'
+  s.homepage         = 'https://cocoapods.org/pods/InstagramPhotos'
   s.screenshots      = 'https://github.com/sweetmans/InstagramPhotos/blob/develop/InstagramPhotosPodspec/Assets/banner.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sweetmans' => 'developer@sweetman.cc' }
   s.source           = { :git => 'https://github.com/sweetmans/InstagramPhotos.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/tubepets'
 
   s.ios.deployment_target = '11.0'
   s.source_files = 'InstagramPhotosPodspec/Classes/**/*.swift'
