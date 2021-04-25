@@ -3,11 +3,12 @@
 //
 
 import UIKit
-import SMInstagramPhotoPicker
+import InstagramPhotosPodspec
 import Photos
+import PhotosUI
 
 class ViewController: UIViewController {
-    var picker: SMPhotoPickerViewController?
+    var picker: InstagramPhotosPickingViewController?
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -23,13 +24,15 @@ class ViewController: UIViewController {
     }
     
     private func getPickerReady() {
-        picker = SMPhotoPickerViewController()
-        picker?.delegate = self
+        let imageProvider = PhotosProvider(viewController: self)
+        picker = InstagramPhotosPickingViewController(imagePicking: imageProvider,
+                                                      localizationsProviding: InstagramPhotosChineseLocalizationProvider())
     }
     
     //show picker. You need use present.
     @IBAction func show(_ sender: UIButton) {
         if picker != nil {
+            picker?.modalPresentationStyle = .fullScreen
             present(picker!, animated: true, completion: nil)
         }
     }
@@ -44,15 +47,5 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             self.present(alert, animated: true, completion: nil)
         }
-    }
-}
-
-extension ViewController: SMPhotoPickerViewControllerDelegate {
-    func didCancelPickingPhoto() {
-        print("User cancel picking image")
-    }
-    
-    func didFinishPickingPhoto(image: UIImage, meteData: [String : Any]) {
-        imageView.image = image
     }
 }
