@@ -70,16 +70,9 @@ public class InstagramPhotosPickingViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        getAuthorizationStatue { (auth) in
-            if !auth {
-                print("User can not assecc photolibrary.")
-                return
-            }
-        }
         settingLibraryView()
         settingAlbumsView()
         localizationContents()
-        PHPhotoLibrary.shared().register(self)
     }
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -159,40 +152,6 @@ public class InstagramPhotosPickingViewController: UIViewController {
         imagePicking.instagramPhotosDidFinishPickingImage(result: .failure(.cancelByUser))
         dismiss(animated: true, completion: nil)
     }
-    
-    func getAuthorizationStatue(result: @escaping (Bool) -> Void) {
-        if #available(iOS 14, *) {
-            if PHPhotoLibrary.authorizationStatus() != .authorized || PHPhotoLibrary.authorizationStatus() != .limited {
-                requestAuthorization(result: result)
-            } else {
-                result(true)
-            }
-        } else {
-            if PHPhotoLibrary.authorizationStatus() != .authorized {
-                requestAuthorization(result: result)
-            } else {
-                result(true)
-            }
-        }
-    }
-    
-    private func requestAuthorization(result: @escaping (Bool) -> Void) {
-        PHPhotoLibrary.requestAuthorization({ (status) in
-            if #available(iOS 14, *) {
-                if status == .authorized || status == .limited {
-                    result(true)
-                }else{
-                    result(false)
-                }
-            } else {
-                if status == .authorized {
-                    result(true)
-                }else{
-                    result(false)
-                }
-            }
-        })
-    }
 }
 
 extension InstagramPhotosPickingViewController: InstagramPhotosLocalizationUpdateable {
@@ -236,11 +195,5 @@ extension InstagramPhotosPickingViewController: InstagramPhotosAlbumViewDelegate
                 print("Selected ablum loading first image failure")
             }
         }
-    }
-}
-
-extension InstagramPhotosPickingViewController: PHPhotoLibraryChangeObserver {
-    public func photoLibraryDidChange(_ changeInstance: PHChange) {
-        self.libraryView.settingFirstAlbum()
     }
 }

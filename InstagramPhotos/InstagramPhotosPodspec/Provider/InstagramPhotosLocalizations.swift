@@ -11,6 +11,7 @@ public protocol InstagramPhotosLocalizationsProviding {
     func pinkingControllerAddingImageAccessButtonText() -> String
     func albumControllerNavigationTitle() -> String
     func albumControllerNavigationCancelButtonText() -> String
+    func photosLimitedAccessModeText() -> String
 }
 
 public protocol InstagramPhotosLocalizationUpdateable {
@@ -42,6 +43,7 @@ public struct InstagramPhotosEnglishLocalizationProvider: InstagramPhotosLocaliz
     public func pinkingControllerAddingImageAccessButtonText() -> String { return "Access more photos" }
     public func albumControllerNavigationTitle() -> String { return "Select album" }
     public func albumControllerNavigationCancelButtonText() -> String { return "Cancel" }
+    public func photosLimitedAccessModeText() -> String { return "Display all photos you authorized access" }
 }
 
 public struct InstagramPhotosChineseLocalizationProvider: InstagramPhotosLocalizationsProviding {
@@ -52,4 +54,5 @@ public struct InstagramPhotosChineseLocalizationProvider: InstagramPhotosLocaliz
     public func pinkingControllerAddingImageAccessButtonText() -> String { return "添加可访问照片" }
     public func albumControllerNavigationTitle() -> String { return "选择相册" }
     public func albumControllerNavigationCancelButtonText() -> String { return "取消" }
+    public func photosLimitedAccessModeText() -> String { return "已显示所有您授权访问的照片" }
 }

@@ -67,7 +67,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="ecu-F3-GBP"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                             <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="14"/>
                             <state key="normal" title="Selecte your photos">
                                 <color key="titleColor" systemColor="labelColor"/>
