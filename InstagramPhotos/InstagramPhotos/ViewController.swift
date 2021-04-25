@@ -26,15 +26,14 @@ class ViewController: UIViewController {
     private func getPickerReady() {
         let imageProvider = PhotosProvider(viewController: self)
         picker = InstagramPhotosPickingViewController(imagePicking: imageProvider,
-                                                      localizationsProviding: InstagramPhotosChineseLocalizationProvider())
+                                                      localizationsProviding: KoreanLocalizationProvider())
     }
     
     //show picker. You need use present.
     @IBAction func show(_ sender: UIButton) {
-        if picker != nil {
-            picker?.modalPresentationStyle = .fullScreen
-            present(picker!, animated: true, completion: nil)
-        }
+        guard let unwrapPicker = picker else { return }
+        unwrapPicker.modalPresentationStyle = .fullScreen
+        present(unwrapPicker, animated: true, completion: nil)
     }
     
     //No things to show here.
@@ -48,4 +47,16 @@ class ViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+}
+
+// Exsample Korean
+struct KoreanLocalizationProvider: InstagramPhotosLocalizationsProviding {
+    public init() {}
+    public func pinkingControllerNavigationTitle() -> String {  return "사진 선택" }
+    public func pinkingControllerNavigationNextButtonText() -> String { return "다음 단계" }
+    public func pinkingControllerDefaultAlbumName() -> String { return "사진 갤러리" }
+    public func pinkingControllerAddingImageAccessButtonText() -> String { return "접근 가능한 사진 추가" }
+    public func albumControllerNavigationTitle() -> String { return "앨범 선택" }
+    public func albumControllerNavigationCancelButtonText() -> String { return "취소" }
+    public func photosLimitedAccessModeText() -> String { return "액세스 권한이있는 모든 사진이 표시됩니다" }
 }
