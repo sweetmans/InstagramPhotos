@@ -1,6 +1,7 @@
 <p align="center" >
 	<img src="https://github.com/sweetmans/InstagramPhotos/blob/develop/InstagramPhotosPodspec/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
 </p>
+
 [![Version](https://img.shields.io/cocoapods/v/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
 [![License](https://img.shields.io/cocoapods/l/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
 [![Platform](https://img.shields.io/cocoapods/p/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
