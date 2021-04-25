@@ -5,9 +5,9 @@
 	InstagramPhotos Create By Sweetman, Inc
 </p>
 
-[![Version](https://img.shields.io/cocoapods/v/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
-[![License](https://img.shields.io/cocoapods/l/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
-[![Platform](https://img.shields.io/cocoapods/p/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
+[![Version](https://img.shields.io/cocoapods/v/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
+[![License](https://img.shields.io/cocoapods/l/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
+[![Platform](https://img.shields.io/cocoapods/p/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
 
 # To be contributed with me
 Twitter PM me: [@tubepets](https://twitter.com/tubepets)
