@@ -29,7 +29,7 @@ class ViewController: UIViewController {
                                                       localizationsProviding: KoreanLocalizationProvider())
     }
     
-    //show picker. You need use present.
+    //show picker. You need use present.#imageLiteral(resourceName: "simulator_screenshot_C3155FE8-EAC8-4EED-8BA6-4F79A69485BB.png")
     @IBAction func show(_ sender: UIButton) {
         guard let unwrapPicker = picker else { return }
         unwrapPicker.modalPresentationStyle = .fullScreen

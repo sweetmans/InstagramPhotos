@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InstagramPhotosAlbumView" customModule="InstagramPhotosPodspec" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="686-kh-E8C">
+                    <rect key="frame" x="0.0" y="93" width="428" height="833"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="qxt-xM-iep"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="bAe-qW-MZ3"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1l-XE-im6" userLabel="NavigationView">
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="92"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y05-3n-KNl">
+                            <rect key="frame" x="0.0" y="28" width="80" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="gES-G1-Gqy"/>
+                                <constraint firstAttribute="width" constant="80" id="puT-dH-hN0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <inset key="contentEdgeInsets" minX="22" minY="0.0" maxX="0.0" maxY="14"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="MPQ-dt-BVd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yX-DF-ZkT">
+                            <rect key="frame" x="88" y="28" width="252" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="Fdv-on-FfD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="选择相册">
+                                <color key="titleColor" systemColor="labelColor"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="4yX-DF-ZkT" firstAttribute="leading" secondItem="y05-3n-KNl" secondAttribute="trailing" constant="8" symbolic="YES" id="5ui-ZS-K0a"/>
+                        <constraint firstAttribute="bottom" secondItem="4yX-DF-ZkT" secondAttribute="bottom" id="NGR-uT-Uzx"/>
+                        <constraint firstAttribute="bottom" secondItem="y05-3n-KNl" secondAttribute="bottom" id="acA-hA-fvX"/>
+                        <constraint firstItem="y05-3n-KNl" firstAttribute="leading" secondItem="Y1l-XE-im6" secondAttribute="leading" id="kFk-Zc-Auj"/>
+                        <constraint firstItem="4yX-DF-ZkT" firstAttribute="centerX" secondItem="Y1l-XE-im6" secondAttribute="centerX" id="kJi-4p-LzE"/>
+                        <constraint firstAttribute="height" constant="92" id="kNG-lO-Yt8"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-A8-4rU">
+                    <rect key="frame" x="0.0" y="92" width="428" height="1"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="5PM-Ey-ZPe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="686-kh-E8C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3KZ-F1-TUz"/>
+                <constraint firstAttribute="trailing" secondItem="jhY-A8-4rU" secondAttribute="trailing" id="Bux-yp-c31"/>
+                <constraint firstAttribute="trailing" secondItem="686-kh-E8C" secondAttribute="trailing" id="EWh-dO-7CD"/>
+                <constraint firstItem="686-kh-E8C" firstAttribute="top" secondItem="Y1l-XE-im6" secondAttribute="bottom" constant="1" id="F21-eH-0b8"/>
+                <constraint firstAttribute="trailing" secondItem="Y1l-XE-im6" secondAttribute="trailing" id="N4Z-lE-a3a"/>
+                <constraint firstItem="jhY-A8-4rU" firstAttribute="top" secondItem="Y1l-XE-im6" secondAttribute="bottom" id="Pof-cc-8Up"/>
+                <constraint firstItem="Y1l-XE-im6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="isd-gK-sx3"/>
+                <constraint firstAttribute="bottom" secondItem="686-kh-E8C" secondAttribute="bottom" id="l9j-bq-4TD"/>
+                <constraint firstItem="Y1l-XE-im6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oIX-JF-DOL"/>
+                <constraint firstItem="jhY-A8-4rU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xDh-UW-KRB"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelButton" destination="y05-3n-KNl" id="K7r-xX-eQ7"/>
+                <outlet property="navigationTitleButton" destination="4yX-DF-ZkT" id="Ysc-8P-XFI"/>
+                <outlet property="navigationView" destination="Y1l-XE-im6" id="Gge-DF-H1x"/>
+                <outlet property="tableView" destination="686-kh-E8C" id="bab-Ua-qLi"/>
+            </connections>
+            <point key="canvasLocation" x="138.78504672897196" y="152.26781857451405"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
