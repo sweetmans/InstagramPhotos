@@ -1,5 +1,5 @@
 <p align="center" >
-	<img src="https://github.com/sweetmans/SMInstagramPhotoPicker/blob/master/SMInstagramPhotoPicker/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
+	<img src="https://github.com/sweetmans/InstagramPhotos/blob/develop/InstagramPhotosPodspec/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
 </p>
 <p align="center">
 	InstagramPhotos Create By Sweetman, Inc
