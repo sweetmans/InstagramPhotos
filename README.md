@@ -21,7 +21,7 @@ New release: 2.0.0
 ## To do
 - [ ] Adding filter function
 - [ ] Multiples photos select support
-### If you like this framework. Please give me a start.
+### If you like this framework. Please give me a start ⭐️
 ### Contributor
 <p align="left" >
 <a href="https://github.com/sweetmans">
@@ -31,7 +31,9 @@ New release: 2.0.0
 
 #### Welcome to be one of us.
 ## Features
-- [x] Same design as Instagram and animation.
+- [x] New UI design same with instagram
+- [x] Adding localization support
+- [x] Supporting new iOS 14 photos limited access system
 - [x] So easy to use.
 - [x] Support Swift 5.0 and above
 - [x] Performances!
