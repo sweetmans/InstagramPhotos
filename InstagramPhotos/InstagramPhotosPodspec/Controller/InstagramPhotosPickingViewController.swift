@@ -6,9 +6,9 @@ import UIKit
 import Photos
 import PhotosUI
 
-public typealias InstagramImagePickingResult = Result<InstagramImage, InstagramImagePickingError>
+public typealias InstagramPhotosPickingResult = Result<InstagramPhotos, InstagramPhotosPickingError>
 
-public enum InstagramImagePickingError: Error {
+public enum InstagramPhotosPickingError: Error {
     case unauthentication
     case generic(Error)
     case cancelByUser
@@ -16,16 +16,16 @@ public enum InstagramImagePickingError: Error {
     case unknown
 }
 
-public protocol InstagramImagePicking {
-    func instagramPhotosDidFinishPickingImage(result: InstagramImagePickingResult)
+public protocol InstagramPhotosPicking {
+    func instagramPhotosDidFinishPickingImage(result: InstagramPhotosPickingResult)
 }
 
-public protocol InstagramImage {
+public protocol InstagramPhotos {
     var image: UIImage { get set }
     var metaData: [String: Any] { get set}
 }
 
-struct InstagramImageObject: InstagramImage {
+struct InstagramPhotosObject: InstagramPhotos {
     var image: UIImage
     var metaData: [String : Any]
 }
@@ -33,9 +33,9 @@ struct InstagramImageObject: InstagramImage {
 let kDeviceScreenHeight = UIScreen.main.bounds.height
 let kDeviceScreenWidth = UIScreen.main.bounds.width
 
-public class InstagramImagePickingViewController: UIViewController {
+public class InstagramPhotosPickingViewController: UIViewController {
     enum Strings: String {
-        case viewControllerNibName = "InstagramImagePickingViewController"
+        case viewControllerNibName = "InstagramPhotosPickingViewController"
         case initFatalError = "init(coder:) has not been implemented"
     }
     
@@ -44,22 +44,22 @@ public class InstagramImagePickingViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var titleButton: UIButton!
     
-    private let albumView: SMPhotoPickerAlbumView
-    private let libraryView: SMPhotoPickerLibraryView
-    private let imagePicking: InstagramImagePicking
-    private var albumsProvider: InstagramImageAlbumsProviding
+    private let albumView: InstagramPhotosAlbumView
+    private let libraryView: InstagramPhotosLibraryView
+    private let imagePicking: InstagramPhotosPicking
+    private var albumsProvider: InstagramPhotosAlbumsProviding
     
-    public init(imagePicking: InstagramImagePicking,
-                albumsProvider: InstagramImageAlbumsProviding = InstagramImageAlbumsProvider(),
+    public init(imagePicking: InstagramPhotosPicking,
+                albumsProvider: InstagramPhotosAlbumsProviding = InstagramPhotosAlbumsProvider(),
                 localizationsProviding: InstagramPhotosLocalizationsProviding = InstagramPhotosEnglishLocalizationProvider(),
-                albumView: SMPhotoPickerAlbumView = SMPhotoPickerAlbumView.instance(),
-                libraryView: SMPhotoPickerLibraryView = SMPhotoPickerLibraryView.instance()) {
+                albumView: InstagramPhotosAlbumView = InstagramPhotosAlbumView.instance(),
+                libraryView: InstagramPhotosLibraryView = InstagramPhotosLibraryView.instance()) {
         InstagramPhotosLocalizationManager.main.changeLanguage(provider: localizationsProviding)
         self.imagePicking = imagePicking
         self.albumsProvider = albumsProvider
         self.albumView = albumView
         self.libraryView = libraryView
-        super.init(nibName: Strings.viewControllerNibName.rawValue, bundle: Bundle(for: InstagramImagePickingViewController.classForCoder()))
+        super.init(nibName: Strings.viewControllerNibName.rawValue, bundle: Bundle(for: InstagramPhotosPickingViewController.classForCoder()))
     }
     
     required init?(coder: NSCoder) {
@@ -79,26 +79,25 @@ public class InstagramImagePickingViewController: UIViewController {
         settingLibraryView()
         settingAlbumsView()
         localizationContents()
+        PHPhotoLibrary.shared().register(self)
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         view.frame = UIScreen.main.bounds
-        InstagramPhotosAuthorizationProvider().requestAuthorization { status in
+        InstagramPhotosAuthorizationProvider().requestAuthorization { [weak self] status in
+            guard let self = self else { return }
             switch status {
-            case .limited:
-                if #available(iOS 14, *) {
-                    PHPhotoLibrary.shared().presentLimitedLibraryPicker(from: self)
-                }
+            case .limited, .authorized:
+                self.libraryView.settingFirstAlbum()
             default:
                 print(status)
             }
-
         }
     }
     
     private func settingLibraryView() {
         libraryView.frame = CGRect(origin: CGPoint.zero, size: scrollView.frame.size)
-        let interactor = InstagramImagePickingInteractor(albumsView: albumView)
+        let interactor = InstagramPhotosPickingInteractor(viewController: self, albumsView: albumView)
         libraryView.pickingInteractor = interactor
         libraryView.collectionView.reloadData()
         scrollView.addSubview(libraryView)
@@ -106,7 +105,7 @@ public class InstagramImagePickingViewController: UIViewController {
     
     private func settingAlbumsView() {
         albumView.delegate = self
-        let interactor = InstagramImagePickingInteractor(albumsView: albumView)
+        let interactor = InstagramPhotosPickingInteractor(viewController: self, albumsView: albumView)
         albumView.pickingInteractor = interactor
         albumView.frame = CGRect(x: 0, y: kDeviceScreenHeight, width: kDeviceScreenWidth, height: kDeviceScreenHeight)
         view.addSubview(self.albumView)
@@ -150,7 +149,7 @@ public class InstagramImagePickingViewController: UIViewController {
             mateData["location"] = asset.location
             mateData["sourceType"] = asset.sourceType
             
-            let ipImage = InstagramImageObject(image: cropedimage, metaData: mateData)
+            let ipImage = InstagramPhotosObject(image: cropedimage, metaData: mateData)
             imagePicking.instagramPhotosDidFinishPickingImage(result: .success(ipImage))
             self.dismiss(animated: true, completion: nil)
         }
@@ -196,7 +195,7 @@ public class InstagramImagePickingViewController: UIViewController {
     }
 }
 
-extension InstagramImagePickingViewController: InstagramPhotosLocalizationUpdateable {
+extension InstagramPhotosPickingViewController: InstagramPhotosLocalizationUpdateable {
     public func localizationContents() {
         let provider = InstagramPhotosLocalizationManager.main.localizationsProviding
         titleButton.setTitle(provider.pinkingControllerNavigationTitle(), for: .normal)
@@ -204,7 +203,7 @@ extension InstagramImagePickingViewController: InstagramPhotosLocalizationUpdate
     }
 }
 
-extension InstagramImagePickingViewController {
+extension InstagramPhotosPickingViewController {
     @IBAction func closeButtonAction(_ sender: UIButton) {
         cancel()
     }
@@ -214,8 +213,8 @@ extension InstagramImagePickingViewController {
     }
 }
 
-extension InstagramImagePickingViewController: SMPhotoPickerAlbumViewDelegate {
-    func didSeletctAlbum(album: InstagramImageAlbum) {
+extension InstagramPhotosPickingViewController: InstagramPhotosAlbumViewDelegate {
+    func didSeletctAlbum(album: InstagramPhotosAlbum) {
         libraryView.images = album.assets
         libraryView.collectionView.reloadData()
         libraryView.collectionView.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: .bottom)
@@ -226,7 +225,7 @@ extension InstagramImagePickingViewController: SMPhotoPickerAlbumViewDelegate {
         })
     }
     
-    private func loadingAlbumFirstImage(album: InstagramImageAlbum) {
+    private func loadingAlbumFirstImage(album: InstagramPhotosAlbum) {
         guard let firstAsset = albumsProvider.fetchAlbumFirstAsset(collection: album.collection) else { return }
         albumsProvider.fetchAssetImage(asset: firstAsset, size: .original) { [weak self] result in
             guard let self = self else { return }
@@ -237,5 +236,11 @@ extension InstagramImagePickingViewController: SMPhotoPickerAlbumViewDelegate {
                 print("Selected ablum loading first image failure")
             }
         }
+    }
+}
+
+extension InstagramPhotosPickingViewController: PHPhotoLibraryChangeObserver {
+    public func photoLibraryDidChange(_ changeInstance: PHChange) {
+        self.libraryView.settingFirstAlbum()
     }
 }

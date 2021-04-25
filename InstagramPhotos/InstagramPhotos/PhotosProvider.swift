@@ -4,13 +4,13 @@
 
 import InstagramPhotosPodspec
 
-struct PhotosProvider: InstagramImagePicking {
+struct PhotosProvider: InstagramPhotosPicking {
     private let viewController: ViewController
     init(viewController: ViewController) {
         self.viewController = viewController
     }
     
-    func instagramPhotosDidFinishPickingImage(result: InstagramImagePickingResult) {
+    func instagramPhotosDidFinishPickingImage(result: InstagramPhotosPickingResult) {
         switch result {
         case .failure(let error):
             switch error {

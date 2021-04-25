@@ -4,25 +4,25 @@
 
 import UIKit
 
-protocol SMPhotoPickerAlbumViewDelegate {
-    func didSeletctAlbum(album: InstagramImageAlbum)
+protocol InstagramPhotosAlbumViewDelegate {
+    func didSeletctAlbum(album: InstagramPhotosAlbum)
 }
 
-public class SMPhotoPickerAlbumView: UIView {
-    private let albumNibName = "SMPhotoPickAlbumViewCell"
-    private let albumCellReuseIdentifier = "SMPhotoPickerAlbumView"
+public class InstagramPhotosAlbumView: UIView {
+    private let albumNibName = "InstagramPhotosAlbumViewCell"
+    private let albumCellReuseIdentifier = "InstagramPhotosAlbumView"
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var navigationTitleButton: UIButton!
     
-    let albums: [InstagramImageAlbum] = InstagramImageAlbumsProvider().listAllAlbums()
-    var delegate: SMPhotoPickerAlbumViewDelegate? = nil
-    var pickingInteractor: InstagramImagePickingInteracting?
+    let albums: [InstagramPhotosAlbum] = InstagramPhotosAlbumsProvider().listAllAlbums()
+    var delegate: InstagramPhotosAlbumViewDelegate? = nil
+    var pickingInteractor: InstagramPhotosPickingInteracting?
     
-    public static func instance() -> SMPhotoPickerAlbumView {
-        let view = UINib(nibName: "SMPhotoPickerAlbumView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! SMPhotoPickerAlbumView
+    public static func instance() -> InstagramPhotosAlbumView {
+        let view = UINib(nibName: "InstagramPhotosAlbumView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosAlbumView
         view.initialize()
         InstagramPhotosLocalizationManager.main.addLocalizationConponent(localizationUpdateable: view)
         return view
@@ -33,7 +33,7 @@ public class SMPhotoPickerAlbumView: UIView {
     }
 }
 
-extension SMPhotoPickerAlbumView: InstagramPhotosLocalizationUpdateable {
+extension InstagramPhotosAlbumView: InstagramPhotosLocalizationUpdateable {
     public func localizationContents() {
         let provider = InstagramPhotosLocalizationManager.main.localizationsProviding
         cancelButton.setTitle(provider.albumControllerNavigationCancelButtonText(), for: .normal)
@@ -41,9 +41,9 @@ extension SMPhotoPickerAlbumView: InstagramPhotosLocalizationUpdateable {
     }
 }
 
-extension SMPhotoPickerAlbumView: UITableViewDataSource {
+extension InstagramPhotosAlbumView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: albumCellReuseIdentifier, for: indexPath) as! SMPhotoPickAlbumViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: albumCellReuseIdentifier, for: indexPath) as! InstagramPhotosAlbumViewCell
         cell.album = albums[indexPath.row]
         return cell
     }
@@ -57,25 +57,15 @@ extension SMPhotoPickerAlbumView: UITableViewDataSource {
     }
 }
 
-extension SMPhotoPickerAlbumView {
+extension InstagramPhotosAlbumView {
     @IBAction func cancelButtonAction(_ sender: UIButton) {
         guard let interactor = pickingInteractor else { return }
         interactor.hidnAlbumsView()
     }
 }
 
-extension SMPhotoPickerAlbumView: UITableViewDelegate {
+extension InstagramPhotosAlbumView: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.didSeletctAlbum(album: albums[indexPath.row])
     }
 }
-
-
-
-
-
-
-
-
-
-

@@ -8,7 +8,7 @@ import Photos
 import PhotosUI
 
 class ViewController: UIViewController {
-    var picker: InstagramImagePickingViewController?
+    var picker: InstagramPhotosPickingViewController?
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -25,7 +25,8 @@ class ViewController: UIViewController {
     
     private func getPickerReady() {
         let imageProvider = PhotosProvider(viewController: self)
-        picker = InstagramImagePickingViewController(imagePicking: imageProvider)
+        picker = InstagramPhotosPickingViewController(imagePicking: imageProvider,
+                                                      localizationsProviding: InstagramPhotosChineseLocalizationProvider())
     }
     
     //show picker. You need use present.

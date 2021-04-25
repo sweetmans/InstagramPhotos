@@ -6,25 +6,25 @@ import Foundation
 import Photos
 import UIKit
 
-public typealias InstagramImageFetchAssetImageResult = Result<UIImage, InstagramImageFetchAssetImageError>
+public typealias InstagramPhotosFetchAssetImageResult = Result<UIImage, InstagramPhotosFetchAssetImageError>
 
-public enum InstagramImageFetchAssetImageError: Error {
+public enum InstagramPhotosFetchAssetImageError: Error {
     case emptyAsset
     case requestImageFailure
 }
 
-public enum InstagramImageFetchAssetTargetSize {
+public enum InstagramPhotosFetchAssetTargetSize {
     case original
     case thumbnail
     case appleDevice
 }
 
-protocol InstagramImageFetchAssetTargetSizeProviding {
-    func tagetImageSizeFrom(asset: PHAsset, size: InstagramImageFetchAssetTargetSize) -> CGSize
+protocol InstagramPhotosFetchAssetTargetSizeProviding {
+    func tagetImageSizeFrom(asset: PHAsset, size: InstagramPhotosFetchAssetTargetSize) -> CGSize
 }
 
-struct InstagramImageFetchAssetTargetSizeProvider: InstagramImageFetchAssetTargetSizeProviding {
-    func tagetImageSizeFrom(asset: PHAsset, size: InstagramImageFetchAssetTargetSize) -> CGSize {
+struct InstagramPhotosFetchAssetTargetSizeProvider: InstagramPhotosFetchAssetTargetSizeProviding {
+    func tagetImageSizeFrom(asset: PHAsset, size: InstagramPhotosFetchAssetTargetSize) -> CGSize {
         switch size {
         case .thumbnail:
             return CGSize(width: 300, height: 300)
@@ -36,19 +36,19 @@ struct InstagramImageFetchAssetTargetSizeProvider: InstagramImageFetchAssetTarge
     }
 }
 
-public protocol InstagramImageAlbumsProviding {
-    func listAllAlbums() -> [InstagramImageAlbum]
-    func fetchAssetImage(asset: PHAsset, size: InstagramImageFetchAssetTargetSize, completion: @escaping (InstagramImageFetchAssetImageResult) -> Void)
+public protocol InstagramPhotosAlbumsProviding {
+    func listAllAlbums() -> [InstagramPhotosAlbum]
+    func fetchAssetImage(asset: PHAsset, size: InstagramPhotosFetchAssetTargetSize, completion: @escaping (InstagramPhotosFetchAssetImageResult) -> Void)
     func fetchAlbumFirstAsset(collection: PHAssetCollection) -> PHAsset?
 }
 
-public struct InstagramImageAlbumsProvider: InstagramImageAlbumsProviding {
-    private let targetSizeProvider: InstagramImageFetchAssetTargetSizeProviding = InstagramImageFetchAssetTargetSizeProvider()
+public struct InstagramPhotosAlbumsProvider: InstagramPhotosAlbumsProviding {
+    private let targetSizeProvider: InstagramPhotosFetchAssetTargetSizeProviding = InstagramPhotosFetchAssetTargetSizeProvider()
     
     public init() {}
     
-    public func listAllAlbums() -> [InstagramImageAlbum] {
-        var albums:[InstagramImageAlbum] = [InstagramImageAlbum]()
+    public func listAllAlbums() -> [InstagramPhotosAlbum] {
+        var albums:[InstagramPhotosAlbum] = [InstagramPhotosAlbum]()
         for type in [PHAssetCollectionType.smartAlbum, PHAssetCollectionType.album] {
             let collections = PHAssetCollection.fetchAssetCollections(with: type, subtype: .any, options: nil)
             collections.enumerateObjects { collection, index, stop in
@@ -58,7 +58,7 @@ public struct InstagramImageAlbumsProvider: InstagramImageAlbumsProviding {
                 let assets = PHAsset.fetchAssets(in: collection, options: fetchOptions)
                 if assets.count > 0,
                    let name = collection.localizedTitle {
-                    let newAlbum = InstagramImageAlbum(name: name,
+                    let newAlbum = InstagramPhotosAlbum(name: name,
                                                        count: assets.count,
                                                        collection: collection,
                                                        assets: assets)
@@ -69,7 +69,7 @@ public struct InstagramImageAlbumsProvider: InstagramImageAlbumsProviding {
         return albums
     }
     
-    public func fetchAssetImage(asset: PHAsset, size: InstagramImageFetchAssetTargetSize = .original, completion: @escaping (InstagramImageFetchAssetImageResult) -> Void) {
+    public func fetchAssetImage(asset: PHAsset, size: InstagramPhotosFetchAssetTargetSize = .original, completion: @escaping (InstagramPhotosFetchAssetImageResult) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async(execute: {
             let requestOptions = PHImageRequestOptions()
             requestOptions.isNetworkAccessAllowed = true

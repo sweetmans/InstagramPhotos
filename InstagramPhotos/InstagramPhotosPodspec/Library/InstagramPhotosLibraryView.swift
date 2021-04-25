@@ -5,13 +5,14 @@
 import UIKit
 import Photos
 
-public class SMPhotoPickerLibraryView: UIView {
+public class InstagramPhotosLibraryView: UIView {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var showAlbumsButton: UIButton!
     @IBOutlet weak var squareMask: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addingMoreImageVisualView: UIVisualEffectView!
-    @IBOutlet weak var progressView: SMProgressView!
+    @IBOutlet weak var progressView: InstagramPhotosProgressView!
+    @IBOutlet weak var addingMoreButton: UIButton!
     
     lazy var imageView: UIImageView = {
         let i = UIImageView()
@@ -33,11 +34,11 @@ public class SMPhotoPickerLibraryView: UIView {
     var scaleRect: CGRect = CGRect.zero
     var imageScale: CGFloat = 1.0
     
-    var pickingInteractor: InstagramImagePickingInteracting?
-    private let albumsProvider: InstagramImageAlbumsProviding = InstagramImageAlbumsProvider()
+    var pickingInteractor: InstagramPhotosPickingInteracting?
+    private let albumsProvider: InstagramPhotosAlbumsProviding = InstagramPhotosAlbumsProvider()
     
-    public static func instance() -> SMPhotoPickerLibraryView {
-        let view = UINib(nibName: "SMPhotoPickerLibraryView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! SMPhotoPickerLibraryView
+    public static func instance() -> InstagramPhotosLibraryView {
+        let view = UINib(nibName: "InstagramPhotosLibraryView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosLibraryView
         view.initialize()
         InstagramPhotosLocalizationManager.main.addLocalizationConponent(localizationUpdateable: view)
         return view
@@ -48,7 +49,7 @@ public class SMPhotoPickerLibraryView: UIView {
         settingFirstAlbum()
         scrollView.addSubview(imageView)
         imageView.frame = scrollView.frame
-        collectionView.register(UINib(nibName: "SMPhotoPickerImageCell", bundle: Bundle(for: self.classForCoder)), forCellWithReuseIdentifier: "SMPhotoPickerImageCell")
+        collectionView.register(UINib(nibName: "InstagramPhotosImageCell", bundle: Bundle(for: self.classForCoder)), forCellWithReuseIdentifier: "InstagramPhotosImageCell")
         
         addingMoreImageVisualView.clipsToBounds = true
         addingMoreImageVisualView.layer.cornerRadius = 23
@@ -59,7 +60,7 @@ public class SMPhotoPickerLibraryView: UIView {
     }
     
     func settingFirstAlbum() {
-        guard let firstAlbum = InstagramImageAlbumsProvider().listAllAlbums().first else { return }
+        guard let firstAlbum = InstagramPhotosAlbumsProvider().listAllAlbums().first else { return }
         images = firstAlbum.assets
         currentAsset = firstAlbum.assets.firstObject
         loadingAlbumFirstImage(album: firstAlbum)
@@ -95,7 +96,7 @@ public class SMPhotoPickerLibraryView: UIView {
         showAlbumsButton.setTitle(title, for: .normal)
     }
     
-    private func loadingAlbumFirstImage(album: InstagramImageAlbum) {
+    private func loadingAlbumFirstImage(album: InstagramPhotosAlbum) {
         guard let firstAsset = albumsProvider.fetchAlbumFirstAsset(collection: album.collection) else { return }
         albumsProvider.fetchAssetImage(asset: firstAsset, size: .original) { [weak self] result in
             guard let self = self else { return }
@@ -109,23 +110,28 @@ public class SMPhotoPickerLibraryView: UIView {
     }
 }
 
-extension SMPhotoPickerLibraryView: InstagramPhotosLocalizationUpdateable {
+extension InstagramPhotosLibraryView: InstagramPhotosLocalizationUpdateable {
     public func localizationContents() {
         let provider = InstagramPhotosLocalizationManager.main.localizationsProviding
         showAlbumsButton.setTitle(provider.pinkingControllerDefaultAlbumName(), for: .normal)
+        addingMoreButton.setTitle(provider.pinkingControllerAddingImageAccessButtonText(), for: .normal)
     }
 }
 
-extension SMPhotoPickerLibraryView {
+extension InstagramPhotosLibraryView {
     @IBAction func showAlbumsButtonAction(_ sender: Any) {
         guard let interactor = pickingInteractor else { return }
         interactor.showAlbumsView()
     }
+    
+    @IBAction func addingMoreButtonAction(_ sender: UIButton) {
+        pickingInteractor?.presentLimitedLibraryPicker()
+    }
 }
 
-extension SMPhotoPickerLibraryView: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
+extension InstagramPhotosLibraryView: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SMPhotoPickerImageCell", for: indexPath) as! SMPhotoPickerImageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InstagramPhotosImageCell", for: indexPath) as! InstagramPhotosImageCell
         let asset = self.images[(indexPath as NSIndexPath).item]
         PHImageManager.default().requestImage(for: asset, targetSize: cellSize, contentMode: .aspectFill, options: nil) { (image, info) in
             cell.image = image
@@ -190,8 +196,7 @@ extension SMPhotoPickerLibraryView: UICollectionViewDelegate, UICollectionViewDa
     }
 }
 
-extension SMPhotoPickerLibraryView {
-    
+extension InstagramPhotosLibraryView {
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
             self.squareMask.isHidden = false

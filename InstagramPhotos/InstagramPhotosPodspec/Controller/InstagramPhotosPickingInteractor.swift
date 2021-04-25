@@ -4,18 +4,23 @@
 
 import Foundation
 import UIKit
+import PhotosUI
 
-protocol InstagramImagePickingInteracting {
+protocol InstagramPhotosPickingInteracting {
     func showAlbumsView()
     func hidnAlbumsView()
+    func presentLimitedLibraryPicker()
 }
 
-struct InstagramImagePickingInteractor: InstagramImagePickingInteracting {
+struct InstagramPhotosPickingInteractor: InstagramPhotosPickingInteracting {
     private let deviceScreenHeight = UIScreen.main.bounds.height
     private let deviceScreenWidth = UIScreen.main.bounds.width
-    private let albumsView: SMPhotoPickerAlbumView
+    private let viewController: InstagramPhotosPickingViewController
+    private let albumsView: InstagramPhotosAlbumView
     
-    init(albumsView: SMPhotoPickerAlbumView) {
+    init(viewController: InstagramPhotosPickingViewController,
+         albumsView: InstagramPhotosAlbumView) {
+        self.viewController = viewController
         self.albumsView = albumsView
     }
     
@@ -45,6 +50,10 @@ struct InstagramImagePickingInteractor: InstagramImagePickingInteracting {
             albumsView.navigationView.isHidden = true
         }
     }
+    
+    func presentLimitedLibraryPicker() {
+        if #available(iOS 14, *) {
+            PHPhotoLibrary.shared().presentLimitedLibraryPicker(from: viewController)
+        }
+    }
 }
-
-

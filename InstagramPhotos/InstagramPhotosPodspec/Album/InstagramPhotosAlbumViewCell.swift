@@ -4,13 +4,13 @@
 
 import UIKit
 
-class SMPhotoPickAlbumViewCell: UITableViewCell {
+class InstagramPhotosAlbumViewCell: UITableViewCell {
     @IBOutlet weak var logoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
-    var album: InstagramImageAlbum? {didSet{updateAlbumInfo()}}
-    private let albumsProvider: InstagramImageAlbumsProviding = InstagramImageAlbumsProvider()
+    var album: InstagramPhotosAlbum? {didSet{updateAlbumInfo()}}
+    private let albumsProvider: InstagramPhotosAlbumsProviding = InstagramPhotosAlbumsProvider()
     
     func updateAlbumInfo() {
         guard let unwrapAlbum = album else { return }
@@ -19,7 +19,7 @@ class SMPhotoPickAlbumViewCell: UITableViewCell {
         countLabel.text = "\(String(describing: unwrapAlbum.count)) photos"
     }
     
-    private func loadingAlbumFirstImage(album: InstagramImageAlbum) {
+    private func loadingAlbumFirstImage(album: InstagramPhotosAlbum) {
         guard let firstAsset = albumsProvider.fetchAlbumFirstAsset(collection: album.collection) else { return }
         albumsProvider.fetchAssetImage(asset: firstAsset, size: .original) { [weak self] result in
             guard let self = self else { return }

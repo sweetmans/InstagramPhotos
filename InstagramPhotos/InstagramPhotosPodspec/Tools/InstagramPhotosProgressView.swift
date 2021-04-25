@@ -4,7 +4,7 @@
 
 import UIKit
 
-class SMProgressView: UIView {
+class InstagramPhotosProgressView: UIView {
     var progress: CGFloat = 0.0 {didSet{updateProgress()}}
     var progressLayer: CAShapeLayer = CAShapeLayer()
     

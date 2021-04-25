@@ -4,7 +4,7 @@
 
 import Photos
 
-public struct InstagramImageAlbum {
+public struct InstagramPhotosAlbum {
     let name: String
     let count: Int
     let collection: PHAssetCollection

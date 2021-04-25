@@ -4,7 +4,7 @@
 
 import UIKit
 
-class SMPhotoPickerImageCell: UICollectionViewCell {
+class InstagramPhotosImageCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!    
     @IBOutlet weak var mk: UIView!
 
@@ -26,6 +26,6 @@ class SMPhotoPickerImageCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.isSelected = false
+        isSelected = false
     }
 }
