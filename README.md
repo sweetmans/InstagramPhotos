@@ -9,13 +9,13 @@
 # To be contributed with me
 Twitter PM me: [@tubepets](https://twitter.com/tubepets)
 
-New release: 2.0.0
+Latest release: 2.0.0
 - [x] Rename to InstagramPhotos
 - [x] Migrated to Xcode 12
 - [x] New UI design same with instagram
 - [x] Adding localization support
 - [x] Supporting new iOS 14 photos limited access system
-## To do
+## TO DO
 - [ ] Adding filter function
 - [ ] Multiples photos select support
 ### If you like this framework. Please give me a star ⭐️
@@ -25,7 +25,6 @@ New release: 2.0.0
 	<img src="https://avatars.githubusercontent.com/u/22865790?s=60&v=4" title="ANDY HUANG" float=left>
 </a>
 </p>
-
 #### Welcome to be one of us.
 ## Features
 - [x] New UI design same with instagram
