@@ -26,7 +26,7 @@ Supporting new iOS 14 photos limited access system
                        DESC
 
   s.homepage         = 'https://github.com/sweetmans/InstagramPhotos'
-  s.screenshots      = 'https://github.com/sweetmans/SMInstagramPhotoPicker/raw/master/SMInstagramPhotoPicker/Assets/banner.png'
+  s.screenshots      = 'https://github.com/sweetmans/InstagramPhotos/blob/develop/InstagramPhotosPodspec/Assets/banner.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sweetmans' => 'developer@sweetman.cc' }
   s.source           = { :git => 'https://github.com/sweetmans/InstagramPhotos.git', :tag => s.version.to_s }
