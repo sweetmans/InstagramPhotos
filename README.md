@@ -2,7 +2,7 @@
 	<img src="https://github.com/sweetmans/SMInstagramPhotoPicker/blob/master/SMInstagramPhotoPicker/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
 </p>
 <p align="center">
-	SMInstagramPhotoPicker Create By Sweetman, Inc
+	InstagramPhotos Create By Sweetman, Inc
 </p>
 
 [![Version](https://img.shields.io/cocoapods/v/SMInstagramPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/SMInstagramPhotoPicker)
@@ -12,29 +12,35 @@
 # To be contributed with me
 Twitter PM me: [@tubepets](https://twitter.com/tubepets)
 
-Next release: 2.0.0 on the way.
+New release: 2.0.0
 - [x] Rename to InstagramPhotos
 - [x] Migrated to Xcode 12
-- [x] Adding Unit test and UI test
-- [x] Workflow checking
+- [x] New UI design same with instagram
+- [x] Adding localization support
+- [x] Supporting new iOS 14 photos limited access system
 ## To do
-- [ ] New design to match Instagram.
-- [ ] Handle Apple New options photo library access system
 - [ ] Adding filter function
 - [ ] Multiples photos select support
-### If you like this framework. Please give me a start.
+### If you like this framework. Please give me a start ⭐️
 ### Contributor
-Welcome to be one of us.
+<p align="left" >
+<a href="https://github.com/sweetmans">
+	<img src="https://avatars.githubusercontent.com/u/22865790?s=60&v=4" title="ANDY HUANG" float=left>
+</a>
+</p>
+
+#### Welcome to be one of us.
 ## Features
-- [x] Same design as Instagram and animation.
+- [x] New UI design same with instagram
+- [x] Adding localization support
+- [x] Supporting new iOS 14 photos limited access system
 - [x] So easy to use.
 - [x] Support Swift 5.0 and above
 - [x] Performances!
 - [x] Use GCD and ARC
-
+- [x] Supported iOS 11.0~14.4
 ## Requirements
-
-- iOS 12.0 or later
+- iOS 11.0 or later
 - Xcode 12.0 or later
 - swift 5.0 or later
 
@@ -46,65 +52,92 @@ SMInstagramPhotoPicker is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SMInstagramPhotoPicker"
+pod 'InstagramPhotos'
 ```
 ```swift
-import SMInstagramPhotoPicker
+import InstagramPhotos
 ```
 
-### Use
-
+### Usage
 
 - In your controller.
 ```swift
-var picker: SMPhotoPickerViewController?
+var picker: InstagramPhotosPickingViewController?
 ```
-- [x] First. It is importance to do this step.
-- [x] Be sour your app have Authorization to assecc your photo library.
-
-- on your plist.info add one attrabute.
-
-```ruby
-kye: Privacy - Photo Library Usage Description
-String: Your app need assecc your photo library.
+#### Photo library access
+First. It is importance to do this step.
+Be sour your app have Authorization to access your photo library.
+on your `plist.info` adding this attribute
+```xml
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Your app need access your photo library</string>
 ```
-- And then request Authorization.
-
+if `iOS 14` you need to set `PHPhotoLibraryPreventAutomaticLimitedAccessAlert` to `YES` on `plist.info` to prevent limited photos access alert.
+```xml
+<key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
+<true/>
+```
+#### Initialize your photo Pinking View Controller
 ```swift
-PHPhotoLibrary.requestAuthorization { (status) in
-if status == .authorized {
-	self.picker = SMPhotoPickerViewController()
-		self.picker?.delegate = self
-	}
+private func getPickerReady() {
+    let imageProvider = PhotosProvider(viewController: self)
+    picker = InstagramPhotosPickingViewController(imagePicking: imageProvider,
+                                         ocalizationsProviding: InstagramPhotosChineseLocalizationProvider())
 }
 ```
-
-- Show!!!
-
+#### Present the pickingViewController
 ```swift
-//show picker. You need use present.
 @IBAction func show(_ sender: UIButton) {
-    if picker != nil {
-        present(picker!, animated: true, completion: nil)
+    guard let unwrapPicker = picker else { return }
+    unwrapPicker.modalPresentationStyle = .fullScreen
+    present(unwrapPicker, animated: true, completion: nil)
+}
+```
+
+#### Get your image through `InstagramPhotosPicking` delegate.
+
+```swift
+extension ViewController: InstagramPhotosPicking {
+    //your viewcontroller
+    func instagramPhotosDidFinishPickingImage(result: InstagramPhotosPickingResult) {
+        switch result {
+        case .failure(let error):
+            switch error {
+            case .cancelByUser:
+                print("User canceled selete image")
+            default:
+                print(error)
+            }
+        case .success(let ipImage):
+            viewController.imageView.image = ipImage.image
+        }
     }
 }
 ```
 
-- Get your image through deledate.
+#### Customize Localization
+You could use default `InstagramPhotosChineseLocalizationProvider()` for `English`, `InstagramPhotosEnglishLocalizationProvider()` for `Chinese`.
 
+define you own localization provider
 ```swift
-class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
-	//your viewcontroller
-
-    func didCancelPickingPhoto() {
-        print("User cancel picking image")
-    }
-    
-    
-    func didFinishPickingPhoto(image: UIImage, meteData: [String : Any]) {
-        
-        imageView.image = image
-    }
+// Exsample Korean
+struct KoreanLocalizationProvider: InstagramPhotosLocalizationsProviding {
+    public init() {}
+    public func pinkingControllerNavigationTitle() -> String {  return "사진 선택" }
+    public func pinkingControllerNavigationNextButtonText() -> String { return "다음 단계" }
+    public func pinkingControllerDefaultAlbumName() -> String { return "사진 갤러리" }
+    public func pinkingControllerAddingImageAccessButtonText() -> String { return "접근 가능한 사진 추가" }
+    public func albumControllerNavigationTitle() -> String { return "앨범 선택" }
+    public func albumControllerNavigationCancelButtonText() -> String { return "취소" }
+    public func photosLimitedAccessModeText() -> String { return "액세스 권한이있는 모든 사진이 표시됩니다" }
+}
+```
+Apply it in the pickingViewController Initialize
+```swift
+private func getPickerReady() {
+    let imageProvider = PhotosProvider(viewController: self)
+    picker = InstagramPhotosPickingViewController(imagePicking: imageProvider,
+                                        localizationsProviding: KoreanLocalizationProvider())
 }
 ```
 
@@ -112,7 +145,7 @@ class ViewController: UIViewController, SMPhotoPickerViewControllerDelegate {
 
 All source code is licensed under the [MIT License](https://raw.github.com/rs/SDWebImage/master/LICENSE).
 
-## Copyright
-- [x] Created by Sweetman, Inc on 2017.
-- [x] GuangZhou City. CN 510000 
-- [x] [https://www.sweetman.cc](https://www.sweetman.cc)
+## About
+- [x] Powered by ANDY HUANG on 2021.
+- [x] GUANGZHOU CN 510000
+- [x] [www.sweetman.cc](https://www.sweetman.cc)

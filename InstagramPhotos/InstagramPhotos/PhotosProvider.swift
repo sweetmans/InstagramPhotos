@@ -6,6 +6,7 @@ import InstagramPhotosPodspec
 
 struct PhotosProvider: InstagramPhotosPicking {
     private let viewController: ViewController
+    
     init(viewController: ViewController) {
         self.viewController = viewController
     }
