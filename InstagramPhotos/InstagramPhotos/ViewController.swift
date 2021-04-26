@@ -25,8 +25,7 @@ class ViewController: UIViewController {
     
     private func getPickerReady() {
         let imageProvider = PhotosProvider(viewController: self)
-        picker = InstagramPhotosPickingViewController(imagePicking: imageProvider,
-                                                      localizationsProviding: KoreanLocalizationProvider())
+        picker = InstagramPhotosPickingViewController(imagePicking: imageProvider)
     }
     
     //show picker. You need use present.#imageLiteral(resourceName: "simulator_screenshot_C3155FE8-EAC8-4EED-8BA6-4F79A69485BB.png")
