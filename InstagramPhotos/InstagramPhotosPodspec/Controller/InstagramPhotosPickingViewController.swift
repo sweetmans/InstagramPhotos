@@ -43,6 +43,7 @@ public class InstagramPhotosPickingViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var titleButton: UIButton!
+    @IBOutlet weak var navigationViewHeightConstraint: NSLayoutConstraint!
     
     private let albumView: InstagramPhotosAlbumView
     private let libraryView: InstagramPhotosLibraryView
@@ -73,6 +74,11 @@ public class InstagramPhotosPickingViewController: UIViewController {
         settingLibraryView()
         settingAlbumsView()
         localizationContents()
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        let provider = InstagramPhotoDimensionalProvider()
+        navigationViewHeightConstraint.constant = provider.safeAreaInsets().top + provider.pickingControllerNavigationViewHeight()
     }
     
     public override func viewWillAppear(_ animated: Bool) {

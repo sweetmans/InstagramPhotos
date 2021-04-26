@@ -13,6 +13,7 @@ public class InstagramPhotosLibraryView: UIView {
     @IBOutlet weak var addingMoreImageVisualView: UIVisualEffectView!
     @IBOutlet weak var progressView: InstagramPhotosProgressView!
     @IBOutlet weak var addingMoreButton: UIButton!
+    @IBOutlet weak var actionViewHeightConstraint: NSLayoutConstraint!
     
     lazy var imageView: UIImageView = {
         let i = UIImageView()
@@ -85,6 +86,11 @@ public class InstagramPhotosLibraryView: UIView {
         self.scaleRect = CGRect(origin: CGPoint.zero, size: scrollView.frame.size)
         self.scrollView.zoomScale = 1.0
         self.scale = 1.0
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        actionViewHeightConstraint.constant = InstagramPhotoDimensionalProvider().libraryActionViewheight()
     }
     
     func cacuclateContentSize(original: CGSize, target: CGSize) -> CGSize {
