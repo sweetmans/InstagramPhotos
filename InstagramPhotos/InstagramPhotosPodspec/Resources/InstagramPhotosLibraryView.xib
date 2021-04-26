@@ -109,6 +109,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="58" id="0dc-f3-hqm"/>
                         <constraint firstItem="LYB-KF-bq5" firstAttribute="leading" secondItem="wQh-Ef-WSP" secondAttribute="trailing" constant="6" id="Bj1-L2-0hY"/>
                         <constraint firstItem="wQh-Ef-WSP" firstAttribute="leading" secondItem="V1H-f7-pNd" secondAttribute="leading" id="Qqa-wI-pCL"/>
                         <constraint firstAttribute="bottom" secondItem="wQh-Ef-WSP" secondAttribute="bottom" id="Se5-T3-zcZ"/>
@@ -126,8 +127,8 @@
                 <constraint firstAttribute="trailing" secondItem="V1H-f7-pNd" secondAttribute="trailing" id="GAY-E3-sFW"/>
                 <constraint firstItem="WD5-CD-pQp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GhI-9w-yYi"/>
                 <constraint firstAttribute="trailing" secondItem="WD5-CD-pQp" secondAttribute="trailing" id="K9h-uC-cHH"/>
-                <constraint firstItem="WD5-CD-pQp" firstAttribute="top" secondItem="NqI-xg-Wlg" secondAttribute="bottom" constant="58" id="R8a-xe-UH2"/>
                 <constraint firstItem="7wF-Rq-obZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ULS-sT-XzR"/>
+                <constraint firstItem="WD5-CD-pQp" firstAttribute="top" secondItem="V1H-f7-pNd" secondAttribute="bottom" id="ULc-6C-5xx"/>
                 <constraint firstAttribute="trailing" secondItem="NqI-xg-Wlg" secondAttribute="trailing" id="Ur9-d4-r95"/>
                 <constraint firstItem="NqI-xg-Wlg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WHi-GU-j89"/>
                 <constraint firstAttribute="bottom" secondItem="cPx-WA-mgf" secondAttribute="bottom" constant="44" id="ah4-0q-Krz"/>
@@ -139,6 +140,7 @@
                 <constraint firstAttribute="bottom" secondItem="WD5-CD-pQp" secondAttribute="bottom" id="zQr-ZM-hCU"/>
             </constraints>
             <connections>
+                <outlet property="actionViewHeightConstraint" destination="0dc-f3-hqm" id="EaR-j6-MFA"/>
                 <outlet property="addingMoreButton" destination="ZTx-61-mm8" id="BlA-7b-8Xc"/>
                 <outlet property="addingMoreImageVisualView" destination="cPx-WA-mgf" id="Rtw-sK-kbB"/>
                 <outlet property="collectionView" destination="WD5-CD-pQp" id="NWb-zM-rMB"/>

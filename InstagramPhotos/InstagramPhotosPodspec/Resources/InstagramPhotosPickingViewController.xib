@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstagramPhotosPickingViewController" customModule="InstagramPhotosPodspec" customModuleProvider="target">
             <connections>
                 <outlet property="closeButton" destination="OEn-eq-X9E" id="Xd5-aK-vpE"/>
+                <outlet property="navigationViewHeightConstraint" destination="eTW-Ue-G1C" id="9bF-M7-F1a"/>
                 <outlet property="nextButton" destination="ywe-i1-xp6" id="a45-K0-Rn9"/>
                 <outlet property="scrollView" destination="8ho-y2-Tda" id="mSn-dm-Un3"/>
                 <outlet property="titleButton" destination="oUP-o8-1kS" id="c7s-7F-YAU"/>

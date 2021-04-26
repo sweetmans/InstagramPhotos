@@ -21,6 +21,12 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(additionalSafeAreaInsets, UIScreen.main.bounds)
     }
     
     private func getPickerReady() {
