@@ -25,7 +25,9 @@ Latest release: 2.0.0
 	<img src="https://avatars.githubusercontent.com/u/22865790?s=60&v=4" title="ANDY HUANG" float=left>
 </a>
 </p>
-#### Welcome to be one of us.
+
+### Welcome to be one of us 🧑🏻‍💻🧑‍💻🧑🏼‍💻🧑🏽‍💻🧑🏾‍💻🧑🏿‍💻
+
 ## Features
 - [x] New UI design same with instagram
 - [x] Adding localization support
