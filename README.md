@@ -6,10 +6,10 @@
 [![License](https://img.shields.io/cocoapods/l/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
 [![Platform](https://img.shields.io/cocoapods/p/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
 
-# To be contributed with me
-Twitter PM me: [@tubepets](https://twitter.com/tubepets)
+## To be contributed with me
+### Twitter PM me: [@tubepets](https://twitter.com/tubepets)
 
-The Latest release: `2.0.0` For more detail []()
+### The Latest release: `2.0.0` For more detail [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
 - [x] Rename to InstagramPhotos
 - [x] Migrated to Xcode 12
 - [x] New UI design same with instagram
