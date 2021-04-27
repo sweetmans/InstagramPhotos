@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InstagramPhotos'
-  s.version          = '2.0.0'
+  s.version          = '2.0.1'
   s.summary          = 'An instagram design photos picker viewController using swift'
   s.license         = 'MIT'
 # This description is used to generate tags and improve search results.
@@ -26,15 +26,15 @@ Supporting new iOS 14 photos limited access system
                        DESC
 
   s.homepage         = 'https://cocoapods.org/pods/InstagramPhotos'
-  s.screenshots      = 'https://github.com/sweetmans/InstagramPhotos/blob/develop/InstagramPhotosPodspec/Assets/banner.png'
+  s.screenshots      = 'https://github.com/sweetmans/InstagramPhotos/blob/develop/Assets/banner.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sweetmans' => 'developer@sweetman.cc' }
   s.source           = { :git => 'https://github.com/sweetmans/InstagramPhotos.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/tubepets'
 
   s.ios.deployment_target = '11.0'
-  s.source_files = 'InstagramPhotosPodspec/Classes/**/*.swift'
-  s.resources    = ['InstagramPhotosPodspec/Resources/*.png', 'InstagramPhotosPodspec/Resources/*.xib']
+  s.source_files = 'InstagramPhotos/InstagramPhotosPodspec/Classes/**/*.swift'
+  s.resources    = ['InstagramPhotos/InstagramPhotosPodspec/Resources/*.png', 'InstagramPhotos/InstagramPhotosPodspec/Resources/*.xib']
   s.module_name  = 'InstagramPhotos'
   # s.resource_bundles = {
   #   'SMColor' => ['SMColor/Assets/*.png']

@@ -1,5 +1,5 @@
 <p align="center" >
-	<img src="https://github.com/sweetmans/InstagramPhotos/blob/develop/InstagramPhotosPodspec/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
+	<img src="https://github.com/sweetmans/InstagramPhotos/blob/develop/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
 </p>
 
 [![Version](https://img.shields.io/cocoapods/v/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
@@ -9,16 +9,19 @@
 ## To be contributed with me
 ### Twitter PM me: [@tubepets](https://twitter.com/tubepets)
 
-### The Latest release: `2.0.0` For more detail [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
+## The latest `MAJOR` release: `2.0.0` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
 - [x] Rename to InstagramPhotos
 - [x] Migrated to Xcode 12
 - [x] New UI design same with instagram
 - [x] Adding localization support
 - [x] Supporting new iOS 14 photos limited access system
 
+## The latest release `2.0.1` `CURRENT` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
+- [x] Use InstagramPhotosPodspec folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
+- [x] Handle iPhone safe area for none all display iPhones [SMIIP-7](https://sweetmancc.atlassian.net/browse/SMIIP-7)
+- [x] Release 2.0.1 [SMIIP-13](https://sweetmancc.atlassian.net/browse/SMIIP-13)
+
 ## TO DO
-- [ ] Release 2.0.1 [SMIIP-5](https://sweetmancc.atlassian.net/browse/SMIIP-5)
-- [ ] Use InstagramPhotosPodspec folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
 - [ ] Adding SwiftPackage support [SMIIP-12](https://sweetmancc.atlassian.net/browse/SMIIP-12)  
 - [ ] Adding filter function [SMIIP-9](https://sweetmancc.atlassian.net/browse/SMIIP-9)
 - [ ] Multiples photos select support [SMIIP-10](https://sweetmancc.atlassian.net/browse/SMIIP-10)
@@ -151,6 +154,6 @@ private func getPickerReady() {
 All source code is licensed under the [MIT License](https://raw.github.com/rs/SDWebImage/master/LICENSE).
 
 ## About
-- [x] Powered by ANDY HUANG on 2021.
+- [x] Powered by SWEETMAN,INC on 2021
 - [x] GUANGZHOU CN 510000
 - [x] [www.sweetman.cc](https://www.sweetman.cc)
