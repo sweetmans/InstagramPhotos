@@ -16,8 +16,12 @@
 - [x] Adding localization support
 - [x] Supporting new iOS 14 photos limited access system
 ## TO DO
-- [ ] Adding filter function
-- [ ] Multiples photos select support
+- [ ] Release 2.0.1 [SMIIP-5](https://sweetmancc.atlassian.net/browse/SMIIP-5) 
+- [ ] Adding filter function [SMIIP-9](https://sweetmancc.atlassian.net/browse/SMIIP-9)
+- [ ] Multiples photos select support [SMIIP-10](https://sweetmancc.atlassian.net/browse/SMIIP-10)
+- [ ] Create iOS code checking [SMIIP-3](https://sweetmancc.atlassian.net/browse/SMIIP-3)
+- [ ] New design for iPad support [SMIIP-8](https://sweetmancc.atlassian.net/browse/SMIIP-8)
+
 ### If you like this framework. Please give me a star ⭐️
 ### Contributor
 <p align="left" >
