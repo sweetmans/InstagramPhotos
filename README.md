@@ -9,7 +9,7 @@
 # To be contributed with me
 Twitter PM me: [@tubepets](https://twitter.com/tubepets)
 
-Latest release: 2.0.0
+The Latest release: `2.0.0` For more detail []()
 - [x] Rename to InstagramPhotos
 - [x] Migrated to Xcode 12
 - [x] New UI design same with instagram
