@@ -1,5 +1,5 @@
 <p align="center" >
-	<img src="https://github.com/sweetmans/InstagramPhotos/blob/develop/InstagramPhotosPodspec/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
+	<img src="https://github.com/sweetmans/InstagramPhotos/blob/develop/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
 </p>
 
 [![Version](https://img.shields.io/cocoapods/v/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)

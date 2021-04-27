@@ -4,6 +4,7 @@
 Every release should include the change Jira ticket and short description. Begin with release 2.0.0.
 Major release should increase number of first digit include. More than 25 UI change or architecture change or iOS SDK update.
 Alpha release version number should include `x.x.x.alpha.x`
+Release should update `README.md` & `RELEASENOTE.md` for release detail.
 
 ## The Latest release
 
