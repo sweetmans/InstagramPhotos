@@ -5,6 +5,7 @@
 [![Version](https://img.shields.io/cocoapods/v/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
 [![License](https://img.shields.io/cocoapods/l/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
 [![Platform](https://img.shields.io/cocoapods/p/InstagramPhotos.svg?style=flat)](http://cocoapods.org/pods/InstagramPhotos)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
 ## To be contributed with me
 ### Twitter PM me: [@tubepets](https://twitter.com/tubepets)
