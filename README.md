@@ -15,8 +15,11 @@
 - [x] New UI design same with instagram
 - [x] Adding localization support
 - [x] Supporting new iOS 14 photos limited access system
+
 ## TO DO
-- [ ] Release 2.0.1 [SMIIP-5](https://sweetmancc.atlassian.net/browse/SMIIP-5) 
+- [ ] Release 2.0.1 [SMIIP-5](https://sweetmancc.atlassian.net/browse/SMIIP-5)
+- [ ] Use InstagramPhotosPodspec folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
+- [ ] Adding SwiftPackage support [SMIIP-12](https://sweetmancc.atlassian.net/browse/SMIIP-12)  
 - [ ] Adding filter function [SMIIP-9](https://sweetmancc.atlassian.net/browse/SMIIP-9)
 - [ ] Multiples photos select support [SMIIP-10](https://sweetmancc.atlassian.net/browse/SMIIP-10)
 - [ ] Create iOS code checking [SMIIP-3](https://sweetmancc.atlassian.net/browse/SMIIP-3)
