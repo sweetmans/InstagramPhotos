@@ -6,10 +6,9 @@
 [![License](https://img.shields.io/cocoapods/l/InstagramPhotos.svg?style=for-the-badge&logo=appveyor)](http://cocoapods.org/pods/InstagramPhotos)
 [![Platform](https://img.shields.io/cocoapods/p/InstagramPhotos.svg?style=for-the-badge&logo=appveyor)](http://cocoapods.org/pods/InstagramPhotos)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg?style=for-the-badge&logo=appveyor)](https://houndci.com)
-[![Twitter](https://img.shields.io/twitter/url?label=tubepets&style=social&url=https%3A%2F%2Ftwitter.com%2Ftubepets)](https://twitter.com/tubepets)
 
 ## To be contributed with me
-### Twitter PM me: [@tubepets](https://twitter.com/tubepets)
+#### Twitter PM me [![Twitter](https://img.shields.io/twitter/url?label=tubepets&style=social&url=https%3A%2F%2Ftwitter.com%2Ftubepets)](https://twitter.com/tubepets)
 
 ## The latest `MAJOR` release: `2.0.0` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
 - [x] Rename to InstagramPhotos
