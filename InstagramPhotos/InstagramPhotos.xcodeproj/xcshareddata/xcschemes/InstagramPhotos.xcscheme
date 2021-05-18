@@ -38,6 +38,16 @@
                ReferencedContainer = "container:InstagramPhotos.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A1AE8AD62653886800B5AD03"
+               BuildableName = "InstagramPhotosTests.xctest"
+               BlueprintName = "InstagramPhotosTests"
+               ReferencedContainer = "container:InstagramPhotos.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
