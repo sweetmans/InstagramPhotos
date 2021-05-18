@@ -36,7 +36,7 @@
 		A17F24972633F030001D6BB8 /* InstagramPhotosPodspec.h in Headers */ = {isa = PBXBuildFile; fileRef = A17F24872633F030001D6BB8 /* InstagramPhotosPodspec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A17F249A2633F030001D6BB8 /* InstagramPhotosPodspec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17F24852633F030001D6BB8 /* InstagramPhotosPodspec.framework */; };
 		A1AE8ADA2653886800B5AD03 /* InstagramPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AE8AD92653886800B5AD03 /* InstagramPhotosTests.swift */; };
-		A1AE8AE226538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AE8AE126538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift */; };
+		A1AE8AE32653B42200B5AD03 /* InstagramPhotosPickingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AE8AE126538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift */; };
 		A1B71E012636870800351153 /* InstagramPhotoDimensionalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B71E002636870800351153 /* InstagramPhotoDimensionalProvider.swift */; };
 		A1B782332638C8A400647544 /* InstagramPhotosPickingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B782312638C8A400647544 /* InstagramPhotosPickingViewController.swift */; };
 		A1B782342638C8A400647544 /* InstagramPhotosPickingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B782322638C8A400647544 /* InstagramPhotosPickingInteractor.swift */; };
@@ -225,6 +225,7 @@
 		A17F24932633F030001D6BB8 /* InstagramPhotosPodspecTests */ = {
 			isa = PBXGroup;
 			children = (
+				A1AE8AE126538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift */,
 				A17F24942633F030001D6BB8 /* InstagramPhotosPodspecTests.swift */,
 				A17F24962633F030001D6BB8 /* Info.plist */,
 			);
@@ -291,7 +292,6 @@
 		A1AE8AD82653886800B5AD03 /* InstagramPhotosTests */ = {
 			isa = PBXGroup;
 			children = (
-				A1AE8AE126538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift */,
 				A1AE8AD92653886800B5AD03 /* InstagramPhotosTests.swift */,
 				A1AE8ADB2653886800B5AD03 /* Info.plist */,
 			);
@@ -530,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AE8AE32653B42200B5AD03 /* InstagramPhotosPickingInteractorTests.swift in Sources */,
 				A17F24952633F030001D6BB8 /* InstagramPhotosPodspecTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,7 +539,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1AE8AE226538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift in Sources */,
 				A1AE8ADA2653886800B5AD03 /* InstagramPhotosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
