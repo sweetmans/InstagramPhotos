@@ -1,12 +1,9 @@
 //
-//  InstagramPhotosTests.swift
-//  InstagramPhotosTests
-//
-//  Created by ANDY HUANG on 2021/5/18.
-//  Copyright © 2021 Sweetman, Inc. All rights reserved.
+//  Copyright © 2021年 Sweetman, Inc. All rights reserved.
 //
 
 import XCTest
+@testable import InstagramPhotosPodspec
 
 class InstagramPhotosTests: XCTestCase {
 

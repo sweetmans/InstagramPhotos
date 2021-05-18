@@ -36,6 +36,7 @@
 		A17F24972633F030001D6BB8 /* InstagramPhotosPodspec.h in Headers */ = {isa = PBXBuildFile; fileRef = A17F24872633F030001D6BB8 /* InstagramPhotosPodspec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A17F249A2633F030001D6BB8 /* InstagramPhotosPodspec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17F24852633F030001D6BB8 /* InstagramPhotosPodspec.framework */; };
 		A1AE8ADA2653886800B5AD03 /* InstagramPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AE8AD92653886800B5AD03 /* InstagramPhotosTests.swift */; };
+		A1AE8AE226538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AE8AE126538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift */; };
 		A1B71E012636870800351153 /* InstagramPhotoDimensionalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B71E002636870800351153 /* InstagramPhotoDimensionalProvider.swift */; };
 		A1B782332638C8A400647544 /* InstagramPhotosPickingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B782312638C8A400647544 /* InstagramPhotosPickingViewController.swift */; };
 		A1B782342638C8A400647544 /* InstagramPhotosPickingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B782322638C8A400647544 /* InstagramPhotosPickingInteractor.swift */; };
@@ -110,6 +111,7 @@
 		A1AE8AD72653886800B5AD03 /* InstagramPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AE8AD92653886800B5AD03 /* InstagramPhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramPhotosTests.swift; sourceTree = "<group>"; };
 		A1AE8ADB2653886800B5AD03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1AE8AE126538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramPhotosPickingInteractorTests.swift; sourceTree = "<group>"; };
 		A1B71E002636870800351153 /* InstagramPhotoDimensionalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramPhotoDimensionalProvider.swift; sourceTree = "<group>"; };
 		A1B782312638C8A400647544 /* InstagramPhotosPickingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramPhotosPickingViewController.swift; sourceTree = "<group>"; };
 		A1B782322638C8A400647544 /* InstagramPhotosPickingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramPhotosPickingInteractor.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 		A1AE8AD82653886800B5AD03 /* InstagramPhotosTests */ = {
 			isa = PBXGroup;
 			children = (
+				A1AE8AE126538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift */,
 				A1AE8AD92653886800B5AD03 /* InstagramPhotosTests.swift */,
 				A1AE8ADB2653886800B5AD03 /* Info.plist */,
 			);
@@ -535,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AE8AE226538A3B00B5AD03 /* InstagramPhotosPickingInteractorTests.swift in Sources */,
 				A1AE8ADA2653886800B5AD03 /* InstagramPhotosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
