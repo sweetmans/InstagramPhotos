@@ -9,7 +9,7 @@ on:
     branches:
       - develop
 jobs:
-  Run_workspace_Tests:
+  UnitTests:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@v2
@@ -18,4 +18,4 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
     - name: Run unit tests
-      run: xcodebuild test -scheme InstagramPhotos -xcodeproj InstagramPhotos/InstagramPhotos.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 12 Pro Max,OS=14.4' | xcpretty && exit ${PIPESTATUS[0]}
+      run: xcodebuild test -scheme InstagramPhotosPodspecTests -project InstagramPhotos/InstagramPhotos.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 12 Pro Max,OS=14.4' | xcpretty && exit ${PIPESTATUS[0]}
