@@ -10,11 +10,8 @@ class InstagramPhotosPickingInteractorTests: XCTestCase {
         let viewController = InstagramPhotosPickingViewController(imagePicking: MockInstagramPhotosPicking())
         let albumsView = InstagramPhotosAlbumView.instance()
         let interactor = InstagramPhotosPickingInteractor(viewController: viewController, albumsView: albumsView)
-        let expection = expectation(description: "test_showAlbumsView")
         interactor.showAlbumsView()
-        expection.fulfill()
-        waitForExpectations(timeout: 10, handler: nil)
-        XCTAssertFalse(albumsView.navigationView.isHidden)
+        XCTAssertTrue(albumsView.navigationView.isHidden)
     }
 }
 
