@@ -28,7 +28,6 @@ class InstagramPhotosPickingInteractorTests: XCTestCase {
         let interactor = InstagramPhotosPickingInteractor(viewController: viewController, albumsView: albumsView)
         interactor.presentLimitedLibraryPicker()
     }
-    
 }
 
 final class MockInstagramPhotosPicking: InstagramPhotosPicking {
