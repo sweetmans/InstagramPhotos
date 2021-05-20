@@ -13,6 +13,22 @@ class InstagramPhotosPickingInteractorTests: XCTestCase {
         interactor.showAlbumsView()
         XCTAssertTrue(albumsView.navigationView.isHidden)
     }
+    
+    func test_hidnAlbumsView() {
+        let viewController = InstagramPhotosPickingViewController(imagePicking: MockInstagramPhotosPicking())
+        let albumsView = InstagramPhotosAlbumView.instance()
+        let interactor = InstagramPhotosPickingInteractor(viewController: viewController, albumsView: albumsView)
+        interactor.hidnAlbumsView()
+        XCTAssertFalse(albumsView.navigationView.isHidden)
+    }
+    
+    func test_presentLimitedLibraryPicker() {
+        let viewController = InstagramPhotosPickingViewController(imagePicking: MockInstagramPhotosPicking())
+        let albumsView = InstagramPhotosAlbumView.instance()
+        let interactor = InstagramPhotosPickingInteractor(viewController: viewController, albumsView: albumsView)
+        interactor.presentLimitedLibraryPicker()
+    }
+    
 }
 
 final class MockInstagramPhotosPicking: InstagramPhotosPicking {
