@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "404A7C801EA97DAD004CB142"
-               BuildableName = "InstagramPhotos.app"
-               BlueprintName = "InstagramPhotos"
+               BlueprintIdentifier = "A17F24842633F030001D6BB8"
+               BuildableName = "InstagramPhotosPodspec.framework"
+               BlueprintName = "InstagramPhotosPodspec"
                ReferencedContainer = "container:InstagramPhotos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,26 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A17F248C2633F030001D6BB8"
-               BuildableName = "InstagramPhotosPodspecTests.xctest"
-               BlueprintName = "InstagramPhotosPodspecTests"
-               ReferencedContainer = "container:InstagramPhotos.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1AE8AD62653886800B5AD03"
-               BuildableName = "InstagramPhotosTests.xctest"
-               BlueprintName = "InstagramPhotosTests"
-               ReferencedContainer = "container:InstagramPhotos.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -61,16 +41,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "404A7C801EA97DAD004CB142"
-            BuildableName = "InstagramPhotos.app"
-            BlueprintName = "InstagramPhotos"
-            ReferencedContainer = "container:InstagramPhotos.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -78,16 +48,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "404A7C801EA97DAD004CB142"
-            BuildableName = "InstagramPhotos.app"
-            BlueprintName = "InstagramPhotos"
+            BlueprintIdentifier = "A17F24842633F030001D6BB8"
+            BuildableName = "InstagramPhotosPodspec.framework"
+            BlueprintName = "InstagramPhotosPodspec"
             ReferencedContainer = "container:InstagramPhotos.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
