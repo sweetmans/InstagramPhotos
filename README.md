@@ -10,14 +10,14 @@
 ## To be contributed with me
 #### Twitter PM me [![Twitter](https://img.shields.io/twitter/url?label=tubepets&style=social&url=https%3A%2F%2Ftwitter.com%2Ftubepets)](https://twitter.com/tubepets)
 
-## The latest `MAJOR` release: `2.0.0` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
+### The latest `MAJOR` release: `2.0.0` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
 - [x] Rename to InstagramPhotos
 - [x] Migrated to Xcode 12
 - [x] New UI design same with instagram
 - [x] Adding localization support
 - [x] Supporting new iOS 14 photos limited access system
 
-## The latest release `2.0.1` `CURRENT` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
+### The latest release `2.0.1` `CURRENT` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
 - [x] Use InstagramPhotosPodspec folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
 - [x] Handle iPhone safe area for none all display iPhones [SMIIP-7](https://sweetmancc.atlassian.net/browse/SMIIP-7)
 - [x] Release 2.0.1 [SMIIP-13](https://sweetmancc.atlassian.net/browse/SMIIP-13)
