@@ -12,6 +12,11 @@
 		404A7C8A1EA97DAD004CB142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404A7C881EA97DAD004CB142 /* Main.storyboard */; };
 		404A7C8C1EA97DAD004CB142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404A7C8B1EA97DAD004CB142 /* Assets.xcassets */; };
 		404A7C8F1EA97DAD004CB142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404A7C8D1EA97DAD004CB142 /* LaunchScreen.storyboard */; };
+		A135A616268FB16700713E54 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A135A610268FB16700713E54 /* README.md */; };
+		A135A617268FB16700713E54 /* RELEASENOTE.md in Resources */ = {isa = PBXBuildFile; fileRef = A135A611268FB16700713E54 /* RELEASENOTE.md */; };
+		A135A618268FB16700713E54 /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = A135A612268FB16700713E54 /* CONTRIBUTING.md */; };
+		A135A619268FB16700713E54 /* InstagramPhotos.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A135A613268FB16700713E54 /* InstagramPhotos.podspec */; };
+		A135A61A268FB16700713E54 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A135A614268FB16700713E54 /* LICENSE */; };
 		A14F1B1E2633F35600F5C6A6 /* squareMask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A14F1B172633F35600F5C6A6 /* squareMask@2x.png */; };
 		A14F1B1F2633F35600F5C6A6 /* InstagramPhotosLibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14F1B182633F35600F5C6A6 /* InstagramPhotosLibraryView.xib */; };
 		A14F1B202633F35600F5C6A6 /* InstagramPhotosImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14F1B192633F35600F5C6A6 /* InstagramPhotosImageCell.xib */; };
@@ -82,6 +87,12 @@
 		404A7C8E1EA97DAD004CB142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		404A7C901EA97DAD004CB142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11194932620C99600900236 /* InstagramPhotos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstagramPhotos.entitlements; sourceTree = "<group>"; };
+		A135A60F268FB16700713E54 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		A135A610268FB16700713E54 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A135A611268FB16700713E54 /* RELEASENOTE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = RELEASENOTE.md; path = ../RELEASENOTE.md; sourceTree = "<group>"; };
+		A135A612268FB16700713E54 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
+		A135A613268FB16700713E54 /* InstagramPhotos.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = InstagramPhotos.podspec; path = ../InstagramPhotos.podspec; sourceTree = "<group>"; };
+		A135A614268FB16700713E54 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A14F1B172633F35600F5C6A6 /* squareMask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareMask@2x.png"; sourceTree = "<group>"; };
 		A14F1B182633F35600F5C6A6 /* InstagramPhotosLibraryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramPhotosLibraryView.xib; sourceTree = "<group>"; };
 		A14F1B192633F35600F5C6A6 /* InstagramPhotosImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramPhotosImageCell.xib; sourceTree = "<group>"; };
@@ -153,6 +164,7 @@
 		404A7C781EA97DAD004CB142 = {
 			isa = PBXGroup;
 			children = (
+				A135A60E268FB14900713E54 /* Deployment */,
 				404A7C831EA97DAD004CB142 /* InstagramPhotos */,
 				A17F24862633F030001D6BB8 /* InstagramPhotosPodspec */,
 				A17F24932633F030001D6BB8 /* InstagramPhotosPodspecTests */,
@@ -193,6 +205,19 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A135A60E268FB14900713E54 /* Deployment */ = {
+			isa = PBXGroup;
+			children = (
+				A135A612268FB16700713E54 /* CONTRIBUTING.md */,
+				A135A613268FB16700713E54 /* InstagramPhotos.podspec */,
+				A135A614268FB16700713E54 /* LICENSE */,
+				A135A60F268FB16700713E54 /* Package.swift */,
+				A135A610268FB16700713E54 /* README.md */,
+				A135A611268FB16700713E54 /* RELEASENOTE.md */,
+			);
+			name = Deployment;
 			sourceTree = "<group>";
 		};
 		A14F1B162633F32100F5C6A6 /* Resources */ = {
@@ -456,6 +481,11 @@
 			files = (
 				404A7C8F1EA97DAD004CB142 /* LaunchScreen.storyboard in Resources */,
 				404A7C8C1EA97DAD004CB142 /* Assets.xcassets in Resources */,
+				A135A61A268FB16700713E54 /* LICENSE in Resources */,
+				A135A618268FB16700713E54 /* CONTRIBUTING.md in Resources */,
+				A135A616268FB16700713E54 /* README.md in Resources */,
+				A135A619268FB16700713E54 /* InstagramPhotos.podspec in Resources */,
+				A135A617268FB16700713E54 /* RELEASENOTE.md in Resources */,
 				404A7C8A1EA97DAD004CB142 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +671,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -694,6 +725,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
