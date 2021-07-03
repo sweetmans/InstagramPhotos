@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina6_7" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19115.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.5"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InstagramPhotosLibraryView" customModule="InstagramPhotosPodspec" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InstagramPhotosLibraryView" customModule="InstagramPhotos" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -44,7 +45,7 @@
                         <constraint firstAttribute="width" secondItem="eZc-Ex-33b" secondAttribute="height" multiplier="1:1" id="ieN-XL-iDD"/>
                     </constraints>
                 </imageView>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wF-Rq-obZ" customClass="InstagramPhotosProgressView" customModule="InstagramPhotosPodspec" customModuleProvider="target">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wF-Rq-obZ" customClass="InstagramPhotosProgressView" customModule="InstagramPhotos" customModuleProvider="target">
                     <rect key="frame" x="184" y="158" width="60" height="60"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -53,17 +54,24 @@
                     </constraints>
                 </view>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPx-WA-mgf">
-                    <rect key="frame" x="176" y="836" width="174" height="46"/>
+                    <rect key="frame" x="146" y="836" width="204" height="46"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UrS-02-t6p">
-                        <rect key="frame" x="0.0" y="0.0" width="174" height="46"/>
+                        <rect key="frame" x="0.0" y="0.0" width="204" height="46"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTx-61-mm8">
-                                <rect key="frame" x="0.0" y="0.0" width="174" height="46"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ceA-h1-LSz">
+                                <rect key="frame" x="0.0" y="0.0" width="204" height="46"/>
+                                <imageReference key="image" image="color.bg.png"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTx-61-mm8">
+                                <rect key="frame" x="1" y="1" width="202" height="44"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                                 <state key="normal" title="Add more photos">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <imageReference key="image" image="photo.on.rectangle" catalog="system"/>
                                 </state>
                                 <connections>
                                     <action selector="addingMoreButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="KEp-Jm-kqG"/>
@@ -71,14 +79,18 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ZTx-61-mm8" firstAttribute="leading" secondItem="UrS-02-t6p" secondAttribute="leading" id="1XM-t3-eNV"/>
-                            <constraint firstAttribute="bottom" secondItem="ZTx-61-mm8" secondAttribute="bottom" id="3Nj-aS-dVw"/>
-                            <constraint firstAttribute="trailing" secondItem="ZTx-61-mm8" secondAttribute="trailing" id="GLJ-lG-pyh"/>
-                            <constraint firstItem="ZTx-61-mm8" firstAttribute="top" secondItem="UrS-02-t6p" secondAttribute="top" id="vwd-Hw-Eu5"/>
+                            <constraint firstItem="ZTx-61-mm8" firstAttribute="leading" secondItem="UrS-02-t6p" secondAttribute="leading" constant="1" id="1XM-t3-eNV"/>
+                            <constraint firstAttribute="bottom" secondItem="ZTx-61-mm8" secondAttribute="bottom" constant="1" id="3Nj-aS-dVw"/>
+                            <constraint firstAttribute="trailing" secondItem="ceA-h1-LSz" secondAttribute="trailing" id="4cG-dC-sCl"/>
+                            <constraint firstAttribute="trailing" secondItem="ZTx-61-mm8" secondAttribute="trailing" constant="1" id="GLJ-lG-pyh"/>
+                            <constraint firstItem="ceA-h1-LSz" firstAttribute="leading" secondItem="UrS-02-t6p" secondAttribute="leading" id="XIV-sl-9FR"/>
+                            <constraint firstItem="ceA-h1-LSz" firstAttribute="top" secondItem="UrS-02-t6p" secondAttribute="top" id="XQ1-Mk-feM"/>
+                            <constraint firstAttribute="bottom" secondItem="ceA-h1-LSz" secondAttribute="bottom" id="mAk-4z-Nap"/>
+                            <constraint firstItem="ZTx-61-mm8" firstAttribute="top" secondItem="UrS-02-t6p" secondAttribute="top" constant="1" id="vwd-Hw-Eu5"/>
                         </constraints>
                     </view>
                     <constraints>
-                        <constraint firstAttribute="width" constant="174" id="DTB-2P-5Cv"/>
+                        <constraint firstAttribute="width" constant="204" id="DTB-2P-5Cv"/>
                         <constraint firstAttribute="height" constant="46" id="xvT-1y-u8P"/>
                     </constraints>
                     <blurEffect style="dark"/>
@@ -154,9 +166,14 @@
     </objects>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="color.bg.png" width="156" height="156"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="97"/>
         <image name="squareMask" width="414" height="414"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

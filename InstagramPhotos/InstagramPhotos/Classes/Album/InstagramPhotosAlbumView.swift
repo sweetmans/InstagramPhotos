@@ -8,6 +8,8 @@ protocol InstagramPhotosAlbumViewDelegate {
     func didSeletctAlbum(album: InstagramPhotosAlbum)
 }
 
+let InstagramPhotosBundle = Bundle(identifier: "me.sweetman.instagramphotos")
+
 public class InstagramPhotosAlbumView: UIView {
     private let albumNibName = "InstagramPhotosAlbumViewCell"
     private let albumCellReuseIdentifier = "InstagramPhotosAlbumView"
@@ -22,14 +24,14 @@ public class InstagramPhotosAlbumView: UIView {
     var pickingInteractor: InstagramPhotosPickingInteracting?
     
     public static func instance() -> InstagramPhotosAlbumView {
-        let view = UINib(nibName: "InstagramPhotosAlbumView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosAlbumView
+        let view = UINib(nibName: "InstagramPhotosAlbumView", bundle: InstagramPhotosBundle).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosAlbumView
         view.initialize()
         InstagramPhotosLocalizationManager.main.addLocalizationConponent(localizationUpdateable: view)
         return view
     }
     
     private func initialize() {
-        tableView.register(UINib(nibName: albumNibName, bundle: Bundle(for: self.classForCoder)), forCellReuseIdentifier: albumCellReuseIdentifier)
+        tableView.register(UINib(nibName: albumNibName, bundle: InstagramPhotosBundle), forCellReuseIdentifier: albumCellReuseIdentifier)
     }
 }
 

@@ -40,7 +40,7 @@ public class InstagramPhotosLibraryView: UIView {
     private let authorizationProvider: InstagramPhotosAuthorizationProviding = InstagramPhotosAuthorizationProvider()
     
     public static func instance() -> InstagramPhotosLibraryView {
-        let view = UINib(nibName: "InstagramPhotosLibraryView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosLibraryView
+        let view = UINib(nibName: "InstagramPhotosLibraryView", bundle: InstagramPhotosBundle).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosLibraryView
         view.initialize()
         InstagramPhotosLocalizationManager.main.addLocalizationConponent(localizationUpdateable: view)
         return view
@@ -51,16 +51,17 @@ public class InstagramPhotosLibraryView: UIView {
         settingFirstAlbum()
         scrollView.addSubview(imageView)
         imageView.frame = scrollView.frame
-        collectionView.register(UINib(nibName: "InstagramPhotosImageCell", bundle: Bundle(for: self.classForCoder)), forCellWithReuseIdentifier: "InstagramPhotosImageCell")
+        collectionView.register(UINib(nibName: "InstagramPhotosImageCell", bundle: InstagramPhotosBundle), forCellWithReuseIdentifier: "InstagramPhotosImageCell")
         
         addingMoreImageVisualView.clipsToBounds = true
-        addingMoreImageVisualView.layer.cornerRadius = 23
+        addingMoreImageVisualView.layer.cornerRadius = 23.0
         collectionView.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: .bottom)
         switch authorizationProvider.authorizationStatus() {
         case .limited:
             let provider = InstagramPhotosLocalizationManager.main.localizationsProviding
             showAlbumsButton.setTitle(provider.photosLimitedAccessModeText(), for: .normal)
             showAlbumsButton.isUserInteractionEnabled = false
+            addingMoreButton.layer.cornerRadius = 22.0
         default:
             addingMoreImageVisualView.isHidden = true
         }

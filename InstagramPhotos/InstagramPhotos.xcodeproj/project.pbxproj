@@ -36,6 +36,8 @@
 		A14F1B472633F5FC00F5C6A6 /* InstagramPhotosLocalizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F24AD2633F0B0001D6BB8 /* InstagramPhotosLocalizations.swift */; };
 		A14F1B4A2633F60000F5C6A6 /* InstagramPhotosLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F24A82633F0B0001D6BB8 /* InstagramPhotosLibraryView.swift */; };
 		A14F1B4D2633F60300F5C6A6 /* InstagramPhotosImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F24A92633F0B0001D6BB8 /* InstagramPhotosImageCell.swift */; };
+		A17991AD2690FD1A0093CF16 /* color.bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A17991AB2690FD1A0093CF16 /* color.bg@3x.png */; };
+		A17991AE2690FD1A0093CF16 /* color.bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A17991AC2690FD1A0093CF16 /* color.bg@2x.png */; };
 		A17F248E2633F030001D6BB8 /* InstagramPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17F24852633F030001D6BB8 /* InstagramPhotos.framework */; };
 		A17F24972633F030001D6BB8 /* InstagramPhotos.h in Headers */ = {isa = PBXBuildFile; fileRef = A17F24872633F030001D6BB8 /* InstagramPhotos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1B71E012636870800351153 /* InstagramPhotoDimensionalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B71E002636870800351153 /* InstagramPhotoDimensionalProvider.swift */; };
@@ -94,6 +96,8 @@
 		A14F1B1B2633F35600F5C6A6 /* squareMask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareMask@3x.png"; sourceTree = "<group>"; };
 		A14F1B1C2633F35600F5C6A6 /* InstagramPhotosAlbumViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramPhotosAlbumViewCell.xib; sourceTree = "<group>"; };
 		A14F1B1D2633F35600F5C6A6 /* InstagramPhotosPickingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramPhotosPickingViewController.xib; sourceTree = "<group>"; };
+		A17991AB2690FD1A0093CF16 /* color.bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color.bg@3x.png"; sourceTree = "<group>"; };
+		A17991AC2690FD1A0093CF16 /* color.bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color.bg@2x.png"; sourceTree = "<group>"; };
 		A17F24852633F030001D6BB8 /* InstagramPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InstagramPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17F24872633F030001D6BB8 /* InstagramPhotos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstagramPhotos.h; sourceTree = "<group>"; };
 		A17F24882633F030001D6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				A14F1B1A2633F35600F5C6A6 /* InstagramPhotosAlbumView.xib */,
 				A14F1B192633F35600F5C6A6 /* InstagramPhotosImageCell.xib */,
 				A14F1B182633F35600F5C6A6 /* InstagramPhotosLibraryView.xib */,
+				A17991AC2690FD1A0093CF16 /* color.bg@2x.png */,
+				A17991AB2690FD1A0093CF16 /* color.bg@3x.png */,
 				A14F1B172633F35600F5C6A6 /* squareMask@2x.png */,
 				A14F1B1B2633F35600F5C6A6 /* squareMask@3x.png */,
 			);
@@ -452,8 +458,10 @@
 				A14F1B232633F35600F5C6A6 /* InstagramPhotosAlbumViewCell.xib in Resources */,
 				A14F1B222633F35600F5C6A6 /* squareMask@3x.png in Resources */,
 				A14F1B242633F35600F5C6A6 /* InstagramPhotosPickingViewController.xib in Resources */,
+				A17991AD2690FD1A0093CF16 /* color.bg@3x.png in Resources */,
 				A14F1B1E2633F35600F5C6A6 /* squareMask@2x.png in Resources */,
 				A14F1B1F2633F35600F5C6A6 /* InstagramPhotosLibraryView.xib in Resources */,
+				A17991AE2690FD1A0093CF16 /* color.bg@2x.png in Resources */,
 				A14F1B202633F35600F5C6A6 /* InstagramPhotosImageCell.xib in Resources */,
 				A14F1B212633F35600F5C6A6 /* InstagramPhotosAlbumView.xib in Resources */,
 			);
