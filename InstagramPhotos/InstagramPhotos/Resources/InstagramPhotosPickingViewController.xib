@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstagramPhotosPickingViewController" customModule="InstagramPhotos" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstagramPhotosPickingViewController" customModule="InstagramPhotos">
             <connections>
                 <outlet property="closeButton" destination="OEn-eq-X9E" id="Xd5-aK-vpE"/>
                 <outlet property="navigationViewHeightConstraint" destination="eTW-Ue-G1C" id="9bF-M7-F1a"/>

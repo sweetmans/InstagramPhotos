@@ -60,7 +60,7 @@ public class InstagramPhotosPickingViewController: UIViewController {
         self.albumsProvider = albumsProvider
         self.albumView = albumView
         self.libraryView = libraryView
-        super.init(nibName: Strings.viewControllerNibName.rawValue, bundle: InstagramPhotosBundle)
+        super.init(nibName: Strings.viewControllerNibName.rawValue, bundle: Bundle.module)
     }
     
     required init?(coder: NSCoder) {

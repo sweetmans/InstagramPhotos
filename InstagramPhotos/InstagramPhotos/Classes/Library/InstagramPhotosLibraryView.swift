@@ -40,7 +40,7 @@ public class InstagramPhotosLibraryView: UIView {
     private let authorizationProvider: InstagramPhotosAuthorizationProviding = InstagramPhotosAuthorizationProvider()
     
     public static func instance() -> InstagramPhotosLibraryView {
-        let view = UINib(nibName: "InstagramPhotosLibraryView", bundle: InstagramPhotosBundle).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosLibraryView
+        let view = UINib(nibName: "InstagramPhotosLibraryView", bundle: Bundle.module).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosLibraryView
         view.initialize()
         InstagramPhotosLocalizationManager.main.addLocalizationConponent(localizationUpdateable: view)
         return view
@@ -51,7 +51,7 @@ public class InstagramPhotosLibraryView: UIView {
         settingFirstAlbum()
         scrollView.addSubview(imageView)
         imageView.frame = scrollView.frame
-        collectionView.register(UINib(nibName: "InstagramPhotosImageCell", bundle: InstagramPhotosBundle), forCellWithReuseIdentifier: "InstagramPhotosImageCell")
+        collectionView.register(UINib(nibName: "InstagramPhotosImageCell", bundle: Bundle.module), forCellWithReuseIdentifier: "InstagramPhotosImageCell")
         
         addingMoreImageVisualView.clipsToBounds = true
         addingMoreImageVisualView.layer.cornerRadius = 23.0
