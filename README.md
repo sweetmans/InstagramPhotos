@@ -10,7 +10,7 @@
 ## To be contributed with me
 #### Twitter PM me [![Twitter](https://img.shields.io/twitter/url?label=tubepets&style=social&url=https%3A%2F%2Ftwitter.com%2Ftubepets)](https://twitter.com/tubepets)
 
-## The latest `MAJOR` release: `2.0.0` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
+### The latest `MAJOR` release: `2.0.0` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
 - [x] Rename to InstagramPhotos
 - [x] Migrated to Xcode 12
 - [x] New UI design same with instagram
