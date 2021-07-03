@@ -17,13 +17,10 @@
 - [x] Adding localization support
 - [x] Supporting new iOS 14 photos limited access system
 
-## The latest release `2.0.1` `CURRENT` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
-- [x] Use InstagramPhotos folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
-- [x] Handle iPhone safe area for none all display iPhones [SMIIP-7](https://sweetmancc.atlassian.net/browse/SMIIP-7)
-- [x] Release 2.0.1 [SMIIP-13](https://sweetmancc.atlassian.net/browse/SMIIP-13)
+## The latest release `2.0.3` `Latest` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
+- [x] Support Swift package [SMIIP-12](https://sweetmancc.atlassian.net/browse/SMIIP-12)
 
-## TO DO
-- [ ] Adding SwiftPackage support [SMIIP-12](https://sweetmancc.atlassian.net/browse/SMIIP-12)  
+## TO DO 
 - [ ] Adding filter function [SMIIP-9](https://sweetmancc.atlassian.net/browse/SMIIP-9)
 - [ ] Multiples photos select support [SMIIP-10](https://sweetmancc.atlassian.net/browse/SMIIP-10)
 - [ ] Create iOS code checking [SMIIP-3](https://sweetmancc.atlassian.net/browse/SMIIP-3)
@@ -49,9 +46,9 @@
 - [x] Use GCD and ARC
 - [x] Supported iOS 11.0 and above
 ## Requirements
-- iOS 11.0 or above
-- Xcode 12.0 or above
-- swift 5.0 or above
+- iOS 12.0 or later
+- Xcode 12.0 or later
+- swift 5.0 or later
 
 ## Getting Started
 
@@ -59,17 +56,24 @@
 
 SMInstagramPhotoPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
-
+#### Cocoapods
 ```ruby
 pod 'InstagramPhotos'
 ```
+#### Swift Package Manager
+```swift
+dependencies: [
+    .package(url: "https://github.com/sweetmans/InstagramPhotos.git", .upToNextMajor(from: "2.0.0"))
+]
+```
+
+#### And Then.
 ```swift
 import InstagramPhotos
 ```
 
 ### Usage
-
-- In your controller.
+#### In your ViewController.
 ```swift
 var picker: InstagramPhotosPickingViewController?
 ```

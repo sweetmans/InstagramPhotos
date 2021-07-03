@@ -8,10 +8,13 @@ Release should update `README.md` & `RELEASENOTE.md` for release detail.
 
 ## The Latest release
 
+### 4th July 2021: `2.0.3` [https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.3](https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.3)
+- [x] Support Swift package [SMIIP-12](https://sweetmancc.atlassian.net/browse/SMIIP-12)
+
 ### 28th April 2021: `2.0.1` [https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.1](https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.1)
-- [ ] Use InstagramPhotos folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
-- [ ] Handle iPhone safe area for none all display iPhones [SMIIP-7](https://sweetmancc.atlassian.net/browse/SMIIP-7)
-- [ ] Release 2.0.1 [SMIIP-13](https://sweetmancc.atlassian.net/browse/SMIIP-13)
+- [x] Use InstagramPhotos folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
+- [x] Handle iPhone safe area for none all display iPhones [SMIIP-7](https://sweetmancc.atlassian.net/browse/SMIIP-7)
+- [x] Release 2.0.1 [SMIIP-13](https://sweetmancc.atlassian.net/browse/SMIIP-13)
 
 ### 25th April 2021: `2.0.0` [https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.0](https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.0)
 - [x] Rename to InstagramPhotos [SMIIP-4](https://sweetmancc.atlassian.net/browse/SMIIP-4)
