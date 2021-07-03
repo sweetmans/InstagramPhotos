@@ -18,8 +18,7 @@ let package = Package(
             dependencies: [],
             path: "InstagramPhotos/InstagramPhotos",
             exclude: ["Info.plist"],
-            resources: [.process("Resources/squareMask@3x.png"),
-                        .process("Resources/squareMask@2x.png")],
+            resources: [.process("Resources")],
             linkerSettings: [.linkedFramework("UIKit", .when(platforms: [.iOS])),
                              .linkedFramework("PhotosUI", .when(platforms: [.iOS])),
                              .linkedFramework("Photos", .when(platforms: [.iOS]))])
