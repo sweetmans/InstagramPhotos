@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InstagramPhotos'
-  s.version          = '2.0.1'
-  s.summary          = 'An instagram design photos picker viewController using swift'
+  s.version          = '2.0.3'
+  s.summary          = 'An elegant instagram design photos picker viewController using swift'
   s.license         = 'MIT'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,16 +25,16 @@ Adding localization support
 Supporting new iOS 14 photos limited access system
                        DESC
 
-  s.homepage         = 'https://cocoapods.org/pods/InstagramPhotos'
+  s.homepage         = 'https://github.com/sweetmans/InstagramPhotos'
   s.screenshots      = 'https://github.com/sweetmans/InstagramPhotos/blob/develop/Assets/banner.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'sweetmans' => 'developer@sweetman.cc' }
+  s.author           = { 'sweetmans' => 'bp@sweetman.cc' }
   s.source           = { :git => 'https://github.com/sweetmans/InstagramPhotos.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/tubepets'
 
   s.ios.deployment_target = '11.0'
-  s.source_files = 'InstagramPhotos/InstagramPhotosPodspec/Classes/**/*.swift'
-  s.resources    = ['InstagramPhotos/InstagramPhotosPodspec/Resources/*.png', 'InstagramPhotos/InstagramPhotosPodspec/Resources/*.xib']
+  s.source_files = 'InstagramPhotos/InstagramPhotos/Classes/**/*.swift'
+  s.resources    = ['InstagramPhotos/InstagramPhotos/Resources/*.png', 'InstagramPhotos/InstagramPhotos/Resources/*.xib']
   s.module_name  = 'InstagramPhotos'
   # s.resource_bundles = {
   #   'SMColor' => ['SMColor/Assets/*.png']
@@ -42,6 +42,6 @@ Supporting new iOS 14 photos limited access system
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks  = 'UIKit', 'Photos', 'PhotosUI'
-  s.swift_versions = ['5.0', '5.0.1', '5.1', '5.1.2', '5.1.3', '5.2', '5.2.2', '5.2.4', '5.3', '5.3.1', '5.3.2']
+  s.swift_versions = ['5.0', '5.1', '5.2', '5.3', '5.4']
   # s.dependency 'AFNetworking', '~> 2.3'
 end

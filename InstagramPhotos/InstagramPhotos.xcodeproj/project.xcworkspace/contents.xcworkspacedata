@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Demo.xcodeproj">
+      location = "self:/Users/andy/Documents/project/iOS/imagePickerProject/InstagramPhotos/InstagramPhotos.xcodeproj">
    </FileRef>
 </Workspace>

@@ -3,7 +3,7 @@
 //
 
 import UIKit
-import InstagramPhotosPodspec
+import InstagramPhotos
 import Photos
 import PhotosUI
 
