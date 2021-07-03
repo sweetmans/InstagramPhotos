@@ -93,8 +93,7 @@ if `iOS 14` you need to set `PHPhotoLibraryPreventAutomaticLimitedAccessAlert` t
 #### Initialize your photo Pinking View Controller
 ```swift
 private func getPickerReady() {
-    let imageProvider = PhotosProvider(viewController: self)
-    picker = InstagramPhotosPickingViewController(imagePicking: imageProvider,
+    picker = InstagramPhotosPickingViewController(imagePicking: self,
                                          ocalizationsProviding: InstagramPhotosChineseLocalizationProvider())
 }
 ```
