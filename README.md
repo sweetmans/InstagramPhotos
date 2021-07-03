@@ -60,7 +60,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'InstagramPhotos'
 ```
-#### Swift Package Manager
+#### Swift Package Manager （Bundle issue could not use swift package right now）
 ```swift
 dependencies: [
     .package(url: "https://github.com/sweetmans/InstagramPhotos.git", .upToNextMajor(from: "2.0.0"))
