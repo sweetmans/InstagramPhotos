@@ -18,7 +18,7 @@
 - [x] Supporting new iOS 14 photos limited access system
 
 ## The latest release `2.0.1` `CURRENT` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
-- [x] Use InstagramPhotosPodspec folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
+- [x] Use InstagramPhotos folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
 - [x] Handle iPhone safe area for none all display iPhones [SMIIP-7](https://sweetmancc.atlassian.net/browse/SMIIP-7)
 - [x] Release 2.0.1 [SMIIP-13](https://sweetmancc.atlassian.net/browse/SMIIP-13)
 

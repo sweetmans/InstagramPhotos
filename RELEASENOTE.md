@@ -9,7 +9,7 @@ Release should update `README.md` & `RELEASENOTE.md` for release detail.
 ## The Latest release
 
 ### 28th April 2021: `2.0.1` [https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.1](https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.1)
-- [ ] Use InstagramPhotosPodspec folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
+- [ ] Use InstagramPhotos folder for cocoapods source [SMIIP-11](https://sweetmancc.atlassian.net/browse/SMIIP-11)
 - [ ] Handle iPhone safe area for none all display iPhones [SMIIP-7](https://sweetmancc.atlassian.net/browse/SMIIP-7)
 - [ ] Release 2.0.1 [SMIIP-13](https://sweetmancc.atlassian.net/browse/SMIIP-13)
 

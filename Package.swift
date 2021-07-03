@@ -8,15 +8,15 @@ let package = Package(
     platforms: [.iOS(.v12)],
     products: [
         .library(
-            name: "InstagramPhotosPodspec",
-            targets: ["InstagramPhotosPodspec"])
+            name: "InstagramPhotos",
+            targets: ["InstagramPhotos"])
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "InstagramPhotosPodspec",
+            name: "InstagramPhotos",
             dependencies: [],
-            path: "InstagramPhotos/InstagramPhotosPodspec",
+            path: "InstagramPhotos/InstagramPhotos",
             resources: [.process("Resources/squareMask@3x.png"),
                         .process("Resources/squareMask@2x.png")],
             linkerSettings: [.linkedFramework("UIKit", .when(platforms: [.iOS])),

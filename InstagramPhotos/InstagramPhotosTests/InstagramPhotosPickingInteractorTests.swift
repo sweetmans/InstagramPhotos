@@ -3,7 +3,7 @@
 //
 
 import XCTest
-@testable import InstagramPhotosPodspec
+@testable import InstagramPhotos
 
 class InstagramPhotosPickingInteractorTests: XCTestCase {
     func test_showAlbumsView() {
