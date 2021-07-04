@@ -6,6 +6,11 @@ import UIKit
 import Photos
 
 public class InstagramPhotosLibraryView: UIView {
+    struct Measurements {
+        static let imageCellName = "InstagramPhotosImageCell"
+        static let libraryViewName = "InstagramPhotosLibraryView"
+    }
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var showAlbumsButton: UIButton!
     @IBOutlet weak var squareMask: UIImageView!
@@ -40,7 +45,8 @@ public class InstagramPhotosLibraryView: UIView {
     private let authorizationProvider: InstagramPhotosAuthorizationProviding = InstagramPhotosAuthorizationProvider()
     
     public static func instance() -> InstagramPhotosLibraryView {
-        let view = UINib(nibName: "InstagramPhotosLibraryView", bundle: Bundle.module).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosLibraryView
+        let view = UINib(nibName: Measurements.libraryViewName,
+                         bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! InstagramPhotosLibraryView
         view.initialize()
         InstagramPhotosLocalizationManager.main.addLocalizationConponent(localizationUpdateable: view)
         return view
@@ -51,8 +57,9 @@ public class InstagramPhotosLibraryView: UIView {
         settingFirstAlbum()
         scrollView.addSubview(imageView)
         imageView.frame = scrollView.frame
-        collectionView.register(UINib(nibName: "InstagramPhotosImageCell", bundle: Bundle.module), forCellWithReuseIdentifier: "InstagramPhotosImageCell")
-        
+        let cellNib = UINib(nibName: Measurements.imageCellName,
+                            bundle: Bundle(for: InstagramPhotosLibraryView.classForCoder()))
+        collectionView.register(cellNib, forCellWithReuseIdentifier: Measurements.imageCellName)
         addingMoreImageVisualView.clipsToBounds = true
         addingMoreImageVisualView.layer.cornerRadius = 23.0
         collectionView.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: .bottom)
@@ -158,7 +165,7 @@ extension InstagramPhotosLibraryView {
 
 extension InstagramPhotosLibraryView: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InstagramPhotosImageCell", for: indexPath) as! InstagramPhotosImageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Measurements.imageCellName, for: indexPath) as! InstagramPhotosImageCell
         let asset = self.images[indexPath.row]
         PHImageManager.default().requestImage(for: asset,
                                               targetSize: CGSize(width: 300, height: 300),
