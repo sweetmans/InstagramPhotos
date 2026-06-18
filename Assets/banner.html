@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920, height=1080" />
+  <title>InstagramPhotos Banner</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 100px 80px 120px;
+    }
+
+    .phones {
+      position: relative;
+      width: 980px;
+      height: 920px;
+      flex-shrink: 0;
+    }
+
+    .phone {
+      position: absolute;
+      background: #111;
+      border-radius: 54px;
+      padding: 14px;
+      box-shadow: 0 40px 100px rgba(0,0,0,.18), 0 8px 24px rgba(0,0,0,.12);
+    }
+
+    .phone.left {
+      width: 390px;
+      height: 820px;
+      left: 40px;
+      top: 20px;
+      z-index: 2;
+    }
+
+    .phone.right {
+      width: 330px;
+      height: 694px;
+      left: 520px;
+      top: 180px;
+      z-index: 1;
+      transform: scale(0.92);
+      opacity: 0.96;
+    }
+
+    .screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 42px;
+      overflow: hidden;
+      background: #f2f2f7;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .status {
+      height: 44px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .status .time { letter-spacing: -0.3px; }
+    .status .icons { display: flex; gap: 6px; align-items: center; }
+    .status .icons span { display: inline-block; background: #000; border-radius: 2px; }
+
+    .nav {
+      height: 44px;
+      background: #fff;
+      border-bottom: 0.5px solid rgba(60,60,67,.12);
+      display: grid;
+      grid-template-columns: 72px 1fr 72px;
+      align-items: center;
+      padding: 0 8px;
+      font-size: 17px;
+    }
+
+    .nav .cancel { color: #000; font-size: 17px; padding-left: 8px; }
+    .nav .title {
+      text-align: center;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-size: 17px;
+    }
+    .nav .title .chev {
+      width: 10px; height: 10px;
+      border-right: 2px solid #8e8e93;
+      border-bottom: 2px solid #8e8e93;
+      transform: rotate(45deg) translateY(-2px);
+      margin-left: 2px;
+    }
+    .nav .add { text-align: right; color: #8e8e93; font-weight: 600; padding-right: 8px; }
+
+    .preview {
+      width: 100%;
+      height: 248px;
+      background:
+        linear-gradient(135deg, #4f86ff 0%, #7b5cff 38%, #ff5f9a 72%, #ffb347 100%);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .phone.left .preview { height: 286px; }
+
+    .preview::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.25), transparent 45%);
+    }
+
+    .grabber-wrap {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 6px 0 4px;
+    }
+    .grabber {
+      width: 36px;
+      height: 5px;
+      border-radius: 99px;
+      background: rgba(60,60,67,.28);
+    }
+
+    .banner {
+      margin: 0 12px;
+      background: #f2f2f7;
+      border-radius: 12px;
+      padding: 10px 12px 12px;
+    }
+
+    .banner-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .banner-row .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .toggle-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(0,0,0,.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 2px rgba(0,0,0,.08);
+    }
+
+    .toggle-btn .chev-up {
+      width: 10px; height: 10px;
+      border-left: 2px solid #000;
+      border-top: 2px solid #000;
+      transform: rotate(45deg) translateY(2px);
+    }
+
+    .banner-desc {
+      font-size: 12px;
+      line-height: 1.35;
+      color: #8e8e93;
+      margin-bottom: 8px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      height: 32px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.85);
+      border: 1px solid rgba(0,0,0,.08);
+      font-size: 12px;
+      font-weight: 600;
+      color: #000;
+      box-shadow: 0 1px 2px rgba(0,0,0,.08);
+    }
+
+    .action-btn .icon {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #000;
+      border-radius: 3px;
+      position: relative;
+    }
+    .action-btn .icon::before {
+      content: "+";
+      position: absolute;
+      right: -5px;
+      bottom: -6px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #34c759;
+      background: #fff;
+      line-height: 1;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #fff;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .cell {
+      aspect-ratio: 1;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .c1 { background: linear-gradient(160deg, #6ea8ff, #315efb); }
+    .c2 { background: linear-gradient(160deg, #ff7eb6, #ff4d8d); }
+    .c3 { background: linear-gradient(160deg, #ffd36b, #ff9f0a); }
+    .c4 { background: linear-gradient(160deg, #5bd6a2, #30b07d); }
+    .c5 { background: linear-gradient(160deg, #b28cff, #7b61ff); }
+    .c6 { background: linear-gradient(160deg, #7dd3fc, #0ea5e9); }
+    .c7 { background: linear-gradient(160deg, #fda4af, #fb7185); }
+    .c8 { background: linear-gradient(160deg, #86efac, #22c55e); }
+    .c9 { background: linear-gradient(160deg, #c4b5fd, #8b5cf6); }
+
+    .phone.right .banner-desc { font-size: 11px; }
+    .phone.right .nav, .phone.right .status { transform-origin: top; }
+
+    .brand {
+      width: 720px;
+      padding-right: 40px;
+      text-align: right;
+    }
+
+    .logo {
+      font-size: 92px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    .logo .insta {
+      background: linear-gradient(90deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .logo .photos {
+      background: linear-gradient(90deg, #f56040, #f77737, #fcaf45, #ffdc80);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .tagline {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #5856d6, #af52de, #ff2d55, #ff9500);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 18px;
+    }
+
+    .sub {
+      font-size: 24px;
+      color: #8e8e93;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 36px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #f2f2f7;
+      color: #3c3c43;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="phones">
+    <div class="phone left">
+      <div class="screen">
+        <div class="status">
+          <span class="time">9:41</span>
+          <div class="icons">
+            <span style="width:18px;height:10px;"></span>
+            <span style="width:16px;height:10px;"></span>
+            <span style="width:24px;height:11px;border-radius:3px;"></span>
+          </div>
+        </div>
+        <div class="nav">
+          <div class="cancel">Cancel</div>
+          <div class="title">Recents <span class="chev"></span></div>
+          <div class="add">Add</div>
+        </div>
+        <div class="preview"></div>
+        <div class="grabber-wrap"><div class="grabber"></div></div>
+        <div class="banner">
+          <div class="banner-row">
+            <div class="label">Limited Access</div>
+            <div class="toggle-btn"><div class="chev-up"></div></div>
+          </div>
+          <div class="banner-desc">You've granted access to only a subset of your photo library. Choose additional photos and albums that can be used in this app.</div>
+          <div class="action-btn"><span class="icon"></span> Add more photos</div>
+        </div>
+        <div class="grid">
+          <div class="cell c1"></div><div class="cell c2"></div><div class="cell c3"></div>
+          <div class="cell c4"></div><div class="cell c5"></div><div class="cell c6"></div>
+          <div class="cell c7"></div><div class="cell c8"></div><div class="cell c9"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phone right">
+      <div class="screen">
+        <div class="status">
+          <span class="time">9:41</span>
+          <div class="icons">
+            <span style="width:18px;height:10px;"></span>
+            <span style="width:16px;height:10px;"></span>
+            <span style="width:24px;height:11px;border-radius:3px;"></span>
+          </div>
+        </div>
+        <div class="nav">
+          <div class="cancel">Cancel</div>
+          <div class="title">Recents <span class="chev"></span></div>
+          <div class="add">Add</div>
+        </div>
+        <div class="preview"></div>
+        <div class="grabber-wrap"><div class="grabber"></div></div>
+        <div class="banner">
+          <div class="banner-row">
+            <div class="label">Limited Access</div>
+            <div class="toggle-btn"><div class="chev-up"></div></div>
+          </div>
+          <div class="banner-desc">You've granted access to only a subset of your photo library. Choose additional photos and albums that can be used in this app.</div>
+          <div class="action-btn"><span class="icon"></span> Add more photos</div>
+        </div>
+        <div class="grid">
+          <div class="cell c3"></div><div class="cell c1"></div><div class="cell c5"></div>
+          <div class="cell c8"></div><div class="cell c2"></div><div class="cell c6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand">
+    <div class="logo"><span class="insta">Instagram</span><span class="photos">Photos</span></div>
+    <div class="tagline">SwiftUI Photo Picker for iOS 16+</div>
+    <div class="sub">Album browsing · iCloud downloads · Limited access</div>
+    <div class="badge">v3.0.0</div>
+  </div>
+</body>
+</html>
