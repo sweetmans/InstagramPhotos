@@ -1,163 +1,218 @@
-<p align="center" >
-	<img src="https://github.com/sweetmans/InstagramPhotos/blob/develop/Assets/banner.png" title="SMInstagramPhotoPicker" float=left>
+# InstagramPhotos
+
+A modern SwiftUI photo picker library with Instagram-style album browsing, preview, selection, and iCloud Photos support.
+
+<p align="center">
+  <img src="https://github.com/sweetmans/InstagramPhotos/blob/develop/Assets/banner.png" alt="InstagramPhotos">
 </p>
 
-[![Version](https://img.shields.io/cocoapods/v/InstagramPhotos.svg?style=for-the-badge&logo=appveyort)](http://cocoapods.org/pods/InstagramPhotos)
-[![License](https://img.shields.io/cocoapods/l/InstagramPhotos.svg?style=for-the-badge&logo=appveyor)](http://cocoapods.org/pods/InstagramPhotos)
-[![Platform](https://img.shields.io/cocoapods/p/InstagramPhotos.svg?style=for-the-badge&logo=appveyor)](http://cocoapods.org/pods/InstagramPhotos)
-[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg?style=for-the-badge&logo=appveyor)](https://houndci.com)
+## Overview
 
-## To be contributed with me
-#### Twitter PM me [![Twitter](https://img.shields.io/twitter/url?label=tubepets&style=social&url=https%3A%2F%2Ftwitter.com%2Ftubepets)](https://twitter.com/tubepets)
+InstagramPhotos is a local Apple Photos picker — not an Instagram API client. Version 3 modernizes the original UIKit library into a SwiftUI-first package while preserving the familiar Instagram-like UX:
 
-### The latest `MAJOR` release: `2.0.0` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
-- [x] Rename to InstagramPhotos
-- [x] Migrated to Xcode 12
-- [x] New UI design same with instagram
-- [x] Adding localization support
-- [x] Supporting new iOS 14 photos limited access system
+- Album grid and photo grid
+- Large zoomable preview with square crop region
+- Recent / all photos browsing
+- Single and multiple selection
+- Limited Photos access handling
+- iCloud download progress UI
+- Localization support
 
-## The latest release `2.0.3` `Latest` [RELEASENOTE.md](https://github.com/sweetmans/InstagramPhotos/blob/develop/RELEASENOTE.md)
-- [x] Support Swift package [SMIIP-12](https://sweetmancc.atlassian.net/browse/SMIIP-12)
-
-## TO DO 
-- [ ] Adding filter function [SMIIP-9](https://sweetmancc.atlassian.net/browse/SMIIP-9)
-- [ ] Multiples photos select support [SMIIP-10](https://sweetmancc.atlassian.net/browse/SMIIP-10)
-- [ ] Create iOS code checking [SMIIP-3](https://sweetmancc.atlassian.net/browse/SMIIP-3)
-- [ ] New design for iPad support [SMIIP-8](https://sweetmancc.atlassian.net/browse/SMIIP-8)
-
-### If you like this framework. Please give me a star ⭐️
-### Contributor
-<p align="left" >
-<a href="https://github.com/sweetmans">
-	<img src="https://avatars.githubusercontent.com/u/22865790?s=60&v=4" title="ANDY HUANG" float=left>
-</a>
-</p>
-
-### Welcome to be one of us 🧑🏻‍💻🧑‍💻🧑🏼‍💻🧑🏽‍💻🧑🏾‍💻🧑🏿‍💻
-
-## Features
-- [x] New UI design same with instagram
-- [x] Adding localization support
-- [x] Supporting new iOS 14 photos limited access system
-- [x] So easy to use.
-- [x] Support Swift 5.0 and above
-- [x] Performances!
-- [x] Use GCD and ARC
-- [x] Supported iOS 11.0 and above
 ## Requirements
-- iOS 12.0 or later
-- Xcode 12.0 or later
-- swift 5.0 or later
 
-## Getting Started
+- iOS 16.0+
+- Xcode 15.0+
+- Swift 5.9+
+- SwiftUI-first API with UIKit-backed photo grid for smooth scrolling
 
-### Installation
+Add to your app's `Info.plist`:
 
-SMInstagramPhotoPicker is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-#### Cocoapods
-```ruby
-pod 'InstagramPhotos'
-```
-#### Swift Package Manager （Bundle issue could not use swift package right now）
-```swift
-dependencies: [
-    .package(url: "https://github.com/sweetmans/InstagramPhotos.git", .upToNextMajor(from: "2.0.0"))
-]
-```
-
-#### And Then.
-```swift
-import InstagramPhotos
-```
-
-### Usage
-#### In your ViewController.
-```swift
-var picker: InstagramPhotosPickingViewController?
-```
-#### Photo library access
-First. It is importance to do this step.
-Be sour your app have Authorization to access your photo library.
-on your `plist.info` adding this attribute
 ```xml
 <key>NSPhotoLibraryUsageDescription</key>
-<string>Your app need access your photo library</string>
-```
-if `iOS 14` you need to set `PHPhotoLibraryPreventAutomaticLimitedAccessAlert` to `YES` on `plist.info` to prevent limited photos access alert.
-```xml
+<string>This app needs access to your photo library.</string>
 <key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
 <true/>
 ```
-#### Initialize your photo Pinking View Controller
-```swift
-private func getPickerReady() {
-    picker = InstagramPhotosPickingViewController(imagePicking: self,
-                                         ocalizationsProviding: InstagramPhotosChineseLocalizationProvider())
-}
-```
-#### Present the pickingViewController
-```swift
-@IBAction func show(_ sender: UIButton) {
-    guard let unwrapPicker = picker else { return }
-    unwrapPicker.modalPresentationStyle = .fullScreen
-    present(unwrapPicker, animated: true, completion: nil)
-}
-```
 
-#### Get your image through `InstagramPhotosPicking` delegate.
+## Installation
+
+### Swift Package Manager (recommended)
 
 ```swift
-extension ViewController: InstagramPhotosPicking {
-    //your viewcontroller
-    func instagramPhotosDidFinishPickingImage(result: InstagramPhotosPickingResult) {
-        switch result {
-        case .failure(let error):
-            switch error {
-            case .cancelByUser:
-                print("User canceled selete image")
-            default:
-                print(error)
-            }
-        case .success(let ipImage):
-            viewController.imageView.image = ipImage.image
+dependencies: [
+    .package(url: "https://github.com/sweetmans/InstagramPhotos.git", from: "3.0.0")
+]
+```
+
+```swift
+.target(
+    name: "YourApp",
+    dependencies: [
+        .product(name: "InstagramPhotos", package: "InstagramPhotos"),
+    ]
+)
+```
+
+## Quick Start
+
+```swift
+import SwiftUI
+import InstagramPhotos
+
+struct ContentView: View {
+    @State private var isPresented = false
+    @State private var selection: [InstagramPhotosAsset] = []
+
+    var body: some View {
+        Button("Pick Photos") {
+            isPresented = true
+        }
+        .sheet(isPresented: $isPresented) {
+            InstagramPhotosPicker(
+                selection: $selection,
+                configuration: .init(
+                    selectionLimit: 10,
+                    allowsMultipleSelection: true,
+                    iCloudNetworkAccessAllowed: true
+                )
+            )
         }
     }
 }
 ```
 
-#### Customize Localization
-You could use default `InstagramPhotosChineseLocalizationProvider()` for `English`, `InstagramPhotosEnglishLocalizationProvider()` for `Chinese`.
+### Load full-size images
 
-define you own localization provider
 ```swift
-// Exsample Korean
-struct KoreanLocalizationProvider: InstagramPhotosLocalizationsProviding {
-    public init() {}
-    public func pinkingControllerNavigationTitle() -> String {  return "사진 선택" }
-    public func pinkingControllerNavigationNextButtonText() -> String { return "다음 단계" }
-    public func pinkingControllerDefaultAlbumName() -> String { return "사진 갤러리" }
-    public func pinkingControllerAddingImageAccessButtonText() -> String { return "접근 가능한 사진 추가" }
-    public func albumControllerNavigationTitle() -> String { return "앨범 선택" }
-    public func albumControllerNavigationCancelButtonText() -> String { return "취소" }
-    public func photosLimitedAccessModeText() -> String { return "액세스 권한이있는 모든 사진이 표시됩니다" }
-}
-```
-Apply it in the pickingViewController Initialize
-```swift
-private func getPickerReady() {
-    let imageProvider = PhotosProvider(viewController: self)
-    picker = InstagramPhotosPickingViewController(imagePicking: imageProvider,
-                                        localizationsProviding: KoreanLocalizationProvider())
+let images = try await selection.loadImages(
+    configuration: .init(iCloudNetworkAccessAllowed: true)
+)
+
+for loaded in images {
+    loaded.swiftUIImage // SwiftUI Image
+    loaded.cgImage      // Core Graphics image data
 }
 ```
 
-## Licenses
+### Configuration
 
-All source code is licensed under the [MIT License](https://raw.github.com/rs/SDWebImage/master/LICENSE).
+```swift
+InstagramPhotosPickerConfiguration(
+    selectionLimit: 10,
+    allowedMediaTypes: [.image],
+    allowsMultipleSelection: true,
+    thumbnailSize: CGSize(width: 300, height: 300),
+    preferredAlbumIdentifier: nil,
+    iCloudNetworkAccessAllowed: true,
+    showsProgress: true,
+    localizationProvider: InstagramPhotosEnglishLocalizationProvider()
+)
+```
+
+## iCloud Photos Support
+
+When `iCloudNetworkAccessAllowed` is `true` (default):
+
+- The library detects assets that are not stored locally.
+- PhotoKit requests use `PHImageRequestOptions.isNetworkAccessAllowed = true`.
+- A progress overlay appears while iCloud assets download.
+- Requests respect Swift task cancellation.
+- Failures surface as `InstagramPhotosImageLoadingError` without blocking the main thread.
+
+Set `iCloudNetworkAccessAllowed` to `false` if you only want on-device assets.
+
+## Limited Photos Access
+
+The picker handles all authorization states:
+
+| Status | Behavior |
+|--------|----------|
+| `.authorized` | Full library browsing and album switching |
+| `.limited` | Shows authorized photos, banner, and "Access more photos" action |
+| `.denied` / `.restricted` | SwiftUI permission empty state |
+| `.notDetermined` | Shows an in-picker permission screen; user taps Allow Access |
+
+**Important:** Add `PHPhotoLibraryPreventAutomaticLimitedAccessAlert` to your **app target's** Info.plist. Without it, iOS shows a system "Select Photos" sheet every time the picker accesses PhotoKit under Limited Photos access. The Swift package cannot set this for you.
+
+Do not call `PHPhotoLibrary.requestAuthorization` in your app immediately before presenting `InstagramPhotosPicker`. Check `InstagramPhotosAuthorizationStatus.current` first, or let the picker handle permission.
+
+When access is limited, the picker opens the app's Settings page so users can manage photo permissions (no UIKit bridge required).
+
+## Localization
+
+Provide a custom localization type conforming to `InstagramPhotosLocalizationProviding`:
+
+```swift
+struct KoreanLocalizationProvider: InstagramPhotosLocalizationProviding {
+    func pickerNavigationTitle() -> String { "사진 선택" }
+    func pickerNavigationNextButtonText() -> String { "다음" }
+    func pickerDefaultAlbumName() -> String { "모든 사진" }
+    func pickerAddingImageAccessButtonText() -> String { "더 많은 사진 허용" }
+    func albumNavigationTitle() -> String { "앨범 선택" }
+    func albumNavigationCancelButtonText() -> String { "취소" }
+    func photosLimitedAccessModeText() -> String { "허용된 사진만 표시됩니다" }
+}
+```
+
+Built-in providers: `InstagramPhotosEnglishLocalizationProvider`, `InstagramPhotosChineseLocalizationProvider`.
+
+## Migration from UIKit (v2)
+
+| UIKit (v2) | SwiftUI (v3) |
+|------------|--------------|
+| `InstagramPhotosPickingViewController` | `InstagramPhotosPicker` |
+| `InstagramPhotosPicking` delegate | `Binding<[InstagramPhotosAsset]>` or `onFinish` |
+| `InstagramPhotos` result type | `InstagramPhotosAsset` + `loadImages()` |
+| `InstagramPhotosLocalizationsProviding` | `InstagramPhotosLocalizationProviding` |
+| `InstagramPhotosAlbumsProvider` | `PhotosLibraryClient` (internal) |
+| Present from `UIViewController` | `.sheet` / `.fullScreenCover` |
+| XIB-based UIKit views | SwiftUI views in `Sources/InstagramPhotos/Views/` |
+
+The v2 UIKit/XIB implementation has been removed. Use the SwiftUI API above.
+
+## Demo
+
+### Xcode project (recommended)
+
+```bash
+open InstagramPhotos/InstagramPhotos.xcodeproj
+```
+
+Run the **InstagramPhotosApps** scheme on a simulator or device.
+
+### Swift Package example
+
+```bash
+open Examples/SwiftUIDemo
+```
+
+## Architecture
+
+```
+Sources/InstagramPhotos/
+├── InstagramPhotosPicker.swift
+├── InstagramPhotosPickerConfiguration.swift
+├── InstagramPhotosAsset.swift
+├── InstagramPhotosSelection.swift
+├── PhotosAuthorizationClient.swift
+├── PhotosLibraryClient.swift
+├── ImageLoadingClient.swift
+├── Views/
+└── Support/
+```
+
+## Testing
+
+```bash
+swift test
+```
+
+Unit tests cover configuration, selection logic, asset identity, and authorization state handling.
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
 
 ## About
-- [x] Powered by SWEETMAN,INC on 2021
-- [x] GUANGZHOU CN 510000
-- [x] [www.sweetman.cc](https://www.sweetman.cc)
+
+Powered by SWEETMAN, INC.

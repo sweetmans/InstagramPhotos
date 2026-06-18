@@ -1,26 +1,35 @@
-// swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version: 5.9
 
 import PackageDescription
 
 let package = Package(
     name: "InstagramPhotos",
-    platforms: [.iOS(.v12)],
+    platforms: [
+        .iOS(.v16),
+    ],
     products: [
         .library(
             name: "InstagramPhotos",
-            targets: ["InstagramPhotos"])
+            targets: ["InstagramPhotos"]
+        ),
     ],
-    dependencies: [],
     targets: [
         .target(
             name: "InstagramPhotos",
             dependencies: [],
-            path: "InstagramPhotos/InstagramPhotos",
-            exclude: ["Info.plist"],
-            resources: [.process("Resources")],
-            linkerSettings: [.linkedFramework("UIKit", .when(platforms: [.iOS])),
-                             .linkedFramework("PhotosUI", .when(platforms: [.iOS])),
-                             .linkedFramework("Photos", .when(platforms: [.iOS]))])
+            path: "Sources/InstagramPhotos",
+            linkerSettings: [
+                .linkedFramework("Photos"),
+                .linkedFramework("PhotosUI"),
+                .linkedFramework("ImageIO"),
+                .linkedFramework("CoreGraphics"),
+                .linkedFramework("UIKit", .when(platforms: [.iOS])),
+            ]
+        ),
+        .testTarget(
+            name: "InstagramPhotosTests",
+            dependencies: ["InstagramPhotos"],
+            path: "Tests/InstagramPhotosTests"
+        ),
     ]
 )

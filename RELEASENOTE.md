@@ -8,6 +8,18 @@ Release should update `README.md` & `RELEASENOTE.md` for release detail.
 
 ## The Latest release
 
+### 19th June 2026: `3.0.0` [https://github.com/sweetmans/InstagramPhotos/releases/tag/3.0.0](https://github.com/sweetmans/InstagramPhotos/releases/tag/3.0.0)
+- [x] SwiftUI-first rewrite — replaces UIKit/XIB picker with `InstagramPhotosPicker`
+- [x] iOS 16+ deployment target with Swift Package Manager as the primary distribution
+- [x] iCloud Photos download with progress UI and cancellation support
+- [x] Limited Photos access banner, settings deep-link, and host Info.plist guidance
+- [x] Album list navigation, single/multiple selection, zoomable square preview crop
+- [x] `InstagramPhotosAsset` + async `loadImages()` API
+- [x] English and Chinese localization providers
+- [x] SwiftUI demo app and `Examples/SwiftUIDemo` package example
+
+**Breaking changes from v2:** UIKit `InstagramPhotosPickingViewController` and XIB resources removed. See README migration table.
+
 ### 4th July 2021: `2.0.3` [https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.3](https://github.com/sweetmans/InstagramPhotos/releases/tag/2.0.3)
 - [x] Support Swift package [SMIIP-12](https://sweetmancc.atlassian.net/browse/SMIIP-12)
 
